@@ -33,7 +33,8 @@
                 MinimumWidthRequest="126"
                 WidthRequest="126"
                 HorizontalOptions="Center"
-                Margin="60,0,60,0"></Button>
+                Margin="60,0,60,0"
+                        Command="{Binding LoginCommand}"></Button>
             </StackLayout>
         </StackLayout>
 

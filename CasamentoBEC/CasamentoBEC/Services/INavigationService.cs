@@ -11,7 +11,7 @@ namespace CasamentoBEC.Services
 
         Task NavigateTo(string viewName, object param);
 
-        Task NavigateToMain();
+        void NavigateToMain();
 
     }
 }

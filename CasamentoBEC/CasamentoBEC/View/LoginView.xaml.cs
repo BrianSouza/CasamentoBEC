@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CasamentoBEC.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace CasamentoBEC.View
 		public LoginView ()
 		{
 			InitializeComponent ();
+            this.BindingContext = new LoginViewModel();
 		}
 	}
 }

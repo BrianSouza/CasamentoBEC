@@ -13,9 +13,9 @@ namespace CasamentoBEC.Services
             throw new NotImplementedException();
         }
 
-        public async Task NavigateToMain()
+        public void NavigateToMain()
         {
-            await App.Current.MainPage.Navigation.PushAsync(new MasterDetailPageView());
+            App.Current.MainPage = new MasterDetailPageView();
         }
 
         public async Task PopNavigation()

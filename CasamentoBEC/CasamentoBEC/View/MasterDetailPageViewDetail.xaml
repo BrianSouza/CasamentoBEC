@@ -3,7 +3,38 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CasamentoBEC.View.MasterDetailPageViewDetail"
              Title="Detail">
-  <StackLayout Padding="10">
-    <Label Text="This is a detail page. To get the 'triple' line icon on each platform add a icon to each platform and update the 'Master' page with an Icon that references it."/>
-  </StackLayout>
+    <StackLayout Padding="30,30,30,30" VerticalOptions="Fill" BackgroundColor="Accent" >
+        <Frame BackgroundColor="Bisque"
+               CornerRadius="10"
+               VerticalOptions="FillAndExpand" 
+               Margin="0,0,0,30">
+            <StackLayout>
+                <Label Text="Save the date" TextColor="Black"/>
+                <BoxView BackgroundColor="Red"
+                     HeightRequest="2"/>
+            </StackLayout>
+        </Frame>
+
+        <Frame BackgroundColor="Bisque"
+               CornerRadius="10"
+               VerticalOptions="FillAndExpand"
+               Margin="0,0,0,30">
+            <StackLayout>
+                <Label Text="Confirme sua presença" TextColor="Black"/>
+                <BoxView BackgroundColor="Red"
+                     HeightRequest="2"/>
+            </StackLayout>
+        </Frame>
+
+        <Frame BackgroundColor="Bisque"
+               CornerRadius="10"
+               VerticalOptions="FillAndExpand">
+            <StackLayout>
+                <Label Text="Como chegar?" TextColor="Black"/>
+                <BoxView BackgroundColor="Red"
+                     HeightRequest="2"/>
+            </StackLayout>
+        </Frame>
+
+    </StackLayout>
 </ContentPage>
