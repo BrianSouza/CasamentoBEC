@@ -1,8 +1,77 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              x:Class="CasamentoBEC.App">
 	<Application.Resources>
-    
+        <ResourceDictionary>
+            <Color x:Key="toolbarcolor">#FF6565</Color>
+            <Color x:Key="fontefundoclaro">#FF6565</Color>
+            <Color x:Key="fontefundolaranja">#FFFFFF</Color>
+            <Color x:Key="fundomenu">#DC8686</Color>
+            <Color x:Key="cordivisao">#E55252</Color>
+            <Color x:Key="fonteboxview">#FFF0F5</Color>
+            <Color x:Key="corbordacircle">#FFFFFF</Color>
+            <Color x:Key="corbordacirclelaranja">#FF6565</Color>
+            <Color x:Key="corfundobotao">#FF6565</Color>
+            <Color x:Key="backgroundentry">#FAF2E6</Color>
+            
+            <!--Labels-->
+            <Style x:Key="labelfundoclaro" TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource fontefundoclaro}"></Setter>
+                <Setter Property="FontSize" Value="16"></Setter>
+                <Setter Property="FontFamily" Value="Franklin Gothic"></Setter>
+            </Style>
+
+            <Style x:Key="labelfundolaranja" TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource fontefundolaranja}"></Setter>
+                <Setter Property="FontSize" Value="14"></Setter>
+                <Setter Property="FontFamily" Value="Franklin Gothic"></Setter>
+            </Style>
+
+            <Style x:Key="labelboxview" TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource fonteboxview}"></Setter>
+                <Setter Property="FontSize" Value="14"></Setter>
+                <Setter Property="FontFamily" Value="Franklin Gothic"></Setter>
+            </Style>
+
+            <!--Toolbar-->
+            <Style x:Key="mdp" TargetType="MasterDetailPage">
+                <Setter Property="NavigationPage.BarBackgroundColor" Value="{DynamicResource toolbarcolor}"></Setter>
+            </Style>
+            
+            <!--CircleImage-->
+            <Style x:Key="circleimagebranco" TargetType="controls:CircleImage">
+                <Setter Property="BorderColor" Value="{DynamicResource corbordacircle}"></Setter>
+                <Setter Property="BorderThickness" Value="2"></Setter>
+                <Setter Property="WidthRequest" Value="200"></Setter>
+                <Setter Property="HeightRequest" Value="200"></Setter>
+            </Style>
+            <Style x:Key="circleimagelaranja" TargetType="controls:CircleImage">
+                <Setter Property="BorderColor" Value="{DynamicResource corbordacirclelaranja}"></Setter>
+                <Setter Property="BorderThickness" Value="2"></Setter>
+                <Setter Property="WidthRequest" Value="200"></Setter>
+                <Setter Property="HeightRequest" Value="200"></Setter>
+            </Style>
+            
+            <!--Button-->
+            <Style x:Key="btnlaranja" TargetType="Button">
+                <Setter Property="FontSize" Value="14"></Setter>
+                <Setter Property="BorderRadius" Value="29"></Setter>
+                <Setter Property="MinimumWidthRequest" Value="126"></Setter>
+                <Setter Property="WidthRequest" Value="126"></Setter>
+                <Setter Property="HorizontalOptions" Value="Center"></Setter>
+                <Setter Property="TextColor" Value="{DynamicResource fontefundolaranja}"></Setter>
+                <Setter Property="BackgroundColor" Value="{DynamicResource corfundobotao}"></Setter>
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+            </Style>
+            
+            <!--Entry-->
+            <Style x:Key="entrylogin" TargetType="Entry">
+                <Setter Property="BackgroundColor" Value="{DynamicResource backgroundentry}"></Setter>
+                <Setter Property="Keyboard" Value="Numeric"></Setter>
+                <Setter Property="TextColor" Value="{DynamicResource fontefundoclaro}"></Setter>
+            </Style>
+        </ResourceDictionary>
 	</Application.Resources>
 </Application>

@@ -52,9 +52,7 @@
                         Aspect="AspectFill" 
                         FillColor="Transparent"
                         Grid.Column="1"
-                        Grid.Row="2"
-                        BorderColor="White"
-                        BorderThickness="2">
+                        Grid.Row="2">
                         <controls:CircleImage.WidthRequest>
                             <OnPlatform x:TypeArguments="x:Double">
                                 <On Platform="Android, iOS">200</On>

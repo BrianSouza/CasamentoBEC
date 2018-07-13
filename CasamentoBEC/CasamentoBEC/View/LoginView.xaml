@@ -2,38 +2,35 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CasamentoBEC.View.LoginView"
-             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin">
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin" BackgroundImage="backgroundlogin.png">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout >
             <StackLayout VerticalOptions="End"
                      Padding="0,0,0,150">
                 <controls:CircleImage 
             Source="{Binding Image}" 
             Aspect="AspectFill" 
             FillColor="Black"
-            Margin="0,30,0,0">
-                    <controls:CircleImage.WidthRequest>
-                        <OnPlatform x:TypeArguments="x:Double">
-                            <On Platform="Android, iOS">200</On>
-                            <On Platform="WinPhone">75</On>
-                        </OnPlatform>
-                    </controls:CircleImage.WidthRequest>
-                    <controls:CircleImage.HeightRequest>
-                        <OnPlatform x:TypeArguments="x:Double">
-                            <On Platform="Android, iOS">200</On>
-                            <On Platform="WinPhone">75</On>
-                        </OnPlatform>
-                    </controls:CircleImage.HeightRequest>
+            Margin="0,30,0,0"
+                    Style="{DynamicResource circleimagelaranja}">
                 </controls:CircleImage>
             </StackLayout>
-            <StackLayout BackgroundColor="FloralWhite">
-                <Entry Placeholder="Código Convidado"
-                   Margin="0,0,0,50"></Entry>
-                <Button BorderRadius="29"
-                MinimumWidthRequest="126"
-                WidthRequest="126"
-                HorizontalOptions="Center"
+            <StackLayout>
+
+                <Frame VerticalOptions="Fill"
+                             BackgroundColor="White"
+                              HorizontalOptions="FillAndExpand"
+                             Margin="20,0,20,50"
+                             WidthRequest="300"
+                            >
+                    <Entry Placeholder="Código Convidado"
+                            WidthRequest="300"
+                       Style="{DynamicResource entrylogin}"></Entry>
+                </Frame>
+                <Button 
+                Style="{DynamicResource btnlaranja}"
                 Margin="60,0,60,0"
+                    Text="Entrar"
                         Command="{Binding LoginCommand}"></Button>
             </StackLayout>
         </StackLayout>
