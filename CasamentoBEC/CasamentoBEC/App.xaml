@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              x:Class="CasamentoBEC.App">
-	<Application.Resources>
+    <Application.Resources>
         <ResourceDictionary>
             <Color x:Key="toolbarcolor">#FF6565</Color>
             <Color x:Key="fontefundoclaro">#FF6565</Color>
@@ -14,8 +14,10 @@
             <Color x:Key="corbordacircle">#FFFFFF</Color>
             <Color x:Key="corbordacirclelaranja">#FF6565</Color>
             <Color x:Key="corfundobotao">#FF6565</Color>
-            <Color x:Key="backgroundentry">#FAF2E6</Color>
-            
+            <Color x:Key="backgroundentry">Transparent</Color>
+            <Color x:Key="bordercolor">#FF6565</Color>
+            <Color x:Key="backgroundframelogin">White</Color>
+
             <!--Labels-->
             <Style x:Key="labelfundoclaro" TargetType="Label">
                 <Setter Property="TextColor" Value="{DynamicResource fontefundoclaro}"></Setter>
@@ -39,7 +41,7 @@
             <Style x:Key="mdp" TargetType="MasterDetailPage">
                 <Setter Property="NavigationPage.BarBackgroundColor" Value="{DynamicResource toolbarcolor}"></Setter>
             </Style>
-            
+
             <!--CircleImage-->
             <Style x:Key="circleimagebranco" TargetType="controls:CircleImage">
                 <Setter Property="BorderColor" Value="{DynamicResource corbordacircle}"></Setter>
@@ -53,7 +55,7 @@
                 <Setter Property="WidthRequest" Value="200"></Setter>
                 <Setter Property="HeightRequest" Value="200"></Setter>
             </Style>
-            
+
             <!--Button-->
             <Style x:Key="btnlaranja" TargetType="Button">
                 <Setter Property="FontSize" Value="14"></Setter>
@@ -64,14 +66,40 @@
                 <Setter Property="TextColor" Value="{DynamicResource fontefundolaranja}"></Setter>
                 <Setter Property="BackgroundColor" Value="{DynamicResource corfundobotao}"></Setter>
                 <Setter Property="FontAttributes" Value="Bold"></Setter>
+                <Setter Property="Margin" Value="60,0,60,0"></Setter>
+                <Setter Property="HeightRequest" Value="58"></Setter>
+                <Setter Property="Opacity" Value="0.80"></Setter>
             </Style>
-            
+
             <!--Entry-->
             <Style x:Key="entrylogin" TargetType="Entry">
                 <Setter Property="BackgroundColor" Value="{DynamicResource backgroundentry}"></Setter>
                 <Setter Property="Keyboard" Value="Numeric"></Setter>
                 <Setter Property="TextColor" Value="{DynamicResource fontefundoclaro}"></Setter>
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+                <Setter Property="FontSize" Value="16"></Setter>
+                <Setter Property="FontFamily" Value="Franklin Gothic"></Setter>
+                <Setter Property="WidthRequest" Value="260"></Setter>
+                <Setter Property="PlaceholderColor" Value="{DynamicResource fontefundoclaro}"></Setter>
+            </Style>
+
+            <!--Frame-->
+            <Style x:Key="framelogin" TargetType="Frame">
+                <Setter Property="CornerRadius" Value="29"></Setter>
+                <Setter Property="BackgroundColor" Value="{DynamicResource backgroundframelogin}"></Setter>
+                <Setter Property="BorderColor" Value="{DynamicResource bordercolor}"></Setter>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"></Setter>
+                <Setter Property="Margin" Value="20,0,20,50"></Setter>
+                <Setter Property="WidthRequest" Value="250"></Setter>
+                <Setter Property="Opacity" Value="0.75"></Setter>
+            </Style>
+            <Style x:Key="frameloginbar" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="{DynamicResource toolbarcolor}"></Setter>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"></Setter>
+                <Setter Property="HeightRequest" Value="19"></Setter>
+                <Setter Property="Margin" Value="0,0,0,25"></Setter>
+                <Setter Property="Opacity" Value="0.80"></Setter>
             </Style>
         </ResourceDictionary>
-	</Application.Resources>
+    </Application.Resources>
 </Application>

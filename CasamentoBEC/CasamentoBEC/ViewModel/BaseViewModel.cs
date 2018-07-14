@@ -21,5 +21,6 @@ namespace CasamentoBEC.ViewModel
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
             }
         }
+        
     }
 }

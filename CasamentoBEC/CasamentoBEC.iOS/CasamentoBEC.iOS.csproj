@@ -159,4 +159,10 @@
       <Name>CasamentoBEC</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\coracao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\icon_edit.png" />
+  </ItemGroup>
 </Project>
