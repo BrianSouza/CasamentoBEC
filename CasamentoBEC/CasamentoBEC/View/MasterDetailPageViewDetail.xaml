@@ -2,23 +2,22 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CasamentoBEC.View.MasterDetailPageViewDetail"
-             Title="Detail">
-    <StackLayout Padding="30,30,30,30" VerticalOptions="Fill" BackgroundColor="Accent" >
-        <Frame BackgroundColor="Bisque"
-               CornerRadius="10"
-               VerticalOptions="FillAndExpand" 
-               Margin="0,0,0,30">
-            <StackLayout>
-                <Label Text="Save the date" TextColor="Black"/>
-                <BoxView BackgroundColor="Red"
+             Title="Detail"
+             BackgroundImage="fundo.png">
+    <ContentPage.Content>
+    <StackLayout Padding="30,30,30,30" VerticalOptions="Fill" CascadeInputTransparent="False">
+            <Frame Style="{DynamicResource framedetail}"  >
+                <StackLayout InputTransparent="False">
+                        <Label Text="Save the date" 
+                               TextColor="White" Opacity="1"
+                               FontAttributes="Bold"
+                               FontSize="16"/>
+                        <BoxView BackgroundColor="Red"
                      HeightRequest="2"/>
-            </StackLayout>
-        </Frame>
+                    </StackLayout>
+            </Frame>
 
-        <Frame BackgroundColor="Bisque"
-               CornerRadius="10"
-               VerticalOptions="FillAndExpand"
-               Margin="0,0,0,30">
+        <Frame Style="{DynamicResource framedetail}">
             <StackLayout>
                 <Label Text="Confirme sua presença" TextColor="Black"/>
                 <BoxView BackgroundColor="Red"
@@ -26,9 +25,7 @@
             </StackLayout>
         </Frame>
 
-        <Frame BackgroundColor="Bisque"
-               CornerRadius="10"
-               VerticalOptions="FillAndExpand">
+        <Frame Style="{DynamicResource framedetail}">
             <StackLayout>
                 <Label Text="Como chegar?" TextColor="Black"/>
                 <BoxView BackgroundColor="Red"
@@ -37,4 +34,5 @@
         </Frame>
 
     </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

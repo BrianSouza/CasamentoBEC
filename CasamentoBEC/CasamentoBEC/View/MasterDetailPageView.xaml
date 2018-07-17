@@ -8,7 +8,7 @@
     <pages:MasterDetailPageViewMaster x:Name="MasterPage"/>
   </MasterDetailPage.Master>
   <MasterDetailPage.Detail>
-    <NavigationPage BarBackgroundColor="Green">
+        <NavigationPage BarBackgroundColor="{DynamicResource toolbarcolor}">
       <x:Arguments>
         <pages:MasterDetailPageViewDetail />
       </x:Arguments>
