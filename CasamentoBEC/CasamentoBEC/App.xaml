@@ -103,11 +103,11 @@
                 <Setter Property="Opacity" Value="0.80"></Setter>
             </Style>
             <Style x:Key="framedetail" TargetType="Frame">
-                <Setter Property="BackgroundColor" Value="#FFC3C3"></Setter>
+                <Setter Property="BackgroundColor" Value="WhiteSmoke"></Setter>
                 <Setter Property="VerticalOptions" Value="FillAndExpand"></Setter>
                 <Setter Property="CornerRadius" Value="10"></Setter>
                 <Setter Property="Margin" Value="0,0,0,30"></Setter>
-                <Setter Property="Opacity" Value="0.50"></Setter>
+                <!--<Setter Property="Opacity" Value="0.50"></Setter>-->
                 <Setter Property="BorderColor" Value="{DynamicResource bordercolor}"></Setter>
             </Style>
         </ResourceDictionary>

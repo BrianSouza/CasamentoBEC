@@ -9,9 +9,7 @@
             <Frame Style="{DynamicResource framedetail}"  >
                 <StackLayout InputTransparent="False">
                         <Label Text="Save the date" 
-                               TextColor="White" Opacity="1"
-                               FontAttributes="Bold"
-                               FontSize="16"/>
+                               Style="{DynamicResource labelfundoclaro}"/>
                         <BoxView BackgroundColor="Red"
                      HeightRequest="2"/>
                     </StackLayout>
@@ -19,7 +17,9 @@
 
         <Frame Style="{DynamicResource framedetail}">
             <StackLayout>
-                <Label Text="Confirme sua presença" TextColor="Black"/>
+                <Label Text="Confirme sua presença" 
+                               Style="{DynamicResource labelfundoclaro}"/>
+                    
                 <BoxView BackgroundColor="Red"
                      HeightRequest="2"/>
             </StackLayout>
@@ -27,8 +27,10 @@
 
         <Frame Style="{DynamicResource framedetail}">
             <StackLayout>
-                <Label Text="Como chegar?" TextColor="Black"/>
-                <BoxView BackgroundColor="Red"
+                <Label Text="Como chegar?" 
+                               Style="{DynamicResource labelfundoclaro}"/>
+
+                    <BoxView BackgroundColor="Red"
                      HeightRequest="2"/>
             </StackLayout>
         </Frame>
