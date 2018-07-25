@@ -173,4 +173,13 @@
   <ItemGroup>
     <BundleResource Include="Resources\fundo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\coracaoverm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\coracaoverm2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\map.png" />
+  </ItemGroup>
 </Project>

@@ -36,7 +36,18 @@
                 <Setter Property="FontSize" Value="14"></Setter>
                 <Setter Property="FontFamily" Value="Franklin Gothic"></Setter>
             </Style>
-
+            <Style x:Key="labelSTD" TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource fontefundoclaro}"></Setter>
+                <Setter Property="FontSize" Value="30"></Setter>
+                <Setter Property="FontFamily" Value="Franklin Gothic"></Setter>
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+            </Style>
+            <Style x:Key="labeltituloFrame" TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource fontefundoclaro}"></Setter>
+                <Setter Property="FontSize" Value="20"></Setter>
+                <Setter Property="FontFamily" Value="Franklin Gothic"></Setter>
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+            </Style>
             <!--Toolbar-->
             <Style x:Key="mdp" TargetType="MasterDetailPage">
                 <Setter Property="NavigationPage.BarBackgroundColor" Value="{DynamicResource toolbarcolor}"></Setter>

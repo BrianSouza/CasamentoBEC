@@ -11,6 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="View\MDPVDetail.xaml.cs">
+      <DependentUpon>MDPVDetail.xaml</DependentUpon>
+    </Compile>
     <Compile Update="View\MasterDetailPageViewMenuItem.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -23,7 +26,7 @@
     <EmbeddedResource Update="View\MasterDetailPageView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\MasterDetailPageViewDetail.xaml">
+    <EmbeddedResource Update="View\MDPVDetail.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\MasterDetailPageViewMaster.xaml">

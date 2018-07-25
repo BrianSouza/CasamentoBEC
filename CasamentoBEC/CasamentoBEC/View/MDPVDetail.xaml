@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CasamentoBEC.View.MasterDetailPageViewDetail"
+             Title="Detail"
+             BackgroundImage="fundo.png">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout Padding="30,30,30,30" VerticalOptions="Fill" CascadeInputTransparent="False">
+            <Frame Style="{DynamicResource framedetail}"  >
+                <StackLayout InputTransparent="False">
+                    <Label Text="Save the date" 
+                               Style="{DynamicResource labeltituloFrame}"/>
+                    <BoxView BackgroundColor="Red"
+                     HeightRequest="2"
+                                 Margin="0,0,0,10"/>
+                    <StackLayout 
+                        Orientation="Horizontal" 
+                        HorizontalOptions="CenterAndExpand"
+                        Margin="0,0,0,10">
+                        <Label 
+                        Text="17"
+                            Style="{DynamicResource labelSTD}"></Label>
+                        <Image Source="coracaoverm.png"></Image>
+                        <Label 
+                            Style="{DynamicResource labelSTD}"
+                        Text="Ago"></Label>
+                        <Image  Source="coracaoverm.png"></Image>
+                        <Label 
+                            Style="{DynamicResource labelSTD}"
+                        Text="2018"></Label>
+                    </StackLayout>
+
+                    <Label 
+                        Text="Local: Salão São Paulo - Vila Leopoldina"
+                        Style="{DynamicResource labelfundoclaro}"></Label>
+                </StackLayout>
+            </Frame>
+
+            <Frame Style="{DynamicResource framedetail}">
+                <StackLayout>
+                    <Label Text="Confirme sua presença" 
+                               Style="{DynamicResource labeltituloFrame}"/>
+
+                    <BoxView BackgroundColor="Red"
+                     HeightRequest="2"
+                        Margin="0,0,0,10" />
+                    <Label 
+                        Text="Neste dia especial contamos com a sua presença."
+                        Style="{DynamicResource labelfundoclaro}"></Label>
+                    <Label 
+                        Text="Então que tal confirma-la?"
+                        Style="{DynamicResource labelfundoclaro}"></Label>
+                    <Label 
+                        Text="(Clique aqui para confirmar)"
+                        Style="{DynamicResource labelfundoclaro}"
+                        HorizontalOptions="CenterAndExpand"
+                        Margin="0,15,0,0"></Label>
+                </StackLayout>
+            </Frame>
+
+            <Frame Style="{DynamicResource framedetail}">
+                <StackLayout>
+                    <Label Text="Como chegar?" 
+                               Style="{DynamicResource labeltituloFrame}"/>
+
+                    <BoxView BackgroundColor="Red"
+                     HeightRequest="2"/>
+                    <Image Source="map.png"
+                           Margin="5,5,5,5"></Image>
+                </StackLayout>
+            </Frame>
+
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
