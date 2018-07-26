@@ -66,6 +66,12 @@
                 <Setter Property="WidthRequest" Value="200"></Setter>
                 <Setter Property="HeightRequest" Value="200"></Setter>
             </Style>
+            <Style x:Key="circlemenu" TargetType="controls:CircleImage">
+                <Setter Property="BorderColor" Value="{DynamicResource corbordacircle}"></Setter>
+                <Setter Property="BorderThickness" Value="2"></Setter>
+                <Setter Property="WidthRequest" Value="200"></Setter>
+                <Setter Property="HeightRequest" Value="200"></Setter>
+            </Style>
 
             <!--Button-->
             <Style x:Key="btnlaranja" TargetType="Button">
@@ -121,6 +127,7 @@
                 <!--<Setter Property="Opacity" Value="0.50"></Setter>-->
                 <Setter Property="BorderColor" Value="{DynamicResource bordercolor}"></Setter>
             </Style>
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>

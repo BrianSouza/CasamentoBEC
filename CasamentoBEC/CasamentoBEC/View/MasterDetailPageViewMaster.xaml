@@ -7,11 +7,13 @@
     <StackLayout >
         <ListView x:Name="MenuItemsListView"
               SeparatorVisibility="Default"
+                  SeparatorColor="{DynamicResource toolbarcolor}"
               HasUnevenRows="true"
               ItemsSource="{Binding MenuItems}"
-              BackgroundColor="Coral">
+              BackgroundColor="{DynamicResource fontefundolaranja}"
+              >
             <ListView.Header>
-                <Grid BackgroundColor="Red" HeightRequest="400">
+                <Grid BackgroundColor="{DynamicResource fundomenu}" HeightRequest="400">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="10"/>
                         <ColumnDefinition Width="*"/>
@@ -29,10 +31,12 @@
                     <controls:CircleImage 
                         Margin="50,50,50,50"
                         Source="{Binding Image}" 
-                        Aspect="AspectFill" 
                         FillColor="White"
+                        Aspect="AspectFill" 
                         Grid.Column="1"
-                        Grid.Row="2">
+                        Grid.Row="2"
+                        BorderColor="{DynamicResource corbordacircle}"
+                        BorderThickness="2">
                         <controls:CircleImage.WidthRequest>
                             <OnPlatform x:TypeArguments="x:Double">
                                 <On Platform="Android, iOS">200</On>
@@ -50,9 +54,12 @@
                         Margin="25,25,25,25"
                         Source="{Binding Image}" 
                         Aspect="AspectFill" 
+                        BorderColor="{DynamicResource corbordacircle}"
+                        BorderThickness="2"
                         FillColor="Transparent"
                         Grid.Column="1"
-                        Grid.Row="2">
+                        Grid.Row="2"
+                        Opacity="0.75">
                         <controls:CircleImage.WidthRequest>
                             <OnPlatform x:TypeArguments="x:Double">
                                 <On Platform="Android, iOS">200</On>
@@ -72,8 +79,9 @@
                         FillColor="Transparent"
                         Grid.Column="1"
                         Grid.Row="2"
-                        BorderColor="White"
-                        BorderThickness="2">
+                        BorderColor="{DynamicResource corbordacircle}"
+                        BorderThickness="2"
+                        Opacity="0.75">
                         <controls:CircleImage.WidthRequest>
                             <OnPlatform x:TypeArguments="x:Double">
                                 <On Platform="Android, iOS">100</On>
@@ -93,11 +101,13 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Padding="15,10" HorizontalOptions="FillAndExpand">
+                        <StackLayout Padding="15,10" HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                            <Image ></Image>
                             <Label VerticalOptions="FillAndExpand" 
                     VerticalTextAlignment="Center" 
                     Text="{Binding Title}" 
-                    FontSize="24"/>
+                    FontSize="24"
+                                   TextColor="{DynamicResource toolbarcolor}"/>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
