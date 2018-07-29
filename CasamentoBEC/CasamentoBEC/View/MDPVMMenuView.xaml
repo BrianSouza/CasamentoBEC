@@ -9,7 +9,7 @@
               SeparatorVisibility="Default"
                   SeparatorColor="{DynamicResource toolbarcolor}"
               HasUnevenRows="true"
-              ItemsSource="{Binding MenuItems}"
+              ItemsSource="{Binding MenuItens}"
               BackgroundColor="{DynamicResource fontefundolaranja}"
               >
             <ListView.Header>
@@ -101,12 +101,17 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Padding="15,10" HorizontalOptions="FillAndExpand" Orientation="Horizontal">
-                            <Image ></Image>
+                        <StackLayout 
+                            Padding="15,10" 
+                            HorizontalOptions="FillAndExpand" 
+                            Orientation="Horizontal">
+
+                            <Image Source="{Binding NomeImagem}" Margin="0,0,30,0"></Image>
                             <Label VerticalOptions="FillAndExpand" 
-                    VerticalTextAlignment="Center" 
-                    Text="{Binding Title}" 
-                    FontSize="24"
+                                   VerticalTextAlignment="Center"
+                                   HorizontalTextAlignment="End"
+                    Text="{Binding DescricaoMenu}" 
+                    FontSize="20"
                                    TextColor="{DynamicResource toolbarcolor}"/>
                         </StackLayout>
                     </ViewCell>

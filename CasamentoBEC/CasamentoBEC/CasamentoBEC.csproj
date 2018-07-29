@@ -11,6 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="View\MDPVMMenuView.xaml.cs">
+      <DependentUpon>MDPVMMenuView</DependentUpon>
+    </Compile>
     <Compile Update="View\MDPVDetail.xaml.cs">
       <DependentUpon>MDPVDetail.xaml</DependentUpon>
     </Compile>
@@ -27,9 +30,6 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\MDPVDetail.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="View\MasterDetailPageViewMaster.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
