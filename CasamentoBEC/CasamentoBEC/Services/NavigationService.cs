@@ -8,6 +8,17 @@ namespace CasamentoBEC.Services
 {
     public class NavigationService : INavigationService
     {
+        public bool MenuIsPresented
+        {
+            get
+            {
+                return ((MasterDetailPageView)App.Current.MainPage).IsPresented;
+            }
+            set
+            {
+                ((MasterDetailPageView)App.Current.MainPage).IsPresented = value;
+            }
+        }
         public Task NavigateTo(string viewName, object param)
         {
             throw new NotImplementedException();
@@ -16,6 +27,7 @@ namespace CasamentoBEC.Services
         public void NavigateToMain()
         {
             App.Current.MainPage = new MasterDetailPageView();
+            
         }
 
         public async Task PopNavigation()

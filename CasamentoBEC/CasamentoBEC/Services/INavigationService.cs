@@ -7,6 +7,8 @@ namespace CasamentoBEC.Services
 {
     interface INavigationService
     {
+        bool MenuIsPresented { get; set; }
+
         Task PopNavigation();
 
         Task NavigateTo(string viewName, object param);

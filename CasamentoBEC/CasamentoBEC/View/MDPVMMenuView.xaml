@@ -7,10 +7,11 @@
     <StackLayout >
         <ListView x:Name="MenuItemsListView"
               SeparatorVisibility="Default"
-                  SeparatorColor="{DynamicResource toolbarcolor}"
+              SeparatorColor="{DynamicResource toolbarcolor}"
               HasUnevenRows="true"
               ItemsSource="{Binding MenuItens}"
               BackgroundColor="{DynamicResource fontefundolaranja}"
+              SelectedItem="{Binding SelectedMenu}"
               >
             <ListView.Header>
                 <Grid BackgroundColor="{DynamicResource fundomenu}" HeightRequest="400">
@@ -27,7 +28,6 @@
                         <RowDefinition Height="25"/>
 
                     </Grid.RowDefinitions>
-
                     <controls:CircleImage 
                         Margin="50,50,50,50"
                         Source="{Binding Image}" 
@@ -110,8 +110,8 @@
                             <Label VerticalOptions="FillAndExpand" 
                                    VerticalTextAlignment="Center"
                                    HorizontalTextAlignment="End"
-                    Text="{Binding DescricaoMenu}" 
-                    FontSize="20"
+                                   Text="{Binding DescricaoMenu}" 
+                                   FontSize="20"
                                    TextColor="{DynamicResource toolbarcolor}"/>
                         </StackLayout>
                     </ViewCell>
