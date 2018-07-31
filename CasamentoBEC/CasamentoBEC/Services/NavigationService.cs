@@ -17,6 +17,7 @@ namespace CasamentoBEC.Services
             set
             {
                 ((MasterDetailPageView)App.Current.MainPage).IsPresented = value;
+                
             }
         }
         public Task NavigateTo(string viewName, object param)

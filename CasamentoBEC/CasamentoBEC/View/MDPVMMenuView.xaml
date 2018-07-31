@@ -11,7 +11,7 @@
               HasUnevenRows="true"
               ItemsSource="{Binding MenuItens}"
               BackgroundColor="{DynamicResource fontefundolaranja}"
-              SelectedItem="{Binding SelectedMenu}"
+              SelectedItem="{Binding SelectedMenu,Mode=TwoWay}"
               >
             <ListView.Header>
                 <Grid BackgroundColor="{DynamicResource fundomenu}" HeightRequest="400">

@@ -15,7 +15,6 @@ namespace CasamentoBEC.View
         public MasterDetailPageView()
         {
             InitializeComponent();
-            //MasterPage.ListView.ItemSelected += ListView_ItemSelected;
         }
 
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -29,8 +28,7 @@ namespace CasamentoBEC.View
 
             Detail = new NavigationPage(page);
             IsPresented = false;
-
-            //MasterPage.ListView.SelectedItem = null;
+            
         }
     }
 }

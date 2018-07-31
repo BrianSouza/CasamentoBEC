@@ -80,6 +80,7 @@ namespace CasamentoBEC.ViewModel
                     break;
             }
             navigationService.MenuIsPresented = false;
+            this.SelectedMenu = null;
         }
 
     }
