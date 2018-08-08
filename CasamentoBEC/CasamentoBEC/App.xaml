@@ -31,19 +31,25 @@
                 <Setter Property="FontFamily" Value="Franklin Gothic"></Setter>
             </Style>
 
+            <Style x:Key="labelfundolaranja2" TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource fontefundolaranja}"></Setter>
+                <Setter Property="FontSize" Value="14"></Setter>
+                <Setter Property="FontFamily" Value="Franklin Gothic"></Setter>
+            </Style>
+
             <Style x:Key="labelboxview" TargetType="Label">
                 <Setter Property="TextColor" Value="{DynamicResource fonteboxview}"></Setter>
                 <Setter Property="FontSize" Value="14"></Setter>
                 <Setter Property="FontFamily" Value="Franklin Gothic"></Setter>
             </Style>
             <Style x:Key="labelSTD" TargetType="Label">
-                <Setter Property="TextColor" Value="{DynamicResource fontefundoclaro}"></Setter>
+                <Setter Property="TextColor" Value="{DynamicResource fontefundolaranja}"></Setter>
                 <Setter Property="FontSize" Value="30"></Setter>
                 <Setter Property="FontFamily" Value="Franklin Gothic"></Setter>
                 <Setter Property="FontAttributes" Value="Bold"></Setter>
             </Style>
             <Style x:Key="labeltituloFrame" TargetType="Label">
-                <Setter Property="TextColor" Value="{DynamicResource fontefundoclaro}"></Setter>
+                <Setter Property="TextColor" Value="{DynamicResource fontefundolaranja}"></Setter>
                 <Setter Property="FontSize" Value="20"></Setter>
                 <Setter Property="FontFamily" Value="Franklin Gothic"></Setter>
                 <Setter Property="FontAttributes" Value="Bold"></Setter>
@@ -66,13 +72,34 @@
                 <Setter Property="WidthRequest" Value="200"></Setter>
                 <Setter Property="HeightRequest" Value="200"></Setter>
             </Style>
-            <Style x:Key="circlemenu" TargetType="controls:CircleImage">
+            <Style x:Key="circlemenu1" TargetType="controls:CircleImage">
                 <Setter Property="BorderColor" Value="{DynamicResource corbordacircle}"></Setter>
                 <Setter Property="BorderThickness" Value="2"></Setter>
                 <Setter Property="WidthRequest" Value="200"></Setter>
                 <Setter Property="HeightRequest" Value="200"></Setter>
+                <Setter Property="Margin" Value="50,50,50,50"></Setter>
+                <Setter Property="FillColor" Value="White"></Setter>
+                <Setter Property="Aspect" Value="AspectFill"></Setter>
             </Style>
-
+            <Style x:Key="circlemenu2" TargetType="controls:CircleImage">
+                <Setter Property="BorderColor" Value="{DynamicResource cordivisao}"></Setter>
+                <Setter Property="BorderThickness" Value="2"></Setter>
+                <Setter Property="WidthRequest" Value="200"></Setter>
+                <Setter Property="HeightRequest" Value="200"></Setter>
+                <Setter Property="Margin" Value="25,25,25,25"></Setter>
+                <Setter Property="FillColor" Value="Transparent"></Setter>
+                <Setter Property="Aspect" Value="AspectFill"></Setter>
+                <Setter Property="Opacity" Value="0.75"></Setter>
+            </Style>
+            <Style x:Key="circlemenu3" TargetType="controls:CircleImage">
+                <Setter Property="BorderColor" Value="{DynamicResource cordivisao}"></Setter>
+                <Setter Property="BorderThickness" Value="2"></Setter>
+                <Setter Property="WidthRequest" Value="100"></Setter>
+                <Setter Property="HeightRequest" Value="100"></Setter>
+                <Setter Property="FillColor" Value="Transparent"></Setter>
+                <Setter Property="Aspect" Value="AspectFill"></Setter>
+                <Setter Property="Opacity" Value="0.75"></Setter>
+            </Style>
             <!--Button-->
             <Style x:Key="btnlaranja" TargetType="Button">
                 <Setter Property="FontSize" Value="14"></Setter>
@@ -120,7 +147,7 @@
                 <Setter Property="Opacity" Value="0.80"></Setter>
             </Style>
             <Style x:Key="framedetail" TargetType="Frame">
-                <Setter Property="BackgroundColor" Value="WhiteSmoke"></Setter>
+                <Setter Property="BackgroundColor" Value="{DynamicResource toolbarcolor}"></Setter>
                 <Setter Property="VerticalOptions" Value="FillAndExpand"></Setter>
                 <Setter Property="CornerRadius" Value="10"></Setter>
                 <Setter Property="Margin" Value="0,0,0,30"></Setter>
