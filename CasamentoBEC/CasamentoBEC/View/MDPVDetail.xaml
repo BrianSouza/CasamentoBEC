@@ -7,11 +7,23 @@
     <ContentPage.Content>
         <ScrollView>
         <StackLayout Padding="30,30,30,30" VerticalOptions="Fill" CascadeInputTransparent="False">
-            <Frame Style="{DynamicResource framedetail}"  >
-                <StackLayout InputTransparent="False">
+            <Frame Style="{DynamicResource framedetail}" >
+                <StackLayout InputTransparent="False" HeightRequest="{Binding HeightFrame1}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                <ColumnDefinition Width="20"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
                     <Label Text="Save the date" 
-                               Style="{DynamicResource labeltituloFrame}"/>
-                    <BoxView BackgroundColor="{DynamicResource cordivisao}"
+                               Style="{DynamicResource labeltituloFrame}"
+                           Grid.Row="0" Grid.Column="0"/>
+                            <StackLayout ></StackLayout>
+                            <Image Grid.Row="0" Grid.Column="1" Source="{Binding Chevron1}" ></Image>
+                        </Grid>
+                        <BoxView BackgroundColor="{DynamicResource cordivisao}"
                      HeightRequest="2"
                                  Margin="0,0,0,10"/>
                     <StackLayout 

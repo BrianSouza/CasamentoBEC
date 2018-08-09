@@ -182,4 +182,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\map.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_expand_more.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_chevron_right.png" />
+  </ItemGroup>
 </Project>
