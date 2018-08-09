@@ -6,84 +6,137 @@
              >
     <ContentPage.Content>
         <ScrollView>
-        <StackLayout Padding="30,30,30,30" VerticalOptions="Fill" CascadeInputTransparent="False">
-            <Frame Style="{DynamicResource framedetail}" >
-                <StackLayout InputTransparent="False" HeightRequest="{Binding HeightFrame1}">
+            <StackLayout Padding="30,30,30,30" VerticalOptions="Fill" CascadeInputTransparent="False">
+                <!--frame 1-->
+                <Frame Style="{DynamicResource framedetail}" >
+                    <StackLayout InputTransparent="False" HeightRequest="{Binding HeightFrame1}">
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
                                 <ColumnDefinition Width="20"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
                                 <RowDefinition></RowDefinition>
                             </Grid.RowDefinitions>
-                    <Label Text="Save the date" 
+                            <Label Text="Save the date" 
                                Style="{DynamicResource labeltituloFrame}"
                            Grid.Row="0" Grid.Column="0"/>
-                            <StackLayout ></StackLayout>
-                            <Image Grid.Row="0" Grid.Column="1" Source="{Binding Chevron1}" ></Image>
+
+                            <Button Grid.Row="0" 
+                                    Grid.Column="1" 
+                                    Image="{Binding Chevron1}" 
+                                    HeightRequest="10"
+                                    BackgroundColor="Transparent"
+                                    Command="{Binding ClickChevron1Cmd}"></Button>
                         </Grid>
                         <BoxView BackgroundColor="{DynamicResource cordivisao}"
                      HeightRequest="2"
                                  Margin="0,0,0,10"/>
-                    <StackLayout 
+                        <StackLayout IsVisible="{Binding VisibleStk1}">
+
+                            <StackLayout 
                         Orientation="Horizontal" 
                         HorizontalOptions="CenterAndExpand"
-                        Margin="0,0,0,10">
-                        <Label 
+                        Margin="0,0,0,10"
+                            >
+                                <Label 
                         Text="17"
                             Style="{DynamicResource labelSTD}"></Label>
-                        <Image Source="coracaoverm.png"></Image>
-                        <Label 
+                                <Image Source="coracaoverm.png"></Image>
+                                <Label 
                             Style="{DynamicResource labelSTD}"
                         Text="Ago"></Label>
-                        <Image  Source="coracaoverm.png"></Image>
-                        <Label 
+                                <Image  Source="coracaoverm.png"></Image>
+                                <Label 
                             Style="{DynamicResource labelSTD}"
                         Text="2018"></Label>
-                    </StackLayout>
+                            </StackLayout>
 
-                    <Label 
+                            <Label 
                         Text="Local: Salão São Paulo - Vila Leopoldina"
                         Style="{DynamicResource labelfundolaranja2}"></Label>
-                </StackLayout>
-            </Frame>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+                <!--frame 2-->
+                <Frame Style="{DynamicResource framedetail}">
+                    <StackLayout HeightRequest="{Binding HeightFrame2}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="20"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Label Text="Confirme sua presença" 
+                               Style="{DynamicResource labeltituloFrame}"
+                           Grid.Row="0" Grid.Column="0"/>
 
-            <Frame Style="{DynamicResource framedetail}">
-                <StackLayout>
-                    <Label Text="Confirme sua presença" 
-                               Style="{DynamicResource labeltituloFrame}"/>
+                            <Button Grid.Row="0" 
+                                    Grid.Column="1" 
+                                    Image="{Binding Chevron2}" 
+                                    HeightRequest="10"
+                                    BackgroundColor="Transparent"
+                                    Command="{Binding ClickChevron2Cmd}"></Button>
+                        </Grid>
 
                         <BoxView BackgroundColor="{DynamicResource cordivisao}"
                      HeightRequest="2"
                         Margin="0,0,0,10" />
-                    <Label 
+                        <StackLayout IsVisible="{Binding VisibleStk2}">
+
+                            <Label 
                         Text="Neste dia especial contamos com a sua presença."
                         Style="{DynamicResource labelfundolaranja2}"></Label>
-                    <Label 
+                            <Label 
                         Text="Então que tal confirma-la?"
                         Style="{DynamicResource labelfundolaranja2}"></Label>
-                    <Label 
+                            <Label 
                         Text="(Clique aqui para confirmar)"
                         Style="{DynamicResource labelfundolaranja2}"
                         HorizontalOptions="CenterAndExpand"
                         Margin="0,15,0,0"></Label>
-                </StackLayout>
-            </Frame>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+                <!--frame 3-->
+                <Frame Style="{DynamicResource framedetail}">
+                    <StackLayout  HeightRequest="{Binding HeightFrame3}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*">
+                                </ColumnDefinition>
+                                <ColumnDefinition Width="20"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Label Text="Como chegar?" 
+                               Style="{DynamicResource labeltituloFrame}"
+                            Grid.Row="0" Grid.Column="0"/>
 
-            <Frame Style="{DynamicResource framedetail}">
-                <StackLayout>
-                    <Label Text="Como chegar?" 
-                               Style="{DynamicResource labeltituloFrame}"/>
+                            <Button Grid.Row="0" 
+                                    Grid.Column="1" 
+                                    Image="{Binding Chevron3}" 
+                                    HeightRequest="10"
+                                    BackgroundColor="Transparent"
+                                    Command="{Binding ClickChevron3Cmd}"></Button>
+                        </Grid>
+
 
                         <BoxView BackgroundColor="{DynamicResource cordivisao}"
                      HeightRequest="2"/>
-                    <Image Source="map.png"
-                           Margin="5,5,5,5"></Image>
-                </StackLayout>
-            </Frame>
+                        <StackLayout IsVisible="{Binding VisibleStk3}">
 
-        </StackLayout>
+                            <Image Source="map.png"
+                           Margin="5,5,5,5"></Image>
+                        </StackLayout>
+                    </StackLayout>
+
+                </Frame>
+
+            </StackLayout>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>
