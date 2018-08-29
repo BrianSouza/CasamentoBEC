@@ -14,12 +14,14 @@
             </Frame>
             <StackLayout VerticalOptions="End"
                      Padding="0,0,0,100">
-                <controls:CircleImage 
+                <!--<controls:CircleImage 
             Source="{Binding Image}" 
             Aspect="AspectFit"
             Margin="0,30,0,0"
                     Style="{DynamicResource circleimagelaranja}">
-                </controls:CircleImage>
+                </controls:CircleImage>-->
+                <Image Source="brasao.png"
+                        Margin="0,30,0,0"></Image>
             </StackLayout>
             
                 <Frame  Style="{DynamicResource framelogin}">

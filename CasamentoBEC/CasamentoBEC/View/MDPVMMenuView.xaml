@@ -2,7 +2,6 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CasamentoBEC.View.MasterDetailPageViewMaster"
-             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              Title="Menu">
     <StackLayout >
         <ListView x:Name="MenuItemsListView"
@@ -25,25 +24,7 @@
                         <RowDefinition Height="25"/>
 
                     </Grid.RowDefinitions>
-                    <controls:CircleImage 
-                        Style="{DynamicResource circlemenu1}"
-                        Source="{Binding Image}"
-                        Grid.Column="1"
-                        Grid.Row="2">
-                    </controls:CircleImage>
-                    <controls:CircleImage 
-                        Source="{Binding Image}"
-                        Grid.Column="1"
-                        Grid.Row="2"
-                       Style="{DynamicResource circlemenu2}">
-                    </controls:CircleImage>
-                    <controls:CircleImage 
-                        Style="{DynamicResource circlemenu3}"
-                        Grid.Column="1"
-                        Grid.Row="2"
-                        BorderColor="{DynamicResource cordivisao}"
-                       >
-                    </controls:CircleImage>
+                    
                 </Grid>
             </ListView.Header>
             <ListView.ItemTemplate>

@@ -1,142 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cv="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
              x:Class="CasamentoBEC.View.MasterDetailPageViewDetail"
              Title="Detail"
+             BackgroundImage="backgrounddetail.png"
              >
     <ContentPage.Content>
-        <ScrollView>
-            <StackLayout Padding="30,30,30,30" VerticalOptions="Fill" CascadeInputTransparent="False">
-                <!--frame 1-->
-                <Frame Style="{DynamicResource framedetail}" >
-                    <StackLayout InputTransparent="False" HeightRequest="{Binding HeightFrame1}">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"></ColumnDefinition>
-                                <ColumnDefinition Width="20"></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition></RowDefinition>
-                            </Grid.RowDefinitions>
-                            <Label Text="Save the date" 
-                               Style="{DynamicResource labeltituloFrame}"
-                           Grid.Row="0" Grid.Column="0"/>
-
-                            <Button Grid.Row="0" 
-                                    Grid.Column="1" 
-                                    Image="{Binding Chevron1}" 
-                                    HeightRequest="10"
-                                    BackgroundColor="Transparent"
-                                    Command="{Binding ClickChevron1Cmd}"></Button>
-                        </Grid>
-                        <BoxView BackgroundColor="{DynamicResource cordivisao}"
-                     HeightRequest="2"
-                                 Margin="0,0,0,10"/>
-                        <StackLayout IsVisible="{Binding VisibleStk1}">
-
-                            <StackLayout 
-                        Orientation="Horizontal" 
-                        HorizontalOptions="CenterAndExpand"
-                        Margin="0,0,0,10"
-                            >
-                                <Label 
-                        Text="17"
-                            Style="{DynamicResource labelSTD}"></Label>
-                                <Image Source="coracaoverm.png"></Image>
-                                <Label 
-                            Style="{DynamicResource labelSTD}"
-                        Text="Ago"></Label>
-                                <Image  Source="coracaoverm.png"></Image>
-                                <Label 
-                            Style="{DynamicResource labelSTD}"
-                        Text="2018"></Label>
-                            </StackLayout>
-
-                            <Label 
-                        Text="Local: Salão São Paulo - Vila Leopoldina"
-                        Style="{DynamicResource labelfundolaranja2}"></Label>
-                        </StackLayout>
-                    </StackLayout>
-                </Frame>
-                <!--frame 2-->
-                <Frame Style="{DynamicResource framedetail}">
-                    <StackLayout HeightRequest="{Binding HeightFrame2}">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"></ColumnDefinition>
-                                <ColumnDefinition Width="20"></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition></RowDefinition>
-                            </Grid.RowDefinitions>
-                            <Label Text="Confirme sua presença" 
-                               Style="{DynamicResource labeltituloFrame}"
-                           Grid.Row="0" Grid.Column="0"/>
-
-                            <Button Grid.Row="0" 
-                                    Grid.Column="1" 
-                                    Image="{Binding Chevron2}" 
-                                    HeightRequest="10"
-                                    BackgroundColor="Transparent"
-                                    Command="{Binding ClickChevron2Cmd}"></Button>
-                        </Grid>
-
-                        <BoxView BackgroundColor="{DynamicResource cordivisao}"
-                     HeightRequest="2"
-                        Margin="0,0,0,10" />
-                        <StackLayout IsVisible="{Binding VisibleStk2}">
-
-                            <Label 
-                        Text="Neste dia especial contamos com a sua presença."
-                        Style="{DynamicResource labelfundolaranja2}"></Label>
-                            <Label 
-                        Text="Então que tal confirma-la?"
-                        Style="{DynamicResource labelfundolaranja2}"></Label>
-                            <Label 
-                        Text="(Clique aqui para confirmar)"
-                        Style="{DynamicResource labelfundolaranja2}"
-                        HorizontalOptions="CenterAndExpand"
-                        Margin="0,15,0,0"></Label>
-                        </StackLayout>
-                    </StackLayout>
-                </Frame>
-                <!--frame 3-->
-                <Frame Style="{DynamicResource framedetail}">
-                    <StackLayout  HeightRequest="{Binding HeightFrame3}">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*">
-                                </ColumnDefinition>
-                                <ColumnDefinition Width="20"></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition></RowDefinition>
-                            </Grid.RowDefinitions>
-                            <Label Text="Como chegar?" 
-                               Style="{DynamicResource labeltituloFrame}"
-                            Grid.Row="0" Grid.Column="0"/>
-
-                            <Button Grid.Row="0" 
-                                    Grid.Column="1" 
-                                    Image="{Binding Chevron3}" 
-                                    HeightRequest="10"
-                                    BackgroundColor="Transparent"
-                                    Command="{Binding ClickChevron3Cmd}"></Button>
-                        </Grid>
-
-
-                        <BoxView BackgroundColor="{DynamicResource cordivisao}"
-                     HeightRequest="2"/>
-                        <StackLayout IsVisible="{Binding VisibleStk3}">
-
-                            <Image Source="map.png"
-                           Margin="5,5,5,5"></Image>
-                        </StackLayout>
-                    </StackLayout>
-
-                </Frame>
-
-            </StackLayout>
-        </ScrollView>
+        <StackLayout>
+        <cv:CarouselView ItemsSource="{Binding Car}" x:Name="CarouselZoos">
+            <cv:CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Image Grid.RowSpan="2" Aspect="AspectFit" Source="{Binding ImageURL}"/>
+                        <!--<StackLayout Grid.Row="0" Padding="12">
+                            --><!--<Label TextColor="White" Text="{Binding Name}" FontSize="16" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>--><!--
+                                <Button Text="Botão"></Button>
+                            </StackLayout>-->
+                            
+                    </Grid>
+                </DataTemplate>
+            </cv:CarouselView.ItemTemplate>
+        </cv:CarouselView>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

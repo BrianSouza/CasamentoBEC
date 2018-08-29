@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              x:Class="CasamentoBEC.App">
     <Application.Resources>
         <ResourceDictionary>
@@ -67,47 +66,7 @@
                 <Setter Property="NavigationPage.BarBackgroundColor" Value="{DynamicResource toolbarcolor}"></Setter>
             </Style>
 
-            <!--CircleImage-->
-            <Style x:Key="circleimagebranco" TargetType="controls:CircleImage">
-                <Setter Property="BorderColor" Value="{DynamicResource corbordacircle}"></Setter>
-                <Setter Property="BorderThickness" Value="2"></Setter>
-                <Setter Property="WidthRequest" Value="200"></Setter>
-                <Setter Property="HeightRequest" Value="200"></Setter>
-            </Style>
-            <Style x:Key="circleimagelaranja" TargetType="controls:CircleImage">
-                <Setter Property="BorderColor" Value="{DynamicResource corbordacirclelaranja}"></Setter>
-                <Setter Property="BorderThickness" Value="2"></Setter>
-                <Setter Property="WidthRequest" Value="200"></Setter>
-                <Setter Property="HeightRequest" Value="200"></Setter>
-            </Style>
-            <Style x:Key="circlemenu1" TargetType="controls:CircleImage">
-                <Setter Property="BorderColor" Value="{DynamicResource corbordacircle}"></Setter>
-                <Setter Property="BorderThickness" Value="2"></Setter>
-                <Setter Property="WidthRequest" Value="200"></Setter>
-                <Setter Property="HeightRequest" Value="200"></Setter>
-                <Setter Property="Margin" Value="50,50,50,50"></Setter>
-                <Setter Property="FillColor" Value="White"></Setter>
-                <Setter Property="Aspect" Value="AspectFill"></Setter>
-            </Style>
-            <Style x:Key="circlemenu2" TargetType="controls:CircleImage">
-                <Setter Property="BorderColor" Value="{DynamicResource cordivisao}"></Setter>
-                <Setter Property="BorderThickness" Value="2"></Setter>
-                <Setter Property="WidthRequest" Value="200"></Setter>
-                <Setter Property="HeightRequest" Value="200"></Setter>
-                <Setter Property="Margin" Value="25,25,25,25"></Setter>
-                <Setter Property="FillColor" Value="Transparent"></Setter>
-                <Setter Property="Aspect" Value="AspectFill"></Setter>
-                <Setter Property="Opacity" Value="0.75"></Setter>
-            </Style>
-            <Style x:Key="circlemenu3" TargetType="controls:CircleImage">
-                <Setter Property="BorderColor" Value="{DynamicResource cordivisao}"></Setter>
-                <Setter Property="BorderThickness" Value="2"></Setter>
-                <Setter Property="WidthRequest" Value="100"></Setter>
-                <Setter Property="HeightRequest" Value="100"></Setter>
-                <Setter Property="FillColor" Value="Transparent"></Setter>
-                <Setter Property="Aspect" Value="AspectFill"></Setter>
-                <Setter Property="Opacity" Value="0.75"></Setter>
-            </Style>
+            
             <!--Button-->
             <Style x:Key="btnlaranja" TargetType="Button">
                 <Setter Property="FontSize" Value="14"></Setter>

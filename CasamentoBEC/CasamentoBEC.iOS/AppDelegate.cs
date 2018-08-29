@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
-using ImageCircle.Forms.Plugin.iOS;
 using UIKit;
 
 namespace CasamentoBEC.iOS
@@ -25,7 +24,6 @@ namespace CasamentoBEC.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
-            ImageCircleRenderer.Init();
 
 
             return base.FinishedLaunching(app, options);
