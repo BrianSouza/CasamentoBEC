@@ -30,7 +30,7 @@ namespace CasamentoBEC.ViewModel
             navigationService = DependencyService.Get<INavigationService>();
             Car = new ObservableCollection<Carousel>()
             {
-                new Carousel{ ImageURL="https://image.ibb.co/i2rudU/savethedate.png",Name="Teste 1"},
+                new Carousel{ ImageURL="https://image.ibb.co/eat0aU/stdsemadornos.png",Name="#CasamentoMoziCamis"},
                 new Carousel{ImageURL ="https://image.ibb.co/c7cT59/Symbol_14_1.png",Name="Teste 2"}
             };
         }

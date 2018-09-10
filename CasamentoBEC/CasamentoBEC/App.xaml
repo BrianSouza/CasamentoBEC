@@ -16,7 +16,7 @@
             <Color x:Key="backgroundentry">Transparent</Color>
             <Color x:Key="bordercolor">#FF6565</Color>
             <Color x:Key="backgroundframelogin">White</Color>
-
+            <Color x:Key="pretolabel">#373435</Color>
             <!--Labels-->
             <Style x:Key="labelfundoclaro" TargetType="Label">
                 <Setter Property="TextColor" Value="{DynamicResource fontefundoclaro}"></Setter>
@@ -58,8 +58,14 @@
                 <Setter Property="VerticalOptions" Value="FillAndExpand"></Setter>
                 <Setter Property="VerticalTextAlignment" Value="Center"></Setter>
                 <Setter Property="HorizontalTextAlignment" Value="End"></Setter>
-
-
+            </Style>
+            <Style x:Key="labelpreto" TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource pretolabel}"></Setter>
+                <Setter Property="FontSize" Value="20"></Setter>
+                <Setter Property="FontFamily" Value="Lobster_13.otf#Lobster_13"></Setter>
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"></Setter>
+                <Setter Property="HorizontalOptions" Value="Center"></Setter>
             </Style>
             <!--Toolbar-->
             <Style x:Key="mdp" TargetType="MasterDetailPage">
@@ -121,7 +127,14 @@
                 <!--<Setter Property="Opacity" Value="0.50"></Setter>-->
                 <Setter Property="BorderColor" Value="{DynamicResource bordercolor}"></Setter>
             </Style>
-            
+            <Style x:Key="framecarousel" TargetType="Frame">
+                <Setter Property="CornerRadius" Value="29"></Setter>
+                <Setter Property="BackgroundColor" Value="Transparent"></Setter>
+                <Setter Property="BorderColor" Value="{DynamicResource bordercolor}"></Setter>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"></Setter>
+                <Setter Property="Margin" Value="20,20,20,20"></Setter>
+                <Setter Property="WidthRequest" Value="250"></Setter>
+            </Style>
             <!--ListView-->
             <Style x:Key="lstMenu" TargetType="ListView">
                 <Setter Property="SeparatorVisibility" Value="Default"></Setter>

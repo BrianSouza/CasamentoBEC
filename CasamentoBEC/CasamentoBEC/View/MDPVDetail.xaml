@@ -16,11 +16,15 @@
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
-                        <Image Grid.RowSpan="2" Aspect="AspectFit" Source="{Binding ImageURL}"/>
-                        <!--<StackLayout Grid.Row="0" Padding="12">
-                            --><!--<Label TextColor="White" Text="{Binding Name}" FontSize="16" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>--><!--
-                                <Button Text="Botão"></Button>
-                            </StackLayout>-->
+                            <Frame
+                                Style="{DynamicResource framecarousel}">
+                                <StackLayout  Padding="12">
+                                <Image Grid.RowSpan="2" Aspect="AspectFit" Source="{Binding ImageURL}"/>
+
+                                    <Label Style="{DynamicResource labelpreto}" Text="{Binding Name}"/>
+                                </StackLayout>
+                            </Frame>
+                        
                             
                     </Grid>
                 </DataTemplate>
