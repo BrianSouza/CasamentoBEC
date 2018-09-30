@@ -74,6 +74,9 @@
                 <Setter Property="FontAttributes" Value="Bold"></Setter>
                 <Setter Property="VerticalOptions" Value="CenterAndExpand"></Setter>
                 <Setter Property="HorizontalOptions" Value="Center"></Setter>
+                <Setter Property="VerticalTextAlignment" Value="Center"></Setter>
+                <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+
             </Style>
             <!--Toolbar-->
             <Style x:Key="mdp" TargetType="MasterDetailPage">
@@ -149,6 +152,7 @@
                 <Setter Property="SeparatorColor" Value="{DynamicResource toolbarcolor}"></Setter>
                 <Setter Property="HasUnevenRows" Value="true"></Setter>
                 <Setter Property="BackgroundColor" Value="{DynamicResource fontefundolaranja}"></Setter>
+                
             </Style>
         </ResourceDictionary>
     </Application.Resources>

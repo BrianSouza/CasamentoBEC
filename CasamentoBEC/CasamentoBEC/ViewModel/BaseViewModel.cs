@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
+using Xamarin.Forms;
 
 namespace CasamentoBEC.ViewModel
 {
@@ -21,6 +22,16 @@ namespace CasamentoBEC.ViewModel
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
             }
         }
-        
+
+        public UriImageSource GetImageSource(string url)
+        {
+            UriImageSource uri = new UriImageSource()
+            {
+                Uri = new Uri(url)
+            };
+
+            return uri;
+        }
+
     }
 }

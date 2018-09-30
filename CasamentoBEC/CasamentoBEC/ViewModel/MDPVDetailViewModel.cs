@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -29,12 +30,15 @@ namespace CasamentoBEC.ViewModel
             messageService = DependencyService.Get<IMessageService>();
             navigationService = DependencyService.Get<INavigationService>();
 
+            string textoPaginaInicial = "...Como é bom poder contar com vocês na \n realização do nosso sonho! \n A contagem regressiva começa,\n o frio na barriga e toda a ansiedade do dia \n mais esperado de nossas vidas.\n Nos enche de alegria em tê-los ao nosso lado.\n Vamos juntos nesse grande sonho,\n o dia do nosso casamento...";
 
             Car = new ObservableCollection<Carousel>()
             {
-                new Carousel{ ImageURL="https://image.ibb.co/eat0aU/stdsemadornos.png",Name="#CasamentoMoziCamis",Description=GetTextoDia()},
-                new Carousel{ImageURL ="https://image.ibb.co/c7cT59/Symbol_14_1.png",Name="Teste 2",Description=""}
+                new Carousel{ ImageURL=GetImageSource("https://image.ibb.co/eat0aU/stdsemadornos.png"),Name="#CasamentoMoziCamis",Description=GetTextoDia()},
+                new Carousel{ImageURL =null ,Name="",Description=textoPaginaInicial}
             };
+
+            
         }
 
         private string GetTextoDia()
@@ -60,5 +64,6 @@ namespace CasamentoBEC.ViewModel
             return txtDiasParaCasamento;
            
         }
+        
     }
 }

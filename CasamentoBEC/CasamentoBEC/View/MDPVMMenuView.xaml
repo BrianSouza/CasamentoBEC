@@ -10,7 +10,8 @@
               SelectedItem="{Binding SelectedMenu,Mode=TwoWay}"
               >
             <ListView.Header>
-                <Grid BackgroundColor="{DynamicResource fundomenu}" HeightRequest="400">
+                <Grid 
+                  HeightRequest="400">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="10"/>
                         <ColumnDefinition Width="*"/>
@@ -24,7 +25,7 @@
                         <RowDefinition Height="25"/>
 
                     </Grid.RowDefinitions>
-                    
+                  <Image Source="fundomenu.png"></Image>
                 </Grid>
             </ListView.Header>
             <ListView.ItemTemplate>

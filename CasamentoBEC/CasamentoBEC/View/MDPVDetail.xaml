@@ -3,12 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:cv="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
              x:Class="CasamentoBEC.View.MasterDetailPageViewDetail"
-             Title="Detail"
+             Title="#CasamentoMoziCamis"
              BackgroundImage="backgrounddetail.png"
              >
     <ContentPage.Content>
         <StackLayout>
-            <cv:CarouselView ItemsSource="{Binding Car}" x:Name="CarouselZoos">
+            <cv:CarouselView ItemsSource="{Binding Car}" 
+                             x:Name="carPrincipal"
+                             >
                 <cv:CarouselView.ItemTemplate>
                     <DataTemplate>
                         <Grid>
