@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CasamentoBEC.Android", "Cas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CasamentoBEC.iOS", "CasamentoBEC\CasamentoBEC.iOS\CasamentoBEC.iOS.csproj", "{649D89FA-6CCE-43A8-BEE1-F4E410823F4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CasamentoBEC", "CasamentoBEC\CasamentoBEC\CasamentoBEC.csproj", "{6FB06121-8FFD-4DCC-B586-A5C6DFE39BBC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CasamentoBEC", "CasamentoBEC\CasamentoBEC\CasamentoBEC.csproj", "{6FB06121-8FFD-4DCC-B586-A5C6DFE39BBC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
