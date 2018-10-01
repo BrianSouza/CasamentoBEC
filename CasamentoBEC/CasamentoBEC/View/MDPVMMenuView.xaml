@@ -2,48 +2,66 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CasamentoBEC.View.MasterDetailPageViewMaster"
-             Title="Menu">
-    <StackLayout >
-        <ListView x:Name="MenuItemsListView"
-              Style="{DynamicResource lstMenu}"
-              ItemsSource="{Binding MenuItens}"
-              SelectedItem="{Binding SelectedMenu,Mode=TwoWay}"
-              >
-            <ListView.Header>
-                <Grid 
-                  HeightRequest="400">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="10"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="10"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="25"/>
-                        <RowDefinition Height="25"/>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="25"/>
-                        <RowDefinition Height="25"/>
+             Title="Menu"
+             BackgroundColor="#FAF2E6"
+             >
+  
+    <Grid>
+      <Image Source="menubackground.png" Grid.RowSpan="4" Aspect="Fill"></Image>
 
-                    </Grid.RowDefinitions>
-                  <Image Source="fundomenu.png"></Image>
-                </Grid>
-            </ListView.Header>
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout 
-                            Padding="15,10" 
-                            HorizontalOptions="FillAndExpand" 
-                            Orientation="Horizontal">
+      <!--<Grid.RowDefinitions>
 
-                            <Image Source="{Binding NomeImagem}" Margin="0,0,5,0"></Image>
-                            <Label 
-                                   Text="{Binding DescricaoMenu}" 
-                                   Style="{DynamicResource labelMenu}"/>
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </StackLayout>
+      </Grid.RowDefinitions>-->
+      <!--<Label Text="Linha 1" Grid.Row="0"></Label>-->
+      <Image Source="brasao.png"
+             Grid.Row="1" ></Image>
+      <Frame Grid.Row="2"
+             Grid.RowSpan="3"
+             Margin="10,30,10,10"
+             CornerRadius	="0,7"
+             >
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+          </Grid.ColumnDefinitions>
+          <Image Source="camera32.png" Grid.Row="0" Grid.Column="0">
+            <Image.GestureRecognizers>
+              <TapGestureRecognizer Command="{Binding CmdTap}"  />
+            </Image.GestureRecognizers>
+          </Image>
+        </Grid>
+      </Frame>
+      <!--<Label Text="Linha 3" Grid.Row="2"></Label>
+      <Label Text="Linha 4" Grid.Row="3"></Label>-->
+
+
+    </Grid>
+      <!--<ListView x:Name="MenuItemsListView"
+            Style="{DynamicResource lstMenu}"
+            ItemsSource="{Binding MenuItens}"
+            SelectedItem="{Binding SelectedMenu,Mode=TwoWay}">
+        <ListView.Header>
+            <Image Source="menubackground.png" ></Image>
+        </ListView.Header>
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <StackLayout
+                  Padding="15,10"
+                  HorizontalOptions="FillAndExpand"
+                  Orientation="Horizontal">
+                <Image Source="{Binding NomeImagem}" Margin="0,0,5,0"></Image>
+                <Label
+                       Text="{Binding DescricaoMenu}"
+                       Style="{DynamicResource labelMenu}"/>
+              </StackLayout>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>-->
 </ContentPage>

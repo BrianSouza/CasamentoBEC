@@ -4,6 +4,7 @@ using CasamentoBEC.View;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace CasamentoBEC.ViewModel
@@ -12,76 +13,26 @@ namespace CasamentoBEC.ViewModel
     {
         private readonly IMessageService messageService;
         private readonly INavigationService navigationService;
-
-        MenuItens selectedMenu;
-        List<MenuItens> menuItens;
-        public List<MenuItens> MenuItens
+        private ICommand cmdTap;
+        
+        public ICommand CmdTap
         {
             get
             {
-                return menuItens;
-            }
-
-            set
-            {
-                menuItens = value;
-                RaisePropertyChanged();
+                return cmdTap;
             }
         }
-
-        public MenuItens SelectedMenu
-        {
-            get => selectedMenu;
-            set
-            {
-                selectedMenu = value;
-                RaisePropertyChanged();
-                MenuSelected(value);
-            }
-        }
-        
 
         public MDPVMMenuViewModel()
         {
             navigationService = DependencyService.Get<INavigationService>();
             messageService = DependencyService.Get<IMessageService>();
-            MenuItens = new List<MenuItens>
-            {
-                new MenuItens{ Index = 1, DescricaoMenu = "Confirme Sua Presença", NomeImagem="check32.png"},
-                new MenuItens{ Index = 2, DescricaoMenu = "Local", NomeImagem="Localizacao32.png"},
-                new MenuItens{ Index = 3, DescricaoMenu = "Fotos", NomeImagem="camera32.png"},
-                new MenuItens{ Index = 4, DescricaoMenu = "Presente Para os Noivos", NomeImagem="presente32.png"}
-            };
+            cmdTap = new Command(BotaoClicado);
         }
-
-        private void MenuSelected(MenuItens menu)
+        
+        private void BotaoClicado()
         {
-            if (menu == null)
-                return;
-
-            switch (menu.Index)
-            {
-                case 1:
-                    messageService.ShowAsync("", "1", "");
-                    break;
-                case 2:
-                    messageService.ShowAsync("", "2", "");
-                    break;
-                case 3:
-                    messageService.ShowAsync("", "3", "");
-
-                    break;
-                case 4:
-                    messageService.ShowAsync("", "4", "");
-
-                    break;
-
-                default:
-                    break;
-            }
-            navigationService.MenuIsPresented = false;
-            this.SelectedMenu = null;
+            messageService.ShowAsync("", "Botao clicado", "");
         }
-
     }
 }

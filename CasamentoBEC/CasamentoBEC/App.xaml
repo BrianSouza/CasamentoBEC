@@ -151,7 +151,7 @@
                 <Setter Property="SeparatorVisibility" Value="Default"></Setter>
                 <Setter Property="SeparatorColor" Value="{DynamicResource toolbarcolor}"></Setter>
                 <Setter Property="HasUnevenRows" Value="true"></Setter>
-                <Setter Property="BackgroundColor" Value="{DynamicResource fontefundolaranja}"></Setter>
+                <Setter Property="BackgroundColor" Value="Transparent"></Setter>
                 
             </Style>
         </ResourceDictionary>
