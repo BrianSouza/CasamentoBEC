@@ -2718,7 +2718,7 @@ namespace CasamentoBEC.Droid
 			public const int icon_edit = 2130837752;
 			
 			// aapt resource value: 0x7f0200f9
-			public const int Localizacao32 = 2130837753;
+			public const int localizacao32 = 2130837753;
 			
 			// aapt resource value: 0x7f0200fa
 			public const int map = 2130837754;

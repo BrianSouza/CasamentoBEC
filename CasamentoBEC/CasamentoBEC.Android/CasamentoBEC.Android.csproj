@@ -127,7 +127,7 @@
     <AndroidResource Include="Resources\drawable\check32.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Localizacao32.png" />
+    <AndroidResource Include="Resources\drawable\localizacao32.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\presente32.png" />

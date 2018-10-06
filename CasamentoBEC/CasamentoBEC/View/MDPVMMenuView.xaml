@@ -16,22 +16,66 @@
       <Image Source="brasao.png"
              Grid.Row="1" ></Image>
       <Frame Grid.Row="2"
-             
+             Opacity="0.5"
              Margin="10,30,10,10"
              CornerRadius	="0,7"
              >
         <Grid>
           <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+          
           </Grid.RowDefinitions>
           <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+          
           </Grid.ColumnDefinitions>
           <Image Source="camera32.png" 
                  Grid.Row="0"
                  Grid.Column="0" 
+                 Aspect="AspectFit">
+            <Image.GestureRecognizers>
+              <TapGestureRecognizer Command="{Binding CmdTap}"  />
+            </Image.GestureRecognizers>
+          </Image>
+        <Image Source="camera32.png" 
+                 Grid.Row="0"
+                 Grid.Column="1" 
+                 Aspect="AspectFit">
+            <Image.GestureRecognizers>
+              <TapGestureRecognizer Command="{Binding CmdTap}"  />
+            </Image.GestureRecognizers>
+          </Image>
+        <Image Source="check32.png" 
+                 Grid.Row="0"
+                 Grid.Column="2" 
+                 Aspect="AspectFit">
+            <Image.GestureRecognizers>
+              <TapGestureRecognizer Command="{Binding CmdTap}"  />
+            </Image.GestureRecognizers>
+          </Image>
+        <Image Source="localizacao32.png" 
+                 Grid.Row="1"
+                 Grid.Column="0" 
+                 Aspect="AspectFit">
+            <Image.GestureRecognizers>
+              <TapGestureRecognizer Command="{Binding CmdTap}"  />
+            </Image.GestureRecognizers>
+          </Image>
+        <Image Source="presente32.png" 
+                 Grid.Row="1"
+                 Grid.Column="1" 
+                 Aspect="AspectFit">
+            <Image.GestureRecognizers>
+              <TapGestureRecognizer Command="{Binding CmdTap}"  />
+            </Image.GestureRecognizers>
+          </Image>
+        <Image Source="camera32.png" 
+                 Grid.Row="1"
+                 Grid.Column="2" 
                  Aspect="AspectFit">
             <Image.GestureRecognizers>
               <TapGestureRecognizer Command="{Binding CmdTap}"  />
