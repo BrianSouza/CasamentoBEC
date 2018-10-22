@@ -1,4 +1,5 @@
 ﻿using CasamentoBEC.View;
+using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,18 +9,18 @@ namespace CasamentoBEC.Services
 {
     public class NavigationService : INavigationService
     {
-        public bool MenuIsPresented
-        {
-            get
-            {
-                return ((MasterDetailPageView)App.Current.MainPage).IsPresented;
-            }
-            set
-            {
-                ((MasterDetailPageView)App.Current.MainPage).IsPresented = value;
+        //public bool MenuIsPresented
+        //{
+        //    get
+        //    {
+        //        return ((MasterDetailPageView)App.Current.MainPage).IsPresented;
+        //    }
+        //    set
+        //    {
+        //        ((MasterDetailPageView)App.Current.MainPage).IsPresented = value;
                 
-            }
-        }
+        //    }
+        //}
         public Task NavigateTo(string viewName, object param)
         {
             throw new NotImplementedException();
@@ -27,7 +28,7 @@ namespace CasamentoBEC.Services
 
         public void NavigateToMain()
         {
-            App.Current.MainPage = new MasterDetailPageView();
+            App.Current.MainPage = new PaginaPrincipalView();
             
         }
 
@@ -36,6 +37,10 @@ namespace CasamentoBEC.Services
             await App.Current.MainPage.Navigation.PopAsync();
         }
 
-        
+        public async void AbrirMenu()
+        {
+            await PopupNavigation.PushAsync(new MenuView());
+
+        }
     }
 }

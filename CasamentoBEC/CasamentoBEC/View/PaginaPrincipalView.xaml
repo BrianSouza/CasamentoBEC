@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CasamentoBEC.View.PaginaPrincipalView"
+             xmlns:cv="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
+             BackgroundImage="backgrounddetail.png">
+
+        <ContentPage.Content>
+            <StackLayout>
+            <StackLayout Orientation="Horizontal" 
+                         VerticalOptions="Start" 
+                         HorizontalOptions="Start"
+                         Margin="30,20,0,0">
+                <Image Source="menu32.png"
+                   Aspect="AspectFit">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding CmdAbriMenu}"  />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label Text="Menu" HorizontalTextAlignment="Center" VerticalOptions="Center"></Label>
+            </StackLayout>
+            <BoxView Color="{DynamicResource cordivisao}"
+                     VerticalOptions="Center"
+                     HorizontalOptions="Center"
+                     WidthRequest="300"
+                     HeightRequest="2"
+                     Margin="0,15,0,15"></BoxView>
+            <cv:CarouselView ItemsSource="{Binding Car}" 
+                             x:Name="carPrincipal"
+                             >
+                    <cv:CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Frame
+                                Style="{DynamicResource framecarousel}">
+                                    <StackLayout  Padding="12">
+                                        <Image Grid.RowSpan="2" Aspect="AspectFit" Source="{Binding ImageURL}"/>
+                                        <Label Style="{DynamicResource labelpretodesc}" Text="{Binding Description}" />
+                                        <Label Style="{DynamicResource labelpreto}" Text="{Binding Name}"/>
+                                    </StackLayout>
+                                </Frame>
+
+
+                            </Grid>
+                        </DataTemplate>
+                    </cv:CarouselView.ItemTemplate>
+                </cv:CarouselView>
+            </StackLayout>
+        </ContentPage.Content>
+
+</ContentPage>

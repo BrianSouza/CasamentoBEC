@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Rg.Plugins.Popup.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,9 +11,9 @@ using Xamarin.Forms.Xaml;
 namespace CasamentoBEC.View
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class DetailView : ContentView
-	{
-		public DetailView ()
+	public partial class MenuView : PopupPage
+    {
+		public MenuView ()
 		{
 			InitializeComponent ();
 		}

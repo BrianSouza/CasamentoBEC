@@ -7,7 +7,7 @@
             <Color x:Key="toolbarcolor">#FF6565</Color>
             <Color x:Key="fontefundoclaro">#FF6565</Color>
             <Color x:Key="fontefundolaranja">#FFFFFF</Color>
-            <Color x:Key="fundomenu">#DC8686</Color>
+            <Color x:Key="fundomenu">#FAF2E6</Color>
             <Color x:Key="cordivisao">#E55252</Color>
             <Color x:Key="fonteboxview">#FFF0F5</Color>
             <Color x:Key="corbordacircle">#FFFFFF</Color>

@@ -1,10 +1,8 @@
 ﻿using CasamentoBEC.ViewModel;
+using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,15 +12,17 @@ using Xamarin.Forms.Xaml;
 namespace CasamentoBEC.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MasterDetailPageViewMaster : ContentPage
+    public partial class PaginaPrincipalView : ContentPage
     {
-        public MasterDetailPageViewMaster()
+        public PaginaPrincipalView()
         {
             InitializeComponent();
-
-            BindingContext = new MDPVMMenuViewModel();
+            this.BindingContext = new PaginaPrincipalViewModel();
         }
 
-       
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            await PopupNavigation.PushAsync(new MenuView());
+        }
     }
 }

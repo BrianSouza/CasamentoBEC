@@ -5,20 +5,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Renderer\**" />
+    <EmbeddedResource Remove="Renderer\**" />
+    <None Remove="Renderer\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="View\MasterDetailPageViewMenuItem.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="LiveXAML" Version="2.1.41" />
+    <PackageReference Include="Rg.Plugins.Popup" Version="1.1.4.168" />
     <PackageReference Include="Xamarin.Forms" Version="3.1.0.697729" />
     <PackageReference Include="Xamarin.Forms.CarouselView" Version="2.3.0-pre2" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="View\MDPVMMenuView.xaml.cs">
-      <DependentUpon>MDPVMMenuView</DependentUpon>
-    </Compile>
-    <Compile Update="View\MDPVDetail.xaml.cs">
-      <DependentUpon>MDPVDetail.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="View\MasterDetailPageViewMenuItem.cs">
-      <SubType>Code</SubType>
+    <Compile Update="View\PaginaPrincipalView.xaml.cs">
+      <DependentUpon>PaginaPrincipalView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -26,10 +31,10 @@
     <EmbeddedResource Update="View\LoginView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\MasterDetailPageView.xaml">
+    <EmbeddedResource Update="View\MenuView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\MDPVDetail.xaml">
+    <EmbeddedResource Update="View\PaginaPrincipalView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
