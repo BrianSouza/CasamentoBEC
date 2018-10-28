@@ -8,73 +8,98 @@
             BackgroundColor="Transparent">
     <pages:PopupPage.Animation>
         <animations:ScaleAnimation
-            PositionIn="Left"
-            PositionOut="Left"
-            ScaleIn="1.2"
-            ScaleOut="0.8"
-            DurationIn="400"
+            PositionIn="Top"
+            PositionOut="Top"
+            ScaleIn="0.6"
+            ScaleOut="0.6"
+            DurationIn="200"
             DurationOut="300"
             EasingIn="Linear"
             EasingOut="Linear"
             HasBackgroundAnimation="False">
         </animations:ScaleAnimation>
     </pages:PopupPage.Animation>
-    <StackLayout VerticalOptions="FillAndExpand" 
-                 HorizontalOptions="Start" 
-                 WidthRequest="150"
+    <StackLayout VerticalOptions="Start" 
+                 HorizontalOptions="FillAndExpand" 
+                 HeightRequest="150"
                  BackgroundColor="{DynamicResource fundomenu}">
-        <Image Source="brasao.png"
-               Margin="10,30,10,50"></Image>
-        <StackLayout HorizontalOptions="Center"
-                     Margin="0,50,0,0">
-        <Image Source="camera32.png"
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackLayout Orientation="Vertical"
+                         Grid.Column="0"
+                         Grid.Row="0">
+                <Image Source="camera32.png"
                  Aspect="AspectFit">
-            <Image.GestureRecognizers>
-                <TapGestureRecognizer Command="{Binding CmdTap}"  />
-            </Image.GestureRecognizers>
-        </Image>
-        <Label Text="Fotos" HorizontalTextAlignment="Center"></Label>
-            <BoxView Color="{DynamicResource cordivisao}"
-                     VerticalOptions="Center"
-                     HorizontalOptions="Center"
-                     WidthRequest="75"
-                     HeightRequest="2"
-                     Margin="0,15,0,15"></BoxView>
-        <Image Source="check32.png"
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding CmdTap}"  />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label Text="Fotos" HorizontalTextAlignment="Center"></Label>
+            </StackLayout>
+            <StackLayout Orientation="Vertical"
+                         Grid.Column="1"
+                         Grid.Row="0">
+                <Image Source="check32.png"
                 
                    Aspect="AspectFit">
-            <Image.GestureRecognizers>
-                <TapGestureRecognizer Command="{Binding CmdTap}"  />
-            </Image.GestureRecognizers>
-        </Image>
-            <Label Text="RSVP" HorizontalTextAlignment="Center"></Label>
-            <BoxView Color="{DynamicResource cordivisao}"
-                     VerticalOptions="Center"
-                     HorizontalOptions="Center"
-                     WidthRequest="75"
-                     HeightRequest="2"
-                     Margin="0,15,0,15"></BoxView>
-            <Image Source="localizacao32.png"
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding CmdTap}"  />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label Text="RSVP" HorizontalTextAlignment="Center"></Label>
+            </StackLayout>
+            <StackLayout Orientation="Vertical"
+                         Grid.Column="2"
+                         Grid.Row="0">
+                <Image Source="localizacao32.png"
                    Aspect="AspectFit">
-            <Image.GestureRecognizers>
-                <TapGestureRecognizer Command="{Binding CmdTap}"  />
-            </Image.GestureRecognizers>
-        </Image>
-            <Label Text="Local" HorizontalTextAlignment="Center"></Label>
-            <BoxView Color="{DynamicResource cordivisao}"
-                     VerticalOptions="Center"
-                     HorizontalOptions="Center"
-                     WidthRequest="75"
-                     HeightRequest="2"
-                     Margin="0,15,0,15"></BoxView>
-            <Image Source="presente32.png"
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding CmdTap}"  />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label Text="Local" HorizontalTextAlignment="Center"></Label>
+            </StackLayout>
+            <StackLayout Orientation="Vertical"
+                         Grid.Column="0"
+                         Grid.Row="1">
+                <Image Source="presente32.png"
                    Aspect="AspectFit">
-            <Image.GestureRecognizers>
-                <TapGestureRecognizer Command="{Binding CmdTap}"  />
-            </Image.GestureRecognizers>
-        </Image>
-            <Label Text="Presentes" HorizontalTextAlignment="Center"></Label>
-            
-        </StackLayout>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding CmdTap}"  />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label Text="Presentes" HorizontalTextAlignment="Center"></Label>
+            </StackLayout>
+            <StackLayout Orientation="Vertical"
+                         Grid.Column="1"
+                         Grid.Row="1">
+                <Image Source="presente32.png"
+                   Aspect="AspectFit">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding CmdTap}"  />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label Text="Presentes" HorizontalTextAlignment="Center"></Label>
+            </StackLayout>
+            <StackLayout Orientation="Vertical"
+                         Grid.Column="2"
+                         Grid.Row="1">
+                <Image Source="presente32.png"
+                   Aspect="AspectFit">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding CmdTap}"  />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label Text="Presentes" HorizontalTextAlignment="Center"></Label>
+            </StackLayout>
+        </Grid>
     </StackLayout>
 </pages:PopupPage>
