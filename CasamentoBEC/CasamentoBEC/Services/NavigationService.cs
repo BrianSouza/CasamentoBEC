@@ -34,7 +34,7 @@ namespace CasamentoBEC.Services
 
         public async Task PopNavigation()
         {
-            await App.Current.MainPage.Navigation.PopAsync();
+            await PopupNavigation.PopAsync();
         }
 
         public async void AbrirMenu()

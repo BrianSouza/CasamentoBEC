@@ -1,4 +1,5 @@
-﻿using Rg.Plugins.Popup.Pages;
+﻿using CasamentoBEC.ViewModel;
+using Rg.Plugins.Popup.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,9 +14,12 @@ namespace CasamentoBEC.View
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class MenuView : PopupPage
     {
+        MenuViewModel menuVM = null;
 		public MenuView ()
 		{
 			InitializeComponent ();
+            menuVM = new MenuViewModel();
+            this.BindingContext = menuVM;
 		}
 	}
 }

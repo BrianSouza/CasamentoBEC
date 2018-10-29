@@ -9,12 +9,11 @@
             <StackLayout>
             <StackLayout Orientation="Vertical" 
                          VerticalOptions="Start" 
-                         HorizontalOptions="FillAndExpand"
-                         BackgroundColor="{DynamicResource fundomenu}">
-                <Label Text="Menu" HorizontalTextAlignment="Center" VerticalOptions="Center"></Label>
-                <Image Source="ic_expand_more.png"
+                         HorizontalOptions="FillAndExpand">
+                <Image Source="menufechado.png"
                    Aspect="AspectFit">
                     <Image.GestureRecognizers>
+                        <!--<PanGestureRecognizer  PanUpdated="{Binding CmdAbriMenu}" />--> 
                         <TapGestureRecognizer Command="{Binding CmdAbriMenu}"  />
                     </Image.GestureRecognizers>
                 </Image>
