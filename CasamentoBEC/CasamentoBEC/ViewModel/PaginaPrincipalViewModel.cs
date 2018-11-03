@@ -13,6 +13,18 @@ namespace CasamentoBEC.ViewModel
     {
         private readonly IMessageService messageService;
         private readonly INavigationService navigationService;
+        private int exibirCarView;
+        int slidePosition = 0;
+
+        public int ExibirCarView
+        {
+            get { return exibirCarView; }
+            set
+            {
+                exibirCarView = value;
+                RaisePropertyChanged();
+            }
+        }
         ObservableCollection<Carousel> car;
         private ICommand cmdAbriMenu; 
         public ObservableCollection<Carousel> Car
@@ -42,13 +54,20 @@ namespace CasamentoBEC.ViewModel
 
             string textoPaginaInicial = "...Como é bom poder contar com vocês na \n realização do nosso sonho! \n A contagem regressiva começa,\n o frio na barriga e toda a ansiedade do dia \n mais esperado de nossas vidas.\n Nos enche de alegria em tê-los ao nosso lado.\n Vamos juntos nesse grande sonho,\n o dia do nosso casamento...";
 
+            PreencheCarousel(textoPaginaInicial);
+
+            CmdAbriMenu = new Command(() => navigationService.AbrirMenu());
+
+            MudarImagensCarousel();
+        }
+
+        private void PreencheCarousel(string textoPaginaInicial)
+        {
             Car = new ObservableCollection<Carousel>()
             {
                 new Carousel{ ImageURL=GetImageSource("https://image.ibb.co/eat0aU/stdsemadornos.png"),Name="#CasamentoMoziCamis",Description=GetTextoDia()},
                 new Carousel{ImageURL =null ,Name="",Description=textoPaginaInicial}
             };
-
-            CmdAbriMenu = new Command(() => navigationService.AbrirMenu());
         }
 
         private string GetTextoDia()
@@ -75,5 +94,16 @@ namespace CasamentoBEC.ViewModel
 
         }
 
+        private void MudarImagensCarousel()
+        {
+            
+            Device.StartTimer(TimeSpan.FromSeconds(4), () =>
+            {
+                slidePosition++;
+                if (slidePosition == car.Count) slidePosition = 0;
+                ExibirCarView = slidePosition;
+                return true;
+            });
+        }
     }
 }

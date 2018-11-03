@@ -22,7 +22,7 @@
            
             <cv:CarouselView ItemsSource="{Binding Car}" 
                              x:Name="carPrincipal"
-                             >
+                             Position="{Binding ExibirCarView}">
                     <cv:CarouselView.ItemTemplate>
                         <DataTemplate>
                             <Grid>
