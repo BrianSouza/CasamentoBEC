@@ -12,7 +12,6 @@ namespace CasamentoBEC.ViewModel
     public class PaginaPrincipalViewModel : BaseViewModel
     {
         private readonly IMessageService messageService;
-        private readonly INavigationService navigationService;
         private int exibirCarView;
         int slidePosition = 0;
 
@@ -50,8 +49,6 @@ namespace CasamentoBEC.ViewModel
         public PaginaPrincipalViewModel()
         {
             messageService = DependencyService.Get<IMessageService>();
-            navigationService = DependencyService.Get<INavigationService>();
-
             string textoPaginaInicial = "...Como é bom poder contar com vocês na \n realização do nosso sonho! \n A contagem regressiva começa,\n o frio na barriga e toda a ansiedade do dia \n mais esperado de nossas vidas.\n Nos enche de alegria em tê-los ao nosso lado.\n Vamos juntos nesse grande sonho,\n o dia do nosso casamento...";
 
             PreencheCarousel(textoPaginaInicial);

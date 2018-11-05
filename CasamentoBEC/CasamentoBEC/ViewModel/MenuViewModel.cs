@@ -9,8 +9,6 @@ namespace CasamentoBEC.ViewModel
 {
     public class MenuViewModel : BaseViewModel
     {
-        private readonly INavigationService navigationService;
-
         private ICommand cmdOpenMenu;
         public ICommand CmdOpenMenu
         {
@@ -38,13 +36,70 @@ namespace CasamentoBEC.ViewModel
                 RaisePropertyChanged();
             }
         }
+
+        private ICommand cmdOpenPresentes;
+        public ICommand CmdOpenPresentes
+        {
+            get
+            {
+                return cmdOpenPresentes;
+            }
+            set
+            {
+                cmdOpenPresentes = value;
+                RaisePropertyChanged();
+            }
+        }
+        private ICommand cmdOpenFotos;
+        public ICommand CmdOpenFotos
+        {
+            get
+            {
+                return cmdOpenFotos;
+            }
+            set
+            {
+                cmdOpenFotos = value;
+                RaisePropertyChanged();
+            }
+        }
+        private ICommand cmdOpenRSVP;
+        public ICommand CmdOpenRSVP
+        {
+            get
+            {
+                return cmdOpenRSVP;
+            }
+            set
+            {
+                cmdOpenRSVP = value;
+                RaisePropertyChanged();
+            }
+        }
+        private ICommand cmdOpenLocal;
+        public ICommand CmdOpenLocal
+        {
+            get
+            {
+                return cmdOpenLocal;
+            }
+            set
+            {
+                cmdOpenLocal = value;
+                RaisePropertyChanged();
+            }
+        }
         public MenuViewModel()
         {
-            navigationService = DependencyService.Get<INavigationService>();
             CmdOpenMenu = new Command(() => navigationService.AbrirMenu());
             CmdCloseMenu = new Command(() => navigationService.PopNavigation());
+            CmdOpenPresentes = new Command(() => navigationService.AbrirPresentes());
+            CmdOpenFotos = new Command(() => navigationService.AbrirFotos());
+            CmdOpenRSVP= new Command(() => navigationService.AbrirRSVP());
+            CmdOpenLocal = new Command(() => navigationService.AbrirLocal());
+
         }
 
-        
+
     }
 }

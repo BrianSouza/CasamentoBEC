@@ -17,5 +17,12 @@ namespace CasamentoBEC.Services
 
         void AbrirMenu();
 
+        void AbrirPresentes();
+
+        void AbrirFotos();
+
+        void AbrirRSVP();
+
+        void AbrirLocal();
     }
 }

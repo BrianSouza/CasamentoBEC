@@ -19,10 +19,6 @@ namespace CasamentoBEC.View
             InitializeComponent();
             this.BindingContext = new PaginaPrincipalViewModel();
         }
-
-        private async void Button_Clicked(object sender, EventArgs e)
-        {
-            await PopupNavigation.PushAsync(new MenuView());
-        }
+        
     }
 }

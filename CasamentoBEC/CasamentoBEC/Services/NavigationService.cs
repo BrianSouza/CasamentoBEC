@@ -42,5 +42,22 @@ namespace CasamentoBEC.Services
             await PopupNavigation.PushAsync(new MenuView());
 
         }
+
+        public async void AbrirPresentes()
+        {
+            await PopupNavigation.PushAsync(new Presentes());
+        }
+        public async void AbrirFotos()
+        {
+            await PopupNavigation.PushAsync(new FotosView());
+        }
+        public async void AbrirRSVP()
+        {
+            await PopupNavigation.PushAsync(new RSVPView());
+        }
+        public async void AbrirLocal()
+        {
+            await PopupNavigation.PushAsync(new LocalView());
+        }
     }
 }

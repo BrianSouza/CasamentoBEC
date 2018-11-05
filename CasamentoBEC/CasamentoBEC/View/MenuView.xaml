@@ -52,7 +52,7 @@
                  Aspect="AspectFit"
                        VerticalOptions="Center">
                     <Image.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding CmdTap}"  />
+                            <TapGestureRecognizer Command="{Binding CmdOpenFotos}"  />
                     </Image.GestureRecognizers>
                 </Image>
                 <Label Text="Fotos" HorizontalTextAlignment="Center"></Label>
@@ -71,7 +71,7 @@
                 
                    Aspect="AspectFit">
                     <Image.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding CmdTap}"  />
+                            <TapGestureRecognizer Command="{Binding CmdOpenRSVP}"  />
                     </Image.GestureRecognizers>
                 </Image>
                 <Label Text="RSVP" HorizontalTextAlignment="Center"></Label>
@@ -90,7 +90,7 @@
                 <Image Source="localizacao32.png"
                    Aspect="AspectFit">
                     <Image.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding CmdTap}"  />
+                            <TapGestureRecognizer Command="{Binding CmdOpenLocal}"  />
                     </Image.GestureRecognizers>
                 </Image>
                 <Label Text="Local" HorizontalTextAlignment="Center"></Label>
@@ -109,7 +109,7 @@
                 <Image Source="presente32.png"
                    Aspect="AspectFit">
                     <Image.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding CmdTap}"  />
+                            <TapGestureRecognizer Command="{Binding CmdOpenPresentes}"  />
                     </Image.GestureRecognizers>
                 </Image>
                 <Label Text="Presentes" HorizontalTextAlignment="Center"></Label>
@@ -128,7 +128,7 @@
                 <Image Source="presente32.png"
                    Aspect="AspectFit">
                     <Image.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding CmdTap}"  />
+                            <TapGestureRecognizer Command="{Binding CmdOpenPresentes}"  />
                     </Image.GestureRecognizers>
                 </Image>
                 <Label Text="Presentes" HorizontalTextAlignment="Center"></Label>
@@ -147,7 +147,7 @@
                 <Image Source="presente32.png"
                    Aspect="AspectFit">
                     <Image.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding CmdTap}"  />
+                            <TapGestureRecognizer Command="{Binding CmdOpenPresentes}"  />
                     </Image.GestureRecognizers>
                 </Image>
                 <Label Text="Presentes" HorizontalTextAlignment="Center"></Label>

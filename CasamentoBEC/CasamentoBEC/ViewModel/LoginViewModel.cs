@@ -11,7 +11,6 @@ namespace CasamentoBEC.ViewModel
     {
         #region Variaveis
         private readonly IMessageService messageService;
-        private readonly INavigationService navigationService;
         private ImageSource image;
         private string toolBarImage;
         private string entryImage;
@@ -75,7 +74,6 @@ namespace CasamentoBEC.ViewModel
         public LoginViewModel()
         {
             messageService = DependencyService.Get<IMessageService>();
-            navigationService = DependencyService.Get<INavigationService>();
             LoginCommand = new Command(() => Login());
             SetImages();
             SetText();
