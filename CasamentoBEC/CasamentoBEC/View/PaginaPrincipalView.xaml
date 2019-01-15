@@ -10,12 +10,12 @@
             <StackLayout Orientation="Vertical" 
                          VerticalOptions="Start" 
                          HorizontalOptions="FillAndExpand">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding CmdAbriMenu}"  />
+                    <SwipeGestureRecognizer Direction="Down" Command="{Binding CmdAbriMenu}"/>
+                </StackLayout.GestureRecognizers>
                 <Image Source="menufechado.png"
                    Aspect="AspectFit">
-                    <Image.GestureRecognizers>
-                        <!--<PanGestureRecognizer  PanUpdated="{Binding CmdAbriMenu}" />--> 
-                        <TapGestureRecognizer Command="{Binding CmdAbriMenu}"  />
-                    </Image.GestureRecognizers>
                 </Image>
                 
             </StackLayout>

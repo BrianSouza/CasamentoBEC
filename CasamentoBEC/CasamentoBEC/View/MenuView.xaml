@@ -19,13 +19,17 @@
             HasBackgroundAnimation="False">
         </animations:ScaleAnimation>
     </pages:PopupPage.Animation>
-    <StackLayout VerticalOptions="Start" 
+    <StackLayout VerticalOptions="StartAndExpand" 
                  HorizontalOptions="FillAndExpand" 
-                 HeightRequest="230"
-                 BackgroundColor="{DynamicResource toolbarcolor}"
                  >
+        <StackLayout
+            VerticalOptions="StartAndExpand" 
+            HorizontalOptions="FillAndExpand" 
+             BackgroundColor="{DynamicResource toolbarcolor}"
+            >
         <Grid 
-            Margin="20,10,20,0">
+            
+            Margin="20,10,20,10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="auto" />
@@ -44,16 +48,17 @@
                    HorizontalOptions="Center"
                    HasShadow="True"
                    WidthRequest="65">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding CmdOpenFotos}"  />
+                </Frame.GestureRecognizers>
                 <StackLayout Orientation="Vertical" 
                              VerticalOptions="Center"
                              HorizontalOptions="Center">
-                
-                <Image Source="camera32.png"
+                    
+                    <Image Source="camera32.png"
                  Aspect="AspectFit"
                        VerticalOptions="Center">
-                    <Image.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding CmdOpenFotos}"  />
-                    </Image.GestureRecognizers>
+                   
                 </Image>
                 <Label Text="Fotos" HorizontalTextAlignment="Center"></Label>
             </StackLayout>
@@ -66,13 +71,14 @@
                    HorizontalOptions="Center"
                    HasShadow="True"
                    WidthRequest="65">
-            <StackLayout Orientation="Vertical" >
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding CmdOpenRSVP}"  />
+                </Frame.GestureRecognizers>
+                <StackLayout Orientation="Vertical" >
                 <Image Source="check32.png"
                 
                    Aspect="AspectFit">
-                    <Image.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding CmdOpenRSVP}"  />
-                    </Image.GestureRecognizers>
+                   
                 </Image>
                 <Label Text="RSVP" HorizontalTextAlignment="Center"></Label>
             </StackLayout>
@@ -85,13 +91,14 @@
                    HorizontalOptions="Center"
                    HasShadow="True"
                    WidthRequest="65">
-            <StackLayout Orientation="Vertical"
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding CmdOpenLocal}"  />
+                </Frame.GestureRecognizers>
+                <StackLayout Orientation="Vertical"
                          >
                 <Image Source="localizacao32.png"
                    Aspect="AspectFit">
-                    <Image.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding CmdOpenLocal}"  />
-                    </Image.GestureRecognizers>
+                    
                 </Image>
                 <Label Text="Local" HorizontalTextAlignment="Center"></Label>
             </StackLayout>
@@ -104,13 +111,14 @@
                    HorizontalOptions="Center"
                    HasShadow="True"
                    WidthRequest="65">
-            <StackLayout Orientation="Vertical"
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding CmdOpenPresentes}"  />
+                </Frame.GestureRecognizers>
+                <StackLayout Orientation="Vertical"
                          >
                 <Image Source="presente32.png"
                    Aspect="AspectFit">
-                    <Image.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding CmdOpenPresentes}"  />
-                    </Image.GestureRecognizers>
+                    
                 </Image>
                 <Label Text="Presentes" HorizontalTextAlignment="Center"></Label>
             </StackLayout>
@@ -123,15 +131,14 @@
                    HorizontalOptions="Center"
                    HasShadow="True"
                    WidthRequest="65">
-            <StackLayout Orientation="Vertical"
-                         >
-                <Image Source="presente32.png"
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding CmdOpenPresentes}"  />
+                </Frame.GestureRecognizers>
+                <StackLayout Orientation="Vertical">
+                    <Image Source="cardapio32.png"
                    Aspect="AspectFit">
-                    <Image.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding CmdOpenPresentes}"  />
-                    </Image.GestureRecognizers>
-                </Image>
-                <Label Text="Presentes" HorizontalTextAlignment="Center"></Label>
+                    </Image>
+                <Label Text="Cardápio" HorizontalTextAlignment="Center"></Label>
             </StackLayout>
             </Frame>
             <Frame Grid.Column="2"
@@ -142,24 +149,30 @@
                    HorizontalOptions="Center"
                    HasShadow="True"
                    WidthRequest="65">
-            <StackLayout Orientation="Vertical"
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding CmdOpenPresentes}"  />
+                </Frame.GestureRecognizers>
+                <StackLayout Orientation="Vertical"
                          >
                 <Image Source="presente32.png"
                    Aspect="AspectFit">
-                    <Image.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding CmdOpenPresentes}"  />
-                    </Image.GestureRecognizers>
+                    
                 </Image>
                 <Label Text="Presentes" HorizontalTextAlignment="Center"></Label>
             </StackLayout>
             </Frame>
         </Grid>
-        <StackLayout Orientation="Vertical">
+        </StackLayout>
+        <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand">
+            <!--<StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding CmdCloseMenu}"  />
+            </StackLayout.GestureRecognizers>-->
             <Image Source="menuaberto.png"
-                   Aspect="AspectFit">
+                   Aspect="AspectFit"
+                   VerticalOptions="Start">
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding CmdCloseMenu}"  />
-            </Image.GestureRecognizers>
+                </Image.GestureRecognizers>
             </Image>
         </StackLayout>
     </StackLayout>
