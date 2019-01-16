@@ -5,36 +5,37 @@
              xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin" 
              BackgroundImage="backgroundlogin.png">
     <ContentPage.Content>
-        <StackLayout >
-            <Frame Style="{DynamicResource frameloginbar}">
-                <Image 
+        <ScrollView>
+            <StackLayout >
+                <Frame Style="{DynamicResource frameloginbar}">
+                    <Image 
                     Source="{Binding ToolBarImage}" 
                     HorizontalOptions="CenterAndExpand" 
                     Aspect="AspectFit" 
                     VerticalOptions="FillAndExpand"></Image>
-            </Frame>
-            <StackLayout VerticalOptions="End"
+                </Frame>
+                <StackLayout VerticalOptions="End"
                      Padding="0,0,0,100">
-                
-                <Image Source="brasao.png"
-                        Margin="0,30,0,0"></Image>
-            </StackLayout>
-            
-                <Frame  Style="{DynamicResource framelogin}">
-                <StackLayout Orientation="Horizontal">
-                    <Entry Placeholder="{Binding PlaceHolderText}"
-                       Style="{DynamicResource entrylogin}"></Entry>
-                    <Image Source="{Binding EntryImage}"></Image>
 
+                    <Image Source="brasao.png"
+                        Margin="0,30,0,0"></Image>
                 </StackLayout>
-            </Frame>
-            
-            <Button 
+
+                <Frame  Style="{DynamicResource framelogin}">
+                    <StackLayout Orientation="Horizontal">
+                        <Entry Placeholder="{Binding PlaceHolderText}"
+                       Style="{DynamicResource entrylogin}"></Entry>
+                        <Image Source="{Binding EntryImage}"></Image>
+
+                    </StackLayout>
+                </Frame>
+
+                <Button 
                     Style="{DynamicResource btnlaranja}"
                     Text="{Binding ButtonEntrarText}"
                         Command="{Binding LoginCommand}"></Button>
-        
-        </StackLayout>
 
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

@@ -21,6 +21,7 @@
     </pages:PopupPage.Animation>
     <StackLayout VerticalOptions="StartAndExpand" 
                  HorizontalOptions="FillAndExpand" 
+                 Spacing="0"
                  >
         <StackLayout
             VerticalOptions="StartAndExpand" 
@@ -172,8 +173,9 @@
                    VerticalOptions="Start">
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding CmdCloseMenu}"  />
+                    <SwipeGestureRecognizer Command="{Binding CmdCloseMenu}" Direction="Up"/>
                 </Image.GestureRecognizers>
             </Image>
         </StackLayout>
     </StackLayout>
-</pages:PopupPage>
+</pages:PopupPage>espaco no me
