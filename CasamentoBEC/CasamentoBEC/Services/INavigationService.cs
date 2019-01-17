@@ -11,7 +11,7 @@ namespace CasamentoBEC.Services
 
         Task PopNavigation();
 
-        Task NavigateTo(string viewName, object param);
+        //Task NavigateTo(string viewName, object param);
 
         void NavigateToMain();
 

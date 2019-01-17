@@ -17,6 +17,7 @@ namespace CasamentoBEC.View
         public PaginaPrincipalView()
         {
             InitializeComponent();
+            Xamarin.Forms.NavigationPage.SetHasNavigationBar(this, false);//Esconde a navigationbar
             this.BindingContext = new PaginaPrincipalViewModel();
         }
         

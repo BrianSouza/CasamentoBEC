@@ -59,6 +59,8 @@ namespace CasamentoBEC.ViewModel
             }
             set
             {
+                CmdCloseMenu.Execute(null);
+
                 cmdOpenFotos = value;
                 RaisePropertyChanged();
             }
