@@ -1,8 +1,43 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CasamentoBEC.View.FotoView">
-    <StackLayout>
-        <Label Text="Hello Xamarin.Forms!" />
-    </StackLayout>
+             x:Class="CasamentoBEC.View.FotoView"
+             BackgroundImage="backgrounddetail.png"
+             Title="Fotos">
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Frame Style="{DynamicResource frameFotos}"
+                   Grid.Row="0" Grid.Column="0">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding CmdFotoInstagram}"  />
+                </Frame.GestureRecognizers>
+                <Image Source="insta.png"
+                   Aspect="AspectFill"
+                   >
+
+                </Image>
+            </Frame>
+            <Frame Style="{DynamicResource frameFotos}"
+                   Grid.Row="1" Grid.Column="0">
+                <Image Source="ensaio.png"
+                   Aspect="AspectFill">
+
+            </Image>
+            </Frame>
+            <Frame Style="{DynamicResource frameFotos}"
+                   Grid.Row="2" Grid.Column="0">
+                <Image Source="casamento.png"
+                   Aspect="AspectFill">
+                </Image>
+            </Frame>
+        </Grid>
+    </ScrollView>
 </ContentPage>

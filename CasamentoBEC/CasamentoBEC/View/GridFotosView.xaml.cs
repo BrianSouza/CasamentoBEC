@@ -11,14 +11,14 @@ using Xamarin.Forms.Xaml;
 namespace CasamentoBEC.View
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class FotoView : ContentPage
+	public partial class GridFotosView : ContentPage
 	{
-        FotoViewModel ftVM = null;
-		public FotoView ()
+        GridFotosViewModel gridVM = null;
+		public GridFotosView ()
 		{
 			InitializeComponent ();
-            ftVM = new FotoViewModel();
-            this.BindingContext = ftVM;
+            gridVM = new GridFotosViewModel();
+            this.BindingContext = gridVM;
 		}
 	}
 }

@@ -62,5 +62,10 @@ namespace CasamentoBEC.Services
         {
             await PopupNavigation.Instance.PushAsync(new LocalView());
         }
+
+        public async void AbrirFotosInstagram()
+        {
+            await App.Current.MainPage.Navigation.PushAsync(new GridFotosView());
+        }
     }
 }

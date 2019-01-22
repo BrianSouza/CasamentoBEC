@@ -24,5 +24,7 @@ namespace CasamentoBEC.Services
         void AbrirRSVP();
 
         void AbrirLocal();
+
+        void AbrirFotosInstagram();
     }
 }
