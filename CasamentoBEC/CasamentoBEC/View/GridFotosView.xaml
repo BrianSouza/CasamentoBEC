@@ -8,12 +8,13 @@
                               SeparatorVisibility="None"
                               HasUnevenRows="False"
                               FlowItemsSource="{Binding ImagesSources}">
-            <control:FlowListView.ItemTemplate>
+            <control:FlowListView.FlowColumnTemplate>
                 <DataTemplate>
                     <Image VerticalOptions="Fill" 
-                           HorizontalOptions="Fill"></Image>
+                           HorizontalOptions="Fill"
+                           Source="{Binding ImgSource}"></Image>
                 </DataTemplate>
-            </control:FlowListView.ItemTemplate>
+            </control:FlowListView.FlowColumnTemplate>
         </control:FlowListView>
     </ContentPage.Content>
 </ContentPage>

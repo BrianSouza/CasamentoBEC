@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using DLToolkit.Forms.Controls;
 
 namespace CasamentoBEC.Droid
 {
@@ -19,7 +20,7 @@ namespace CasamentoBEC.Droid
 
             base.OnCreate(bundle);
             Rg.Plugins.Popup.Popup.Init(this, bundle);
-
+            FlowListView.Init();
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
 

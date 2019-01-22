@@ -1,4 +1,5 @@
 using CasamentoBEC.Services;
+using DLToolkit.Forms.Controls;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -13,7 +14,8 @@ namespace CasamentoBEC
             DependencyService.Register<IMessageService, MessageService>();
             DependencyService.Register<INavigationService, NavigationService>();
 			InitializeComponent();
-			MainPage = new View.LoginView();
+            FlowListView.Init();
+            MainPage = new View.LoginView();
 		}
 
 		protected override void OnStart ()
