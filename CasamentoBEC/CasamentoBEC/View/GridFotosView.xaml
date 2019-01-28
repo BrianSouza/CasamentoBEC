@@ -7,12 +7,12 @@
     <ContentPage.Content>
         <control:FlowListView FlowColumnCount="3" 
                               SeparatorVisibility="None"
-                              HasUnevenRows="False"
+                              HasUnevenRows="True"
+                              FlowColumnExpand="None"
                               FlowItemsSource="{Binding ImagesSources}">
             <control:FlowListView.FlowColumnTemplate>
                 <DataTemplate>
-                    <Grid Padding="3" Margin="10,10,10,10">
-
+                    <Grid Margin="5">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*" />
                         </Grid.RowDefinitions>
@@ -20,10 +20,13 @@
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
 
-                        <ffimageloading:CachedImage HeightRequest="100" Aspect="AspectFill"
-							DownsampleHeight="100" DownsampleUseDipUnits="false" 
-							LoadingPlaceholder="image_loading.png" ErrorPlaceholder="image_error.png"
+                        <ffimageloading:CachedImage 
+                             Aspect="AspectFill"
+							LoadingPlaceholder="image_loading.png" 
+                            ErrorPlaceholder="image_error.png"
 							Source="{Binding ImgSource}"/>
+
+
                     </Grid>
                 </DataTemplate>
             </control:FlowListView.FlowColumnTemplate>

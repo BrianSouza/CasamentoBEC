@@ -3,10 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CasamentoBEC.View.PaginaPrincipalView"
              xmlns:cv="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
-             BackgroundImage="backgrounddetail.png">
+             BackgroundImage="backgrounddetail.png"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms">
 
-        <ContentPage.Content>
-            <StackLayout>
+    <ContentPage.Content>
+        <StackLayout>
             <StackLayout Orientation="Vertical" 
                          VerticalOptions="Start" 
                          HorizontalOptions="FillAndExpand">
@@ -17,34 +18,39 @@
                 <Image Source="menufechado.png"
                    Aspect="AspectFit">
                 </Image>
-                
+
             </StackLayout>
-           
+
             <cv:CarouselView ItemsSource="{Binding Car}" 
                              x:Name="carPrincipal"
                              Position="{Binding ExibirCarView}">
-                    <cv:CarouselView.ItemTemplate>
-                        <DataTemplate>
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="*"/>
-                                    <RowDefinition Height="Auto"/>
-                                </Grid.RowDefinitions>
-                                <Frame
+                <cv:CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Frame
                                 Style="{DynamicResource framecarousel}">
-                                    <StackLayout  Padding="12">
-                                        <Image Grid.RowSpan="2" Aspect="AspectFit" Source="{Binding ImageURL}"/>
-                                        <Label Style="{DynamicResource labelpretodesc}" Text="{Binding Description}" />
-                                        <Label Style="{DynamicResource labelpreto}" Text="{Binding Name}"/>
-                                    </StackLayout>
-                                </Frame>
+                                <StackLayout  Padding="12">
+                                    <!--<Image Grid.RowSpan="2" Aspect="AspectFit" Source="{Binding ImageURL}"/>-->
+                                    <ffimageloading:CachedImage  
+                                        Aspect="AspectFit"
+							            DownsampleUseDipUnits="false" 
+							            LoadingPlaceholder="image_loading.png" ErrorPlaceholder="image_error.png"
+							            Source="{Binding ImageURL}"/>
+                                    <Label Style="{DynamicResource labelpretodesc}" Text="{Binding Description}" />
+                                    <Label Style="{DynamicResource labelpreto}" Text="{Binding Name}"/>
+                                </StackLayout>
+                            </Frame>
 
 
-                            </Grid>
-                        </DataTemplate>
-                    </cv:CarouselView.ItemTemplate>
-                </cv:CarouselView>
-            </StackLayout>
-        </ContentPage.Content>
+                        </Grid>
+                    </DataTemplate>
+                </cv:CarouselView.ItemTemplate>
+            </cv:CarouselView>
+        </StackLayout>
+    </ContentPage.Content>
 
 </ContentPage>
