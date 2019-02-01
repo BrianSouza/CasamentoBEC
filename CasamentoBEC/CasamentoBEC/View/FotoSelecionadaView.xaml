@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+              xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                 xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CasamentoBEC.View.FotoSelecionadaView"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation
+      PositionIn="Bottom"
+      PositionOut="Top"
+      ScaleIn="1"
+      ScaleOut="0.7"
+      DurationIn="700"
+      EasingIn="CubicIn"/>
+    </pages:PopupPage.Animation>
+    <ScrollView
+    HorizontalOptions="FillAndExpand"
+    VerticalOptions="FillAndExpand"
+        Margin="10,10,10,10">
+        <Frame BackgroundColor="White"
+                   VerticalOptions="FillAndExpand"
+                   HorizontalOptions="FillAndExpand">
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="End"
+                         VerticalOptions="Start"
+                         Grid.Column="2" Grid.Row="1">
+                    <Image Source="closebutton.png"
+                 Aspect="AspectFit"
+                       VerticalOptions="End"
+                       HorizontalOptions="End"
+                       WidthRequest="20">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding CmdClose}"  />
+                        </Image.GestureRecognizers>
+                    </Image>
+                </StackLayout>
+                <StackLayout
+                    Grid.Column="0"
+                        Grid.Row="2"
+                    Grid.RowSpan="2"
+                    Grid.ColumnSpan="2">
+                    <ffimageloading:CachedImage
+                            Margin="0,5,0,5"
+                            Aspect="AspectFill"
+                            VerticalOptions="FillAndExpand"
+                            HorizontalOptions="FillAndExpand"
+							LoadingPlaceholder="image_loading.png" 
+                            ErrorPlaceholder="image_error.png"
+							Source="{Binding Foto}"/>
+                </StackLayout>
+            </Grid>
+        </Frame>
+    </ScrollView>
+</pages:PopupPage>

@@ -20,5 +20,10 @@ namespace CasamentoBEC.View
             gridVM = new GridFotosViewModel();
             this.BindingContext = gridVM;
 		}
-	}
+
+        private void FlowListView_FlowItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            gridVM.Foto = (e.Item as Model.Fotos);
+        }
+    }
 }

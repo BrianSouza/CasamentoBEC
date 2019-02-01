@@ -43,7 +43,10 @@ namespace CasamentoBEC.Services
             await PopupNavigation.Instance.PushAsync(new MenuView());
 
         }
-
+        public async void AbrirFotoSelecionada(Model.Fotos foto)
+        {
+            await PopupNavigation.Instance.PushAsync(new FotoSelecionadaView(foto));
+        }
         public async void AbrirPresentes()
         {
             await PopupNavigation.Instance.PushAsync(new Presentes());

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace CasamentoBEC.ViewModel
@@ -18,6 +19,18 @@ namespace CasamentoBEC.ViewModel
                 RaisePropertyChanged();
             }
         }
+
+        private ICommand cmdFotoSelecionada;
+        public ICommand CmdFotoSelecionada
+        {
+            get { return cmdFotoSelecionada; }
+            set
+            {
+                cmdFotoSelecionada = value;
+                RaisePropertyChanged();
+            }
+        }
+
         private List<Fotos> imagesSources;
         public List<Fotos> ImagesSources
         {
@@ -31,6 +44,7 @@ namespace CasamentoBEC.ViewModel
         public GridFotosViewModel()
         {
             PreencherListaImagens();
+            CmdFotoSelecionada = new Command(() => navigationService.AbrirFotoSelecionada(Foto));
         }
         private void  PreencherListaImagens()
         {

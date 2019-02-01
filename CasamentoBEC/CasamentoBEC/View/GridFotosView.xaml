@@ -10,10 +10,13 @@
                               HasUnevenRows="True"
                               FlowColumnExpand="None"
                               FlowItemsSource="{Binding ImagesSources}"
+                              FlowItemTappedCommand="{Binding CmdFotoSelecionada}"
+                              FlowItemTapped="FlowListView_FlowItemTapped"
                               HorizontalOptions="FillAndExpand"
                               VerticalOptions="StartAndExpand"
                               RowHeight="20"
-                              Margin="10">
+                              Margin="10"
+                              >
             <control:FlowListView.FlowColumnTemplate>
                 <DataTemplate>
                     <Grid Margin="5"
