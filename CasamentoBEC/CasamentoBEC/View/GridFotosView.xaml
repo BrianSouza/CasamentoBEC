@@ -3,7 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CasamentoBEC.View.GridFotosView"
              xmlns:control="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
-             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms">
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             BackgroundImage="backgrounddetail.png"
+             Title="Instagram">
     <ContentPage.Content>
         <control:FlowListView FlowColumnCount="3" 
                               SeparatorVisibility="None"
@@ -31,7 +33,7 @@
 
                         <ffimageloading:CachedImage
                             Margin="0,5,0,5"
-                             Aspect="AspectFill"
+                             Aspect="AspectFit"
 							LoadingPlaceholder="image_loading.png" 
                             ErrorPlaceholder="image_error.png"
 							Source="{Binding ImgSource}"/>

@@ -14,20 +14,24 @@
       DurationIn="700"
       EasingIn="CubicIn"/>
     </pages:PopupPage.Animation>
-    <ScrollView
+    <!--<ScrollView
     HorizontalOptions="FillAndExpand"
-    VerticalOptions="FillAndExpand"
-        Margin="10,10,10,10">
+    VerticalOptions="CenterAndExpand"
+        Margin="10,10,10,10">-->
         <Frame BackgroundColor="White"
-                   VerticalOptions="FillAndExpand"
-                   HorizontalOptions="FillAndExpand">
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="FillAndExpand"
+               HeightRequest="300"
+               Margin="10,10,10,10">
             <Grid >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+
+            </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="auto "/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
@@ -35,7 +39,7 @@
                 <StackLayout Orientation="Horizontal"
                          HorizontalOptions="End"
                          VerticalOptions="Start"
-                         Grid.Column="2" Grid.Row="1">
+                         Grid.Column="2" Grid.Row="0">
                     <Image Source="closebutton.png"
                  Aspect="AspectFit"
                        VerticalOptions="End"
@@ -50,10 +54,10 @@
                     Grid.Column="0"
                         Grid.Row="2"
                     Grid.RowSpan="2"
-                    Grid.ColumnSpan="2">
+                    Grid.ColumnSpan="3">
                     <ffimageloading:CachedImage
                             Margin="0,5,0,5"
-                            Aspect="AspectFill"
+                            Aspect="AspectFit"
                             VerticalOptions="FillAndExpand"
                             HorizontalOptions="FillAndExpand"
 							LoadingPlaceholder="image_loading.png" 
@@ -62,5 +66,5 @@
                 </StackLayout>
             </Grid>
         </Frame>
-    </ScrollView>
+    <!--</ScrollView>-->
 </pages:PopupPage>
