@@ -14,10 +14,10 @@ namespace CasamentoBEC.View
 	public partial class GridFotosView : ContentPage
 	{
         GridFotosViewModel gridVM = null;
-		public GridFotosView ()
+		public GridFotosView (TiposFotos tipo)
 		{
 			InitializeComponent ();
-            gridVM = new GridFotosViewModel();
+            gridVM = new GridFotosViewModel(tipo);
             this.BindingContext = gridVM;
 		}
 

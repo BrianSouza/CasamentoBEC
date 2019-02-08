@@ -27,6 +27,11 @@ namespace CasamentoBEC.Services
 
         void AbrirFotosInstagram();
 
+        void AbrirFotosEnsaio();
+
+        void AbrirFotosCasamento();
+
+
         void AbrirFotoSelecionada(Model.Fotos foto);
     }
 }

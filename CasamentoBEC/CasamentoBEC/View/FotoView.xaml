@@ -27,6 +27,9 @@
             </Frame>
             <Frame Style="{DynamicResource frameFotos}"
                    Grid.Row="1" Grid.Column="0">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding CmdFotoCasamento}"  />
+                </Frame.GestureRecognizers>
                 <Image Source="ensaio.png"
                    Aspect="AspectFill">
 
@@ -34,6 +37,9 @@
             </Frame>
             <Frame Style="{DynamicResource frameFotos}"
                    Grid.Row="2" Grid.Column="0">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding CmdFotoEnsaio}"  />
+                </Frame.GestureRecognizers>
                 <Image Source="casamento.png"
                    Aspect="AspectFill">
                 </Image>

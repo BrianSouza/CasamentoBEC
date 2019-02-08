@@ -1,4 +1,5 @@
 ﻿using CasamentoBEC.View;
+using CasamentoBEC.ViewModel;
 using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
@@ -68,7 +69,16 @@ namespace CasamentoBEC.Services
 
         public async void AbrirFotosInstagram()
         {
-            await App.Current.MainPage.Navigation.PushAsync(new GridFotosView());
+            await App.Current.MainPage.Navigation.PushAsync(new GridFotosView(ViewModel.TiposFotos.Instagram));
+        }
+
+        public async void AbrirFotosEnsaio()
+        {
+            await App.Current.MainPage.Navigation.PushAsync(new GridFotosView(ViewModel.TiposFotos.Ensaio));
+        }
+        public async void AbrirFotosCasamento()
+        {
+            await App.Current.MainPage.Navigation.PushAsync(new GridFotosView(ViewModel.TiposFotos.Casamento));
         }
     }
 }

@@ -5,7 +5,7 @@
              xmlns:control="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              BackgroundImage="backgrounddetail.png"
-             Title="Instagram">
+             Title="{Binding Titulo}">
     <ContentPage.Content>
         <control:FlowListView FlowColumnCount="3" 
                               SeparatorVisibility="None"

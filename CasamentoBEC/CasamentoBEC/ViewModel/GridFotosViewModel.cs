@@ -1,18 +1,36 @@
 ﻿using CasamentoBEC.Model;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace CasamentoBEC.ViewModel
 {
+    public enum TiposFotos
+    {
+        Instagram,
+        Ensaio,
+        Casamento
+    }
     public class GridFotosViewModel : BaseViewModel
     {
         private Fotos foto;
+        private List<Fotos> imagesSources;
+        private string titulo;
+
+        private ICommand cmdFotoSelecionada;
+
+        public string Titulo
+        {
+            get => titulo;
+            set
+            {
+                titulo = value;
+                RaisePropertyChanged();
+            }
+        }
         public Fotos Foto
         {
-            get { return foto; }
+            get => foto;
             set
             {
                 foto = value;
@@ -20,10 +38,9 @@ namespace CasamentoBEC.ViewModel
             }
         }
 
-        private ICommand cmdFotoSelecionada;
         public ICommand CmdFotoSelecionada
         {
-            get { return cmdFotoSelecionada; }
+            get => cmdFotoSelecionada;
             set
             {
                 cmdFotoSelecionada = value;
@@ -31,22 +48,35 @@ namespace CasamentoBEC.ViewModel
             }
         }
 
-        private List<Fotos> imagesSources;
         public List<Fotos> ImagesSources
         {
-            get { return imagesSources; }
+            get => imagesSources;
             set
             {
                 imagesSources = value;
                 RaisePropertyChanged();
             }
         }
-        public GridFotosViewModel()
+        public GridFotosViewModel(TiposFotos tipo)
         {
+            switch (tipo)
+            {
+                case TiposFotos.Instagram:
+                    Titulo = "Instagram";
+                    break;
+                case TiposFotos.Ensaio:
+                    Titulo = "Ensaio";
+                    break;
+                case TiposFotos.Casamento:
+                    Titulo = "Casamento";
+                    break;
+                default:
+                    break;
+            }
             PreencherListaImagens();
             CmdFotoSelecionada = new Command(() => navigationService.AbrirFotoSelecionada(Foto));
         }
-        private void  PreencherListaImagens()
+        private void PreencherListaImagens()
         {
             ImagesSources = new List<Fotos>()
             {
