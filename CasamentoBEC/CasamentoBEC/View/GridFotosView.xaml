@@ -7,7 +7,9 @@
              BackgroundImage="backgrounddetail.png"
              Title="{Binding Titulo}">
     <ContentPage.Content>
-        <control:FlowListView FlowColumnCount="3" 
+        <Frame
+             Style="{DynamicResource framecarousel}">
+            <control:FlowListView FlowColumnCount="3" 
                               SeparatorVisibility="None"
                               HasUnevenRows="True"
                               FlowColumnExpand="None"
@@ -19,19 +21,19 @@
                               RowHeight="20"
                               Margin="10"
                               >
-            <control:FlowListView.FlowColumnTemplate>
-                <DataTemplate>
-                    <Grid Margin="5"
+                    <control:FlowListView.FlowColumnTemplate>
+                        <DataTemplate>
+                            <Grid Margin="5"
                           VerticalOptions="FillAndExpand"
                           HorizontalOptions="FillAndExpand">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="60" />
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="60" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
 
-                        <ffimageloading:CachedImage
+                                <ffimageloading:CachedImage
                             Margin="0,5,0,5"
                              Aspect="AspectFit"
 							LoadingPlaceholder="image_loading.png" 
@@ -39,9 +41,10 @@
 							Source="{Binding ImgSource}"/>
 
 
-                    </Grid>
-                </DataTemplate>
-            </control:FlowListView.FlowColumnTemplate>
-        </control:FlowListView>
+                            </Grid>
+                        </DataTemplate>
+                    </control:FlowListView.FlowColumnTemplate>
+                </control:FlowListView>
+        </Frame>
     </ContentPage.Content>
 </ContentPage>

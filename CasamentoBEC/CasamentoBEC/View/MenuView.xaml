@@ -165,16 +165,13 @@
             </Grid>
         </StackLayout>
         <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand">
-            <!--<StackLayout.GestureRecognizers>
+            <StackLayout.GestureRecognizers>
                 <TapGestureRecognizer Command="{Binding CmdCloseMenu}"  />
-            </StackLayout.GestureRecognizers>-->
+                <SwipeGestureRecognizer Command="{Binding CmdCloseMenu}" Direction="Up"/>
+            </StackLayout.GestureRecognizers>
             <Image Source="menuaberto.png"
                    Aspect="AspectFit"
                    VerticalOptions="Start">
-                <Image.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding CmdCloseMenu}"  />
-                    <SwipeGestureRecognizer Command="{Binding CmdCloseMenu}" Direction="Up"/>
-                </Image.GestureRecognizers>
             </Image>
         </StackLayout>
     </StackLayout>
