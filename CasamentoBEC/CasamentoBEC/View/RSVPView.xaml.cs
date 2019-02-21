@@ -12,7 +12,7 @@ using Xamarin.Forms.Xaml;
 namespace CasamentoBEC.View
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class RSVPView : PopupPage
+	public partial class RSVPView : ContentPage
 	{
         RSVPViewModel RSVPVM;
 		public RSVPView ()

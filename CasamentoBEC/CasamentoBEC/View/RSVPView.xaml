@@ -1,26 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<pages:PopupPage
-    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
-            xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
-    x:Class="CasamentoBEC.View.RSVPView"
-     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms">
-    <pages:PopupPage.Animation>
-        <animations:ScaleAnimation
-      PositionIn="Bottom"
-      PositionOut="Top"
-      ScaleIn="1"
-      ScaleOut="0.7"
-      DurationIn="700"
-      EasingIn="CubicIn"/>
-    </pages:PopupPage.Animation>
-    <ScrollView
-        BackgroundColor="White"
-    HorizontalOptions="FillAndExpand"
-    VerticalOptions="FillAndExpand"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             x:Class="CasamentoBEC.View.RSVPView"
+             BackgroundImage="backgroundlogin.png"
+             Title="RSVP">
+    <ContentPage.Content>
+        <Frame  Style="{DynamicResource framecarousel}">
+            <ScrollView
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand"
         Margin="10,10,10,10">
-        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+                    <StackLayout>
+                        <Label HorizontalTextAlignment="Center" FontFamily="Gabriola" FontSize="20" TextColor="Black">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Estamos muito felizes por ter você em nossa "></Span>
+                                    <Span Text="lista de convidados. Gostaríamos de pedir que "></Span>
+                                    <Span Text="gentilmente confirme sua presença através do "></Span>
+                                    <Span Text="botão abaixo. "></Span>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <ffimageloading:CachedImage
+                            Margin="0,50,0,50"
+                             Aspect="AspectFit"
+							LoadingPlaceholder="image_loading.png" 
+                            ErrorPlaceholder="image_error.png"
+							Source="rsvpicon.png"/>
+                        <Label  HorizontalTextAlignment="Center" FontFamily="Gabriola" FontSize="20"  TextColor="Black">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Após a confirmação enviaremos o convite oficial "></Span>
+                                    <Span Text="juntamente com os convites individuais, sendo "></Span>
+                                    <Span Text="assim só confirme se tiver total certeza. Sua "></Span>
+                                    <Span Text="presença é especial e importantíssima para "></Span>
+                                    <Span Text="completar nosso tão sonhado dia."></Span>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </Frame>
+            <!--<Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
@@ -30,7 +54,6 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-
             <StackLayout Orientation="Horizontal"
                          HorizontalOptions="End"
                          VerticalOptions="Start"
@@ -49,7 +72,7 @@
             </StackLayout>
             <StackLayout
                     Grid.Row="2" Grid.Column="0" Grid.RowSpan="3" Grid.ColumnSpan="3">
-                <Label HorizontalTextAlignment="Center" FontFamily="Gabriola" FontSize="20">
+                <Label HorizontalTextAlignment="Center" FontFamily="Gabriola" FontSize="20" TextColor="Black">
                     <Label.FormattedText>
                         <FormattedString>
                             <Span Text="Estamos muito felizes por ter você em nossa "></Span>
@@ -60,12 +83,12 @@
                     </Label.FormattedText>
                 </Label>
                 <ffimageloading:CachedImage
-                            Margin="0,40,0,40"
+                            Margin="0,50,0,50"
                              Aspect="AspectFit"
 							LoadingPlaceholder="image_loading.png" 
                             ErrorPlaceholder="image_error.png"
 							Source="rsvpicon.png"/>
-                <Label  HorizontalTextAlignment="Center" FontFamily="Gabriola" FontSize="20">
+                <Label  HorizontalTextAlignment="Center" FontFamily="Gabriola" FontSize="20"  TextColor="Black">
                     <Label.FormattedText>
                         <FormattedString>
                             <Span Text="Após a confirmação enviaremos o convite oficial "></Span>
@@ -77,6 +100,8 @@
                     </Label.FormattedText>
                 </Label>
             </StackLayout>
-        </Grid>
-    </ScrollView>
-</pages:PopupPage>
+        </Grid>-->
+        
+
+    </ContentPage.Content>
+</ContentPage>
