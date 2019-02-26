@@ -1,52 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<pages:PopupPage
-    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+<ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
-    x:Class="CasamentoBEC.View.LocalView">
-    <pages:PopupPage.Animation>
-        <animations:ScaleAnimation
-      PositionIn="Bottom"
-      PositionOut="Top"
-      ScaleIn="1"
-      ScaleOut="0.7"
-      DurationIn="700"
-      EasingIn="CubicIn"/>
-    </pages:PopupPage.Animation>
+     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+     x:Class="CasamentoBEC.View.LocalView"
+    BackgroundImage="backgrounddetail.png">
+
     <ScrollView
     HorizontalOptions="FillAndExpand"
     VerticalOptions="FillAndExpand"
         Margin="10,10,10,10">
-        <Frame BackgroundColor="White"
-                   VerticalOptions="FillAndExpand"
-                   HorizontalOptions="FillAndExpand">
-            <Grid >
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-
-                <StackLayout Orientation="Horizontal"
-                         HorizontalOptions="End"
-                         VerticalOptions="Start"
-                         Grid.Column="2" Grid.Row="1">
-                    <Image Source="closebutton.png"
-                 Aspect="AspectFit"
-                       VerticalOptions="End"
-                       HorizontalOptions="End"
-                       WidthRequest="20">
-                        <Image.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding CmdClose}"  />
-                        </Image.GestureRecognizers>
-                    </Image>
-                </StackLayout>
-            </Grid>
+        <Frame Style="{DynamicResource framecarousel}">
+            <StackLayout>
+                <Label 
+                Text="O Local" 
+                FontFamily="Lobster_13.otf#Lobster_13" 
+                FontSize="40" 
+                HorizontalOptions="Center" 
+                VerticalOptions="Start"
+                Margin="0,40,0,10"></Label>
+                <Label  FontFamily="Lobster_13.otf#Lobster_13" 
+                        FontSize="18" 
+                         HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="Start">
+                    <Label.FormattedText>
+                        <FormattedString >
+                            <Span Text="A cêrimonia será realizada no"></Span>
+                            <Span Text="Espaço Armazém, Sala São Paulo."></Span>
+                            <Span Text="Localizado na Vila Leopoldina,"></Span>
+                            <Span Text="rua Jaguaré, n.164 - São Paulo"></Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
         </Frame>
     </ScrollView>
-</pages:PopupPage>
+</ContentPage>

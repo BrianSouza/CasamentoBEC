@@ -65,7 +65,8 @@ namespace CasamentoBEC.Services
         }
         public async void AbrirLocal()
         {
-            await PopupNavigation.Instance.PushAsync(new LocalView());
+            await PopupNavigation.Instance.PopAsync();//Fecha o menu antes de abrir a navigation
+            await App.Current.MainPage.Navigation.PushAsync(new LocalView());
         }
 
         public async void AbrirFotosInstagram()

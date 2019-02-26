@@ -12,8 +12,8 @@ using Xamarin.Forms.Xaml;
 namespace CasamentoBEC.View
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class LocalView : PopupPage
-	{
+	public partial class LocalView : ContentPage
+    {
         LocalViewModel LocalVM;
 		public LocalView ()
 		{

@@ -32,10 +32,7 @@
                         <Label  HorizontalTextAlignment="Center" FontFamily="Gabriola" FontSize="20"  TextColor="Black">
                             <Label.FormattedText>
                                 <FormattedString>
-                                    <Span Text="Após a confirmação enviaremos o convite oficial "></Span>
-                                    <Span Text="juntamente com os convites individuais, sendo "></Span>
-                                    <Span Text="assim só confirme se tiver total certeza. Sua "></Span>
-                                    <Span Text="presença é especial e importantíssima para "></Span>
+                                    <Span Text="Sua presença é especial e importantíssima para "></Span>
                                     <Span Text="completar nosso tão sonhado dia."></Span>
                                 </FormattedString>
                             </Label.FormattedText>
