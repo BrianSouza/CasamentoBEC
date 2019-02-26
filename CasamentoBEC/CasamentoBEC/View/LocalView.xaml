@@ -3,6 +3,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
      x:Class="CasamentoBEC.View.LocalView"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     BackgroundImage="backgrounddetail.png">
 
     <ScrollView
@@ -10,27 +11,40 @@
     VerticalOptions="FillAndExpand"
         Margin="10,10,10,10">
         <Frame Style="{DynamicResource framecarousel}">
-            <StackLayout>
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
                 <Label 
                 Text="O Local" 
                 FontFamily="Lobster_13.otf#Lobster_13" 
                 FontSize="40" 
                 HorizontalOptions="Center" 
                 VerticalOptions="Start"
-                Margin="0,40,0,10"></Label>
+                Margin="0,40,0,10"
+                TextColor="{DynamicResource fontefundoclaro}"></Label>
                 <Label  FontFamily="Lobster_13.otf#Lobster_13" 
                         FontSize="18" 
-                         HorizontalOptions="CenterAndExpand"
-                        VerticalOptions="Start">
-                    <Label.FormattedText>
-                        <FormattedString >
-                            <Span Text="A cêrimonia será realizada no"></Span>
-                            <Span Text="Espaço Armazém, Sala São Paulo."></Span>
-                            <Span Text="Localizado na Vila Leopoldina,"></Span>
-                            <Span Text="rua Jaguaré, n.164 - São Paulo"></Span>
-                        </FormattedString>
-                    </Label.FormattedText>
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="StartAndExpand"
+                        HorizontalTextAlignment="Center"
+                        Text="A cêrimonia será realizada no &#10; Espaço Armazém, Sala São Paulo. &#10; Localizado na Vila Leopoldina, &#10; rua Jaguaré, n.164 - São Paulo &#10; ">
                 </Label>
+                <StackLayout Orientation="Horizontal">
+                    <ffimageloading:CachedImage
+                            Margin="10,0,10,0"
+                             Aspect="AspectFill"
+							LoadingPlaceholder="image_loading.png" 
+                            ErrorPlaceholder="image_error.png"
+							Source="eam1.jpg"
+                        HeightRequest="91"
+                        WidthRequest="65"/>
+                    <ffimageloading:CachedImage
+                            Margin="10,0,10,0"
+                             Aspect="AspectFill"
+							LoadingPlaceholder="image_loading.png" 
+                            ErrorPlaceholder="image_error.png"
+							Source="eam2.jpg"
+                        HeightRequest="91"
+                        WidthRequest="65"/>
+                </StackLayout>
             </StackLayout>
         </Frame>
     </ScrollView>
