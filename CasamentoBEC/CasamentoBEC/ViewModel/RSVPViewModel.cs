@@ -8,22 +8,51 @@ namespace CasamentoBEC.ViewModel
 {
     public class RSVPViewModel : BaseViewModel
     {
-        private ICommand cmdClose;
-        public ICommand CmdClose
+        private bool _naoConfirmado;
+        private bool _confirmado; 
+        private ICommand cmdConfirmar;
+
+        public bool Confirmado
+        {
+            get { return _confirmado; }
+            set
+            {
+                _confirmado = value;
+                RaisePropertyChanged();
+            }
+        }
+        public bool NaoConfirmado
+        {
+            get { return _naoConfirmado; }
+            set
+            {
+                _naoConfirmado = value;
+                RaisePropertyChanged();
+            }
+        }
+        public ICommand CmdConfirmar
         {
             get
             {
-                return cmdClose;
+                return cmdConfirmar;
             }
             set
             {
-                cmdClose = value;
+                cmdConfirmar = value;
                 RaisePropertyChanged();
             }
         }
         public RSVPViewModel()
         {
-            CmdClose = new Command(() => navigationService.PopNavigation());
+            Confirmado = false;
+            NaoConfirmado = true;
+            CmdConfirmar = new Command(ConfirmarPresenca);
+        }
+
+        private void ConfirmarPresenca()
+        {
+            Confirmado = true;
+            NaoConfirmado = false;
         }
     }
 }

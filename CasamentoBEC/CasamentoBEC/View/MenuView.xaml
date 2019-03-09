@@ -21,8 +21,7 @@
     </pages:PopupPage.Animation>
     <StackLayout VerticalOptions="StartAndExpand" 
                  HorizontalOptions="FillAndExpand" 
-                 Spacing="0"
-                 >
+                 Spacing="0">
         <StackLayout
             VerticalOptions="StartAndExpand" 
             HorizontalOptions="FillAndExpand" 

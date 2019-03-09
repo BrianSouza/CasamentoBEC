@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:behavior="clr-namespace:CasamentoBEC.CustomControls"
              x:Class="CasamentoBEC.View.RSVPView"
              BackgroundImage="backgroundlogin.png"
              Title="RSVP">
@@ -13,92 +14,39 @@
         Margin="10,10,10,10">
                 <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
                     <StackLayout>
-                        <Label HorizontalTextAlignment="Center" FontFamily="Gabriola" FontSize="20" TextColor="Black">
+                        <Label HorizontalTextAlignment="Center" FontFamily="gabriola.ttf#gabriola" FontSize="28" TextColor="Black" IsVisible="{Binding NaoConfirmado}">
                             <Label.FormattedText>
                                 <FormattedString>
-                                    <Span Text="Estamos muito felizes por ter você em nossa "></Span>
-                                    <Span Text="lista de convidados. Gostaríamos de pedir que "></Span>
-                                    <Span Text="gentilmente confirme sua presença através do "></Span>
-                                    <Span Text="botão abaixo. "></Span>
+                                    <Span Text="Estamos muito felizes por ter você em nossa &#10;"></Span>
+                                    <Span Text="lista de convidados. Gostaríamos de pedir que &#10;"></Span>
+                                    <Span Text="gentilmente confirme sua presença através do &#10;"></Span>
+                                    <Span Text="botão abaixo. &#10;"></Span>
                                 </FormattedString>
                             </Label.FormattedText>
                         </Label>
+                        <Label Text="Obrigado pela sua confirmação!"  HorizontalTextAlignment="Center" FontFamily="gabriola.ttf#gabriola" FontSize="28" TextColor="Black" IsVisible="{Binding Confirmado}"></Label>
                         <ffimageloading:CachedImage
-                            Margin="0,50,0,50"
+                            Margin="0,30,0,30"
                              Aspect="AspectFit"
 							LoadingPlaceholder="image_loading.png" 
                             ErrorPlaceholder="image_error.png"
-							Source="rsvpicon.png"/>
-                        <Label  HorizontalTextAlignment="Center" FontFamily="Gabriola" FontSize="20"  TextColor="Black">
+							Source="rsvpicon.png">
+                            <ffimageloading:CachedImage.Behaviors>
+                                <behavior:ViewTappedButtonBehavior AnimationType="Scale" Command="{Binding CmdConfirmar}"></behavior:ViewTappedButtonBehavior>
+                            </ffimageloading:CachedImage.Behaviors>
+                        </ffimageloading:CachedImage>
+                        <Label  HorizontalTextAlignment="Center" FontFamily="gabriola.ttf#gabriola" FontSize="28"  TextColor="Black" IsVisible="{Binding NaoConfirmado}">
                             <Label.FormattedText>
                                 <FormattedString>
-                                    <Span Text="Sua presença é especial e importantíssima para "></Span>
-                                    <Span Text="completar nosso tão sonhado dia."></Span>
+                                    <Span Text="Sua presença é especial e importantíssima para &#10;"></Span>
+                                    <Span Text="completar nosso tão sonhado dia.&#10;"></Span>
                                 </FormattedString>
                             </Label.FormattedText>
                         </Label>
+                        <Label Text="Nos vemos no grande dia!" HorizontalTextAlignment="Center" FontFamily="gabriola.ttf#gabriola" FontSize="28" TextColor="Black" IsVisible="{Binding Confirmado}"></Label>
                     </StackLayout>
                 </StackLayout>
             </ScrollView>
         </Frame>
-            <!--<Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <StackLayout Orientation="Horizontal"
-                         HorizontalOptions="End"
-                         VerticalOptions="Start"
-                         WidthRequest="30"
-                         HeightRequest="30"
-                         Grid.Column="2" Grid.Row="1">
-                <StackLayout.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding CmdClose}"  />
-                </StackLayout.GestureRecognizers>
-                <Image Source="closebutton.png"
-                 Aspect="AspectFit"
-                       VerticalOptions="End"
-                       HorizontalOptions="End"
-                       WidthRequest="20">
-                </Image>
-            </StackLayout>
-            <StackLayout
-                    Grid.Row="2" Grid.Column="0" Grid.RowSpan="3" Grid.ColumnSpan="3">
-                <Label HorizontalTextAlignment="Center" FontFamily="Gabriola" FontSize="20" TextColor="Black">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <Span Text="Estamos muito felizes por ter você em nossa "></Span>
-                            <Span Text="lista de convidados. Gostaríamos de pedir que "></Span>
-                            <Span Text="gentilmente confirme sua presença através do "></Span>
-                            <Span Text="botão abaixo. "></Span>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-                <ffimageloading:CachedImage
-                            Margin="0,50,0,50"
-                             Aspect="AspectFit"
-							LoadingPlaceholder="image_loading.png" 
-                            ErrorPlaceholder="image_error.png"
-							Source="rsvpicon.png"/>
-                <Label  HorizontalTextAlignment="Center" FontFamily="Gabriola" FontSize="20"  TextColor="Black">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <Span Text="Após a confirmação enviaremos o convite oficial "></Span>
-                            <Span Text="juntamente com os convites individuais, sendo "></Span>
-                            <Span Text="assim só confirme se tiver total certeza. Sua "></Span>
-                            <Span Text="presença é especial e importantíssima para "></Span>
-                            <Span Text="completar nosso tão sonhado dia."></Span>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-            </StackLayout>
-        </Grid>-->
-        
-
     </ContentPage.Content>
 </ContentPage>

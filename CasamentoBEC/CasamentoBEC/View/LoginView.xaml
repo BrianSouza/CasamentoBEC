@@ -2,7 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CasamentoBEC.View.LoginView"
-             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin" 
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             xmlns:behavior="clr-namespace:CasamentoBEC.CustomControls"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              BackgroundImage="backgroundlogin.png">
     <ContentPage.Content>
         <ScrollView>
@@ -17,8 +19,8 @@
                 <StackLayout VerticalOptions="End"
                      Padding="0,0,0,100">
 
-                    <Image Source="brasao.png"
-                        Margin="0,30,0,0"></Image>
+                    <ffimageloading:CachedImage Source="brasao.png"
+                        Margin="0,30,0,0"></ffimageloading:CachedImage>
                 </StackLayout>
 
                 <Frame  Style="{DynamicResource framelogin}">
@@ -33,7 +35,11 @@
                 <Button 
                     Style="{DynamicResource btnlaranja}"
                     Text="{Binding ButtonEntrarText}"
-                        Command="{Binding LoginCommand}"></Button>
+                        Command="{Binding LoginCommand}">
+                    <Button.Behaviors>
+                        <behavior:ViewTappedButtonBehavior AnimationType="Scale"></behavior:ViewTappedButtonBehavior>
+                    </Button.Behaviors>
+                </Button>
 
             </StackLayout>
         </ScrollView>
