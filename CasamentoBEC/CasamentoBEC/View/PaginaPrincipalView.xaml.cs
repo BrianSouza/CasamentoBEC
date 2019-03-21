@@ -1,10 +1,5 @@
 ﻿using CasamentoBEC.ViewModel;
-using Rg.Plugins.Popup.Services;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -18,8 +13,31 @@ namespace CasamentoBEC.View
         {
             InitializeComponent();
             Xamarin.Forms.NavigationPage.SetHasNavigationBar(this, false);//Esconde a navigationbar
-            this.BindingContext = new PaginaPrincipalViewModel();
+            BindingContext = new PaginaPrincipalViewModel();
         }
-        
+
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            ShowHideMenu();
+        }
+
+        private void SwipeGestureRecognizer_Swiped(object sender, SwipedEventArgs e)
+        {
+            ShowHideMenu();
+        }
+
+        private void ShowHideMenu()
+        {
+            //if (frameMenu.Height == 25)
+            //{
+            //    AbsoluteLayout.SetLayoutBounds(frameMenu, new Rectangle(0, 0, 1, 250));
+            //    AbsoluteLayout.SetLayoutFlags(frameMenu, AbsoluteLayoutFlags.WidthProportional);
+            //}
+            //else
+            //{
+            //    AbsoluteLayout.SetLayoutBounds(frameMenu, new Rectangle(0, 0, 1, 25));
+            //    AbsoluteLayout.SetLayoutFlags(frameMenu, AbsoluteLayoutFlags.WidthProportional);
+            //}
+        }
     }
 }

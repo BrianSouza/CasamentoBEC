@@ -7,8 +7,8 @@
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms">
 
     <ContentPage.Content>
-        <StackLayout>
-            <StackLayout Orientation="Vertical" 
+        <AbsoluteLayout>
+            <!--<StackLayout Orientation="Vertical" 
                          VerticalOptions="Start" 
                          HorizontalOptions="FillAndExpand">
                 <StackLayout.GestureRecognizers>
@@ -19,11 +19,13 @@
                    Aspect="AspectFit">
                 </Image>
 
-            </StackLayout>
+            </StackLayout>-->
 
             <cv:CarouselView ItemsSource="{Binding Car}" 
                              x:Name="carPrincipal"
-                             Position="{Binding ExibirCarView}">
+                             Position="{Binding ExibirCarView}"
+                             AbsoluteLayout.LayoutBounds="1,.9,1,.9"
+                             AbsoluteLayout.LayoutFlags="All">
                 <cv:CarouselView.ItemTemplate>
                     <DataTemplate>
                         <Grid>
@@ -50,7 +52,152 @@
                     </DataTemplate>
                 </cv:CarouselView.ItemTemplate>
             </cv:CarouselView>
-        </StackLayout>
+            <Frame
+                x:Name="frameMenu"
+             BackgroundColor="{DynamicResource toolbarcolor}"
+                AbsoluteLayout.LayoutBounds="{Binding Bounds}"
+                AbsoluteLayout.LayoutFlags="WidthProportional">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding CmdAbriMenu}" Tapped="TapGestureRecognizer_Tapped" />
+                    <SwipeGestureRecognizer Command="{Binding CmdAbriMenu}" Direction="Down" Swiped="SwipeGestureRecognizer_Swiped"/>
+                </Frame.GestureRecognizers>
+                <Grid Margin="20,10,20,10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Frame Grid.Column="0"
+                   Grid.Row="0"
+                   CornerRadius="10"
+                   BackgroundColor="White"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   HasShadow="True"
+                   WidthRequest="65">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding CmdOpenFotos}"  />
+                        </Frame.GestureRecognizers>
+                        <StackLayout Orientation="Vertical" 
+                             VerticalOptions="Center"
+                             HorizontalOptions="Center">
+
+                            <Image Source="camera32.png"
+                 Aspect="AspectFit"
+                       VerticalOptions="Center">
+
+                            </Image>
+                            <Label Text="Fotos" HorizontalTextAlignment="Center"></Label>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Grid.Column="1"
+                         Grid.Row="0"
+                   CornerRadius="10"
+                   BackgroundColor="White"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   HasShadow="True"
+                   WidthRequest="65">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding CmdOpenRSVP}"  />
+                        </Frame.GestureRecognizers>
+                        <StackLayout Orientation="Vertical" >
+                            <Image Source="check32.png"
+                
+                   Aspect="AspectFit">
+
+                            </Image>
+                            <Label Text="RSVP" HorizontalTextAlignment="Center"></Label>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Grid.Column="2"
+                         Grid.Row="0"
+                   CornerRadius="10"
+                   BackgroundColor="White"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   HasShadow="True"
+                   WidthRequest="65">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding CmdOpenLocal}"  />
+                        </Frame.GestureRecognizers>
+                        <StackLayout Orientation="Vertical"
+                         >
+                            <Image Source="localizacao32.png"
+                   Aspect="AspectFit">
+
+                            </Image>
+                            <Label Text="Local" HorizontalTextAlignment="Center"></Label>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Grid.Column="0"
+                         Grid.Row="1"
+                   CornerRadius="10"
+                   BackgroundColor="White"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   HasShadow="True"
+                   WidthRequest="65">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding CmdOpenPresentes}"  />
+                        </Frame.GestureRecognizers>
+                        <StackLayout Orientation="Vertical"
+                         >
+                            <Image Source="presente32.png"
+                   Aspect="AspectFit">
+
+                            </Image>
+                            <Label Text="Presentes" HorizontalTextAlignment="Center"></Label>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Grid.Column="1"
+                         Grid.Row="1"
+                   CornerRadius="10"
+                   BackgroundColor="White"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   HasShadow="True"
+                   WidthRequest="65">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding CmdOpenPresentes}"  />
+                        </Frame.GestureRecognizers>
+                        <StackLayout Orientation="Vertical">
+                            <Image Source="cardapio32.png"
+                   Aspect="AspectFit">
+                            </Image>
+                            <Label Text="Cardápio" HorizontalTextAlignment="Center"></Label>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Grid.Column="2"
+                         Grid.Row="1"
+                   CornerRadius="10"
+                   BackgroundColor="White"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   HasShadow="True"
+                   WidthRequest="65">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding CmdOpenPresentes}"  />
+                        </Frame.GestureRecognizers>
+                        <StackLayout Orientation="Vertical"
+                         >
+                            <Image Source="presente32.png"
+                   Aspect="AspectFit">
+
+                            </Image>
+                            <Label Text="Presentes" HorizontalTextAlignment="Center"></Label>
+                        </StackLayout>
+                    </Frame>
+                </Grid>
+
+            </Frame>
+            
+        </AbsoluteLayout>
     </ContentPage.Content>
 
 </ContentPage>

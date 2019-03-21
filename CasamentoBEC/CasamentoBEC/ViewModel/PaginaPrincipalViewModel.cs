@@ -25,7 +25,7 @@ namespace CasamentoBEC.ViewModel
             }
         }
         ObservableCollection<Carousel> car;
-        private ICommand cmdAbriMenu; 
+        private ICommand cmdAbriMenu;
         public ObservableCollection<Carousel> Car
         {
             get { return car; }
@@ -45,6 +45,71 @@ namespace CasamentoBEC.ViewModel
                 RaisePropertyChanged();
             }
         }
+        private ICommand cmdOpenPresentes;
+        public ICommand CmdOpenPresentes
+        {
+            get
+            {
+                return cmdOpenPresentes;
+            }
+            set
+            {
+                cmdOpenPresentes = value;
+                RaisePropertyChanged();
+            }
+        }
+        private ICommand cmdOpenFotos;
+        public ICommand CmdOpenFotos
+        {
+            get
+            {
+                return cmdOpenFotos;
+            }
+            set
+            {
+                cmdOpenFotos = value;
+                RaisePropertyChanged();
+            }
+        }
+        private ICommand cmdOpenRSVP;
+        public ICommand CmdOpenRSVP
+        {
+            get
+            {
+                return cmdOpenRSVP;
+            }
+            set
+            {
+                cmdOpenRSVP = value;
+                RaisePropertyChanged();
+            }
+        }
+        private ICommand cmdOpenLocal;
+        public ICommand CmdOpenLocal
+        {
+            get
+            {
+                return cmdOpenLocal;
+            }
+            set
+            {
+                cmdOpenLocal = value;
+                RaisePropertyChanged();
+            }
+        }
+        private Xamarin.Forms.Rectangle bounds;
+        public Xamarin.Forms.Rectangle Bounds
+        {
+            get
+            {
+                return bounds;
+            }
+            set
+            {
+                bounds = value;
+                RaisePropertyChanged();
+            }
+        }
 
         public PaginaPrincipalViewModel()
         {
@@ -53,11 +118,23 @@ namespace CasamentoBEC.ViewModel
 
             PreencheCarousel(textoPaginaInicial);
 
-            CmdAbriMenu = new Command(() => navigationService.AbrirMenu());
-
+            CmdAbriMenu = new Command(BoundAberto);
+            CmdOpenPresentes = new Command(() => navigationService.AbrirPresentes());
+            CmdOpenFotos = new Command(() => navigationService.AbrirFotos());
+            CmdOpenRSVP = new Command(() => navigationService.AbrirRSVP());
+            CmdOpenLocal = new Command(() => navigationService.AbrirLocal());
+            BoundFechado();
             MudarImagensCarousel();
         }
 
+        private void BoundAberto()
+        {
+            Bounds = new Rectangle(0, 0, 1, 250);
+        }
+        private void BoundFechado()
+        {
+            Bounds = new Rectangle(0, 0, 1, 25);
+        }
         private void PreencheCarousel(string textoPaginaInicial)
         {
             Car = new ObservableCollection<Carousel>()
