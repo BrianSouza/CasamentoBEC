@@ -18,26 +18,35 @@ namespace CasamentoBEC.View
 
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            ShowHideMenu();
+            if (frameMenu.TranslationY == 0)
+            {
+                AbrirMenu();
+            }
+            else if (frameMenu.TranslationY > 0)
+            {
+                FecharMenu();
+            }
         }
 
         private void SwipeGestureRecognizer_Swiped(object sender, SwipedEventArgs e)
         {
-            ShowHideMenu();
+            AbrirMenu();
+        }
+        private void SwipeGestureRecognizer_Swiped_1(object sender, SwipedEventArgs e)
+        {
+            FecharMenu();
         }
 
-        private void ShowHideMenu()
+        private void AbrirMenu()
         {
-            //if (frameMenu.Height == 25)
-            //{
-            //    AbsoluteLayout.SetLayoutBounds(frameMenu, new Rectangle(0, 0, 1, 250));
-            //    AbsoluteLayout.SetLayoutFlags(frameMenu, AbsoluteLayoutFlags.WidthProportional);
-            //}
-            //else
-            //{
-            //    AbsoluteLayout.SetLayoutBounds(frameMenu, new Rectangle(0, 0, 1, 25));
-            //    AbsoluteLayout.SetLayoutFlags(frameMenu, AbsoluteLayoutFlags.WidthProportional);
-            //}
+            frameMenu.TranslateTo(0, 225, 2000, Easing.Linear);
         }
+        private void FecharMenu()
+        {
+            frameMenu.TranslateTo(0, 0, 2000, Easing.Linear);
+        }
+
+        
+        
     }
 }

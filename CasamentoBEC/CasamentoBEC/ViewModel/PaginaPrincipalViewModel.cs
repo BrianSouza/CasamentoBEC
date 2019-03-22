@@ -25,7 +25,6 @@ namespace CasamentoBEC.ViewModel
             }
         }
         ObservableCollection<Carousel> car;
-        private ICommand cmdAbriMenu;
         public ObservableCollection<Carousel> Car
         {
             get { return car; }
@@ -36,15 +35,7 @@ namespace CasamentoBEC.ViewModel
             }
         }
 
-        public ICommand CmdAbriMenu
-        {
-            get => cmdAbriMenu;
-            set
-            {
-                cmdAbriMenu = value;
-                RaisePropertyChanged();
-            }
-        }
+       
         private ICommand cmdOpenPresentes;
         public ICommand CmdOpenPresentes
         {
@@ -97,19 +88,6 @@ namespace CasamentoBEC.ViewModel
                 RaisePropertyChanged();
             }
         }
-        private Xamarin.Forms.Rectangle bounds;
-        public Xamarin.Forms.Rectangle Bounds
-        {
-            get
-            {
-                return bounds;
-            }
-            set
-            {
-                bounds = value;
-                RaisePropertyChanged();
-            }
-        }
 
         public PaginaPrincipalViewModel()
         {
@@ -117,24 +95,14 @@ namespace CasamentoBEC.ViewModel
             string textoPaginaInicial = "...Como é bom poder contar com vocês na \n realização do nosso sonho! \n A contagem regressiva começa,\n o frio na barriga e toda a ansiedade do dia \n mais esperado de nossas vidas.\n Nos enche de alegria em tê-los ao nosso lado.\n Vamos juntos nesse grande sonho,\n o dia do nosso casamento...";
 
             PreencheCarousel(textoPaginaInicial);
-
-            CmdAbriMenu = new Command(BoundAberto);
+            
             CmdOpenPresentes = new Command(() => navigationService.AbrirPresentes());
             CmdOpenFotos = new Command(() => navigationService.AbrirFotos());
             CmdOpenRSVP = new Command(() => navigationService.AbrirRSVP());
             CmdOpenLocal = new Command(() => navigationService.AbrirLocal());
-            BoundFechado();
             MudarImagensCarousel();
         }
 
-        private void BoundAberto()
-        {
-            Bounds = new Rectangle(0, 0, 1, 250);
-        }
-        private void BoundFechado()
-        {
-            Bounds = new Rectangle(0, 0, 1, 25);
-        }
         private void PreencheCarousel(string textoPaginaInicial)
         {
             Car = new ObservableCollection<Carousel>()

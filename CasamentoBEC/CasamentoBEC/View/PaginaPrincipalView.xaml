@@ -8,19 +8,6 @@
 
     <ContentPage.Content>
         <AbsoluteLayout>
-            <!--<StackLayout Orientation="Vertical" 
-                         VerticalOptions="Start" 
-                         HorizontalOptions="FillAndExpand">
-                <StackLayout.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding CmdAbriMenu}"  />
-                    <SwipeGestureRecognizer Direction="Down" Command="{Binding CmdAbriMenu}"/>
-                </StackLayout.GestureRecognizers>
-                <Image Source="menufechado.png"
-                   Aspect="AspectFit">
-                </Image>
-
-            </StackLayout>-->
-
             <cv:CarouselView ItemsSource="{Binding Car}" 
                              x:Name="carPrincipal"
                              Position="{Binding ExibirCarView}"
@@ -46,21 +33,16 @@
                                     <Label Style="{DynamicResource labelpreto}" Text="{Binding Name}"/>
                                 </StackLayout>
                             </Frame>
-
-
                         </Grid>
                     </DataTemplate>
                 </cv:CarouselView.ItemTemplate>
             </cv:CarouselView>
-            <Frame
+            <StackLayout
                 x:Name="frameMenu"
-             BackgroundColor="{DynamicResource toolbarcolor}"
-                AbsoluteLayout.LayoutBounds="{Binding Bounds}"
-                AbsoluteLayout.LayoutFlags="WidthProportional">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding CmdAbriMenu}" Tapped="TapGestureRecognizer_Tapped" />
-                    <SwipeGestureRecognizer Command="{Binding CmdAbriMenu}" Direction="Down" Swiped="SwipeGestureRecognizer_Swiped"/>
-                </Frame.GestureRecognizers>
+                BackgroundColor="{DynamicResource toolbarcolor}"
+                AbsoluteLayout.LayoutBounds="0,-225,1,310"
+                AbsoluteLayout.LayoutFlags="WidthProportional"
+                Spacing="0">
                 <Grid Margin="20,10,20,10">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto" />
@@ -193,10 +175,33 @@
                             <Label Text="Presentes" HorizontalTextAlignment="Center"></Label>
                         </StackLayout>
                     </Frame>
+                    <StackLayout
+                        Margin="0,20,0,0"
+                        x:Name="stackMenu"
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="3"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        Spacing="0">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer  Tapped="TapGestureRecognizer_Tapped" />
+                            <SwipeGestureRecognizer Direction="Down" Swiped="SwipeGestureRecognizer_Swiped"/>
+                            <SwipeGestureRecognizer  Direction="Up" Swiped="SwipeGestureRecognizer_Swiped_1" />
+                        </StackLayout.GestureRecognizers>
+                        <Image Source="ic_menu"
+                               HorizontalOptions="Center">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer  Tapped="TapGestureRecognizer_Tapped" />
+                                <SwipeGestureRecognizer  Direction="Down" Swiped="SwipeGestureRecognizer_Swiped"/>
+                                <SwipeGestureRecognizer Direction="Up" Swiped="SwipeGestureRecognizer_Swiped_1" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label TextColor="White" Text="Menu" FontSize="Small" HorizontalTextAlignment="Center" FontFamily="gabriola.ttf#gabriola"></Label>
+                    </StackLayout>
                 </Grid>
+            </StackLayout>
 
-            </Frame>
-            
         </AbsoluteLayout>
     </ContentPage.Content>
 
