@@ -11,7 +11,7 @@
             <cv:CarouselView ItemsSource="{Binding Car}" 
                              x:Name="carPrincipal"
                              Position="{Binding ExibirCarView}"
-                             AbsoluteLayout.LayoutBounds="1,.9,1,.9"
+                             AbsoluteLayout.LayoutBounds="1,.85,1,.85"
                              AbsoluteLayout.LayoutFlags="All">
                 <cv:CarouselView.ItemTemplate>
                     <DataTemplate>

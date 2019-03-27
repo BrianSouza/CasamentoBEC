@@ -107,7 +107,7 @@ namespace CasamentoBEC.ViewModel
         {
             Car = new ObservableCollection<Carousel>()
             {
-                new Carousel{ ImageURL=GetImageSource("https://image.ibb.co/eat0aU/stdsemadornos.png"),Name="#CasamentoMoziCamis",Description=GetTextoDia()},
+                new Carousel{ ImageURL=GetImageSource("https://image.ibb.co/eat0aU/stdsemadornos.png"),Name="#CasorioMoziCamis",Description=GetTextoDia()},
                 new Carousel{ImageURL =null ,Name="",Description=textoPaginaInicial}
             };
         }
@@ -139,7 +139,7 @@ namespace CasamentoBEC.ViewModel
         private void MudarImagensCarousel()
         {
             
-            Device.StartTimer(TimeSpan.FromSeconds(4), () =>
+            Device.StartTimer(TimeSpan.FromSeconds(10), () =>
             {
                 slidePosition++;
                 if (slidePosition == car.Count) slidePosition = 0;
