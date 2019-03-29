@@ -74,7 +74,7 @@
                        VerticalOptions="Center">
 
                             </Image>
-                            <Label x:Name="menuFotos" FontFamily="gabriola.ttf#gabriola" FontSize="Small" Text="Fotos" HorizontalTextAlignment="Center"></Label>
+                            <Label x:Name="menuFotos" Text="Fotos" Style="{StaticResource LabelGabriolaStyleSmallBlack}"></Label>
                         </StackLayout>
                     </Frame>
                     <Frame Grid.Column="1"
@@ -94,7 +94,7 @@
                    Aspect="AspectFit">
 
                             </Image>
-                            <Label  x:Name="menuRSVP" FontFamily="gabriola.ttf#gabriola" FontSize="Small" Text="RSVP" HorizontalTextAlignment="Center"></Label>
+                            <Label  x:Name="menuRSVP" Text="RSVP" Style="{StaticResource LabelGabriolaStyleSmallBlack}"></Label>
                         </StackLayout>
                     </Frame>
                     <Frame Grid.Column="2"
@@ -114,7 +114,7 @@
                    Aspect="AspectFit">
 
                             </Image>
-                            <Label x:Name="menuLocal" FontFamily="gabriola.ttf#gabriola"  FontSize="Small" Text="Local" HorizontalTextAlignment="Center"></Label>
+                            <Label x:Name="menuLocal" Text="Local" Style="{StaticResource LabelGabriolaStyleSmallBlack}"></Label>
                         </StackLayout>
                     </Frame>
                     <Frame Grid.Column="0"
@@ -134,7 +134,7 @@
                    Aspect="AspectFit">
 
                             </Image>
-                            <Label x:Name="menuPresentes" FontFamily="gabriola.ttf#gabriola"  FontSize="Small" Text="Presentes" HorizontalTextAlignment="Center"></Label>
+                            <Label x:Name="menuPresentes" Text="Presentes" Style="{StaticResource LabelGabriolaStyleSmallBlack}"></Label>
                         </StackLayout>
                     </Frame>
                     <Frame Grid.Column="1"
@@ -152,7 +152,7 @@
                             <Image Source="cardapio32.png"
                    Aspect="AspectFit">
                             </Image>
-                            <Label x:Name="menuCronograma" FontFamily="gabriola.ttf#gabriola" FontSize="Small" Text="Cardápio" HorizontalTextAlignment="Center"></Label>
+                            <Label x:Name="menuCronograma" Text="Cardapio" Style="{StaticResource LabelGabriolaStyleSmallBlack}"></Label>
                         </StackLayout>
                     </Frame>
                     <Frame Grid.Column="2"
@@ -172,7 +172,7 @@
                                     Aspect="AspectFit">
 
                             </Image>
-                            <Label  x:Name="menuContatos" FontFamily="gabriola.ttf#gabriola" FontSize="Small" Text="Presentes" HorizontalTextAlignment="Center"></Label>
+                            <Label  x:Name="menuContatos" Text="Presentes" Style="{StaticResource LabelGabriolaStyleSmallBlack}"></Label>
                         </StackLayout>
                     </Frame>
                     <StackLayout
@@ -196,7 +196,7 @@
                                 <SwipeGestureRecognizer Direction="Up" Swiped="SwipeGestureRecognizer_Swiped_1" />
                             </Image.GestureRecognizers>
                         </Image>
-                        <Label TextColor="White" Text="Menu" FontSize="Small" HorizontalTextAlignment="Center" FontFamily="gabriola.ttf#gabriola"></Label>
+                        <Label Text="Menu" Style="{StaticResource LabelGabriolaStyleSmallWhite}"></Label>
                     </StackLayout>
                 </Grid>
             </StackLayout>

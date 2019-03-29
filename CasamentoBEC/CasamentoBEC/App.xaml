@@ -78,12 +78,33 @@
                 <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
 
             </Style>
+            <Style x:Key="LabelGabriolaStyleSmallWhite" TargetType="Label" BaseResourceKey="BaseLabelStyle">
+                <Setter Property="FontFamily">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:String" iOS="gabriola" Android="gabriola.ttf#gabriola"/>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="FontSize" Value="Small"></Setter>
+                <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+            </Style>
+            <Style x:Key="LabelGabriolaStyleSmallBlack" TargetType="Label" BaseResourceKey="BaseLabelStyle">
+                <Setter Property="FontFamily">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:String" iOS="gabriola" Android="gabriola.ttf#gabriola"/>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="TextColor" Value="Black"></Setter>
+                <Setter Property="FontSize" Value="Small"></Setter>
+                <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+            </Style>
+            
             <!--Toolbar-->
             <Style x:Key="mdp" TargetType="MasterDetailPage">
                 <Setter Property="NavigationPage.BarBackgroundColor" Value="{DynamicResource toolbarcolor}"></Setter>
             </Style>
 
-            
+
             <!--Button-->
             <Style x:Key="btnlaranja" TargetType="Button">
                 <Setter Property="FontSize" Value="14"></Setter>
@@ -160,8 +181,8 @@
                 <Setter Property="SeparatorColor" Value="{DynamicResource toolbarcolor}"></Setter>
                 <Setter Property="HasUnevenRows" Value="true"></Setter>
                 <Setter Property="BackgroundColor" Value="Transparent"></Setter>
-                
             </Style>
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>

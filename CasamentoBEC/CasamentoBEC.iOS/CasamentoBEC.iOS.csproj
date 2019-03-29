@@ -47,12 +47,16 @@
     <OutputPath>bin\iPhone\Debug</OutputPath>
     <DefineConstants>DEBUG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <WarningLevel>0</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchArch>ARM64</MtouchArch>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Developer: brian-desouza@hotmail.com (3CU897XAU5)</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
-    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignEntitlements>
+    </CodesignEntitlements>
+    <CodesignProvision>BDSouza</CodesignProvision>
+    <CodesignExtraArgs />
+    <CodesignResourceRules />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -97,9 +101,16 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <None Include="Entitlements.plist" />
-    <None Include="Info.plist" />
+    <None Include="Info.plist">
+      <SubType>Designer</SubType>
+    </None>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <BundleResource Include="Resources\gabriola.ttf" />
+    <BundleResource Include="Resources\gabriola.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Lobster_13.otf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -197,5 +208,77 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\ic_chevron_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\backgrounddetail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\backgroundlogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\brasao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\camera32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\cardapio32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\casamento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\check32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\closebutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\eam1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\eam2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ensaio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\fundomenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\image_error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\image_loading.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\insta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\localizacao32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\menu32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\menuaberto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\menubackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\menufechado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\OLDbackgroundlogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\presente32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\rsvpicon.png" />
   </ItemGroup>
 </Project>
