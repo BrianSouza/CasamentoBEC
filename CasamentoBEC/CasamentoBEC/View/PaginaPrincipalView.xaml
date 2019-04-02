@@ -40,10 +40,11 @@
             <StackLayout
                 x:Name="frameMenu"
                 BackgroundColor="{DynamicResource toolbarcolor}"
-                AbsoluteLayout.LayoutBounds="0,-225,1,310"
+                AbsoluteLayout.LayoutBounds="0,-245,1,320"
                 AbsoluteLayout.LayoutFlags="WidthProportional"
+                Padding="0,20,0,0"
                 Spacing="0">
-                <Grid Margin="10,10,10,10">
+                <Grid Margin="10,10,10,0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
@@ -55,13 +56,13 @@
                     </Grid.ColumnDefinitions>
 
                     <Frame Grid.Column="0"
-                   Grid.Row="0"
-                   CornerRadius="10"
-                   BackgroundColor="White"
-                   VerticalOptions="Center"
-                   HorizontalOptions="Center"
-                   HasShadow="True"
-                   WidthRequest="65">
+                           Grid.Row="0"
+                           CornerRadius="10"
+                           BackgroundColor="White"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           HasShadow="True"
+                           WidthRequest="65">   
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding CmdOpenFotos}"  />
                         </Frame.GestureRecognizers>
@@ -72,7 +73,6 @@
                             <Image Source="camera32.png"
                  Aspect="AspectFit"
                        VerticalOptions="Center">
-
                             </Image>
                             <Label x:Name="menuFotos" Text="Fotos" Style="{StaticResource LabelGabriolaStyleSmallBlack}"></Label>
                         </StackLayout>

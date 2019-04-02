@@ -76,7 +76,14 @@ namespace CasamentoBEC.View
             frameMenu.TranslateTo(0, 0, 1000, Easing.Linear);
         }
 
-        
-        
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+            if (frameMenu.TranslationY > 0)
+            {
+                FecharMenu();
+            }
+        }
+
     }
 }

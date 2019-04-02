@@ -4,17 +4,17 @@
              x:Class="CasamentoBEC.App">
     <Application.Resources>
         <ResourceDictionary>
-            <Color x:Key="toolbarcolor">#FF6565</Color>
-            <Color x:Key="fontefundoclaro">#FF6565</Color>
+            <Color x:Key="toolbarcolor">#DC8686</Color>
+            <Color x:Key="fontefundoclaro">#DC8686</Color>
             <Color x:Key="fontefundolaranja">#FFFFFF</Color>
             <Color x:Key="fundomenu">#FAF2E6</Color>
             <Color x:Key="cordivisao">#E55252</Color>
             <Color x:Key="fonteboxview">#FFF0F5</Color>
             <Color x:Key="corbordacircle">#FFFFFF</Color>
             <Color x:Key="corbordacirclelaranja">#FF6565</Color>
-            <Color x:Key="corfundobotao">#FF6565</Color>
+            <Color x:Key="corfundobotao">#DC8686</Color>
             <Color x:Key="backgroundentry">Transparent</Color>
-            <Color x:Key="bordercolor">#FF6565</Color>
+            <Color x:Key="bordercolor">#DC8686</Color>
             <Color x:Key="backgroundframelogin">White</Color>
             <Color x:Key="pretolabel">#373435</Color>
             <!--Labels-->
@@ -62,7 +62,11 @@
             <Style x:Key="labelpreto" TargetType="Label">
                 <Setter Property="TextColor" Value="{DynamicResource pretolabel}"></Setter>
                 <Setter Property="FontSize" Value="Large"></Setter>
-                <Setter Property="FontFamily" Value="gabriola.ttf#gabriola"></Setter>
+                <Setter Property="FontFamily">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:String" iOS="gabriola" Android="gabriola.ttf#gabriola"/>
+                    </Setter.Value>
+                </Setter>
                 <Setter Property="FontAttributes" Value="Bold"></Setter>
                 <Setter Property="VerticalOptions" Value="CenterAndExpand"></Setter>
                 <Setter Property="HorizontalOptions" Value="Center"></Setter>
@@ -70,7 +74,11 @@
             <Style x:Key="labelpretodesc" TargetType="Label">
                 <Setter Property="TextColor" Value="{DynamicResource pretolabel}"></Setter>
                 <Setter Property="FontSize" Value="Large"></Setter>
-                <Setter Property="FontFamily" Value="gabriola.ttf#gabriola"></Setter>
+                <Setter Property="FontFamily">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:String" iOS="gabriola" Android="gabriola.ttf#gabriola"/>
+                    </Setter.Value>
+                </Setter>
                 <Setter Property="FontAttributes" Value="Bold"></Setter>
                 <Setter Property="VerticalOptions" Value="CenterAndExpand"></Setter>
                 <Setter Property="HorizontalOptions" Value="Center"></Setter>
@@ -97,6 +105,17 @@
                 <Setter Property="TextColor" Value="Black"></Setter>
                 <Setter Property="FontSize" Value="Small"></Setter>
                 <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+            </Style>
+            <Style x:Key="LabelLobsterStyleSmallBlackNegrito" TargetType="Label" BaseResourceKey="BaseLabelStyle">
+                <Setter Property="FontFamily">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:String" iOS="Lobster_13" Android="Lobster_13.otf#Lobster_13"/>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="TextColor" Value="Black"></Setter>
+                <Setter Property="FontSize" Value="Small"></Setter>
+                <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
             </Style>
             
             <!--Toolbar-->

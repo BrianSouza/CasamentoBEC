@@ -281,4 +281,13 @@
   <ItemGroup>
     <BundleResource Include="Resources\rsvpicon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\placeholderrosa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\placeholderrosa%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\placeholderrosa%403x.png" />
+  </ItemGroup>
 </Project>

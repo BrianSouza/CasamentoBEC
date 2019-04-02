@@ -8,22 +8,26 @@ namespace CasamentoBEC.ViewModel
 {
     public class LocalViewModel : BaseViewModel
     {
-        private ICommand cmdClose;
-        public ICommand CmdClose
+        private ICommand tapMap;
+        public ICommand CmdTapMap
         {
             get
             {
-                return cmdClose;
+                return tapMap;
             }
             set
             {
-                cmdClose = value;
+                tapMap = value;
                 RaisePropertyChanged();
             }
         }
         public LocalViewModel()
         {
-            CmdClose = new Command(() => navigationService.PopNavigation());
+            CmdTapMap = new Command(TappedMap);
+        }
+        private void TappedMap()
+        {
+            Device.OpenUri(new Uri("https://www.waze.com/ul?ll=-23.52641370%2C-46.73721970&navigate=yes&zoom=16"));
         }
     }
 }

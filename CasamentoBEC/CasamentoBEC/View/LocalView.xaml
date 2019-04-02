@@ -15,35 +15,45 @@
                 <Label 
                 Text="O Local" 
                 FontFamily="Lobster_13.otf#Lobster_13" 
-                FontSize="40" 
+                FontSize="Large" 
                 HorizontalOptions="Center" 
                 VerticalOptions="Start"
                 Margin="0,40,0,10"
                 TextColor="{DynamicResource fontefundoclaro}"></Label>
-                <Label  FontFamily="Lobster_13.otf#Lobster_13" 
-                        FontSize="18" 
-                        HorizontalOptions="CenterAndExpand"
-                        VerticalOptions="StartAndExpand"
-                        HorizontalTextAlignment="Center"
+                <Label  Style="{DynamicResource LabelLobsterStyleSmallBlackNegrito}"
                         Text="A cêrimonia será realizada no &#10; Espaço Armazém, Sala São Paulo. &#10; Localizado na Vila Leopoldina, &#10; rua Jaguaré, n.164 - São Paulo &#10; ">
                 </Label>
-                <StackLayout Orientation="Horizontal">
+                <StackLayout Orientation="Horizontal" Padding="10">
                     <ffimageloading:CachedImage
-                            Margin="10,0,10,0"
-                             Aspect="AspectFill"
+                             Aspect="AspectFit"
 							LoadingPlaceholder="image_loading.png" 
                             ErrorPlaceholder="image_error.png"
 							Source="eam1.jpg"
-                        HeightRequest="91"
-                        WidthRequest="65"/>
+                        HeightRequest="150"
+                        WidthRequest="120"
+                        HorizontalOptions="Start"/>
                     <ffimageloading:CachedImage
-                            Margin="10,0,10,0"
-                             Aspect="AspectFill"
+                             Aspect="AspectFit"
 							LoadingPlaceholder="image_loading.png" 
                             ErrorPlaceholder="image_error.png"
 							Source="eam2.jpg"
-                        HeightRequest="91"
-                        WidthRequest="65"/>
+                        HeightRequest="150"
+                        WidthRequest="100"
+                        HorizontalOptions="End"/>
+                </StackLayout>
+                <StackLayout
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand">
+                    <ffimageloading:CachedImage
+                             Aspect="AspectFit"
+							LoadingPlaceholder="image_loading.png" 
+                            ErrorPlaceholder="image_error.png"
+							Source="placeholderrosa.png">
+                        <ffimageloading:CachedImage.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding CmdTapMap}"></TapGestureRecognizer>
+                        </ffimageloading:CachedImage.GestureRecognizers>
+                    </ffimageloading:CachedImage>
+                    <Label Style="{DynamicResource LabelLobsterStyleSmallBlackNegrito}" Text="(Clique aqui para abrir no Waze)"></Label>
                 </StackLayout>
             </StackLayout>
         </Frame>
