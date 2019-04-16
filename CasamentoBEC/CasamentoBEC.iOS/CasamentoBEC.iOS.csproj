@@ -111,6 +111,7 @@
     <BundleResource Include="Resources\Lobster_13.otf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </BundleResource>
+    <BundleResource Include="Resources\materialdesignicons-webfont.ttf" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -289,5 +290,14 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\placeholderrosa%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\duvidas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\duvidas%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\duvidas%403x.png" />
   </ItemGroup>
 </Project>

@@ -4,8 +4,7 @@
              x:Class="CasamentoBEC.View.PaginaPrincipalView"
              xmlns:cv="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
              BackgroundImage="backgrounddetail.png"
-             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms">
-
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" >
     <ContentPage.Content>
         <AbsoluteLayout>
             <cv:CarouselView ItemsSource="{Binding Car}" 
@@ -40,7 +39,7 @@
             <StackLayout
                 x:Name="frameMenu"
                 BackgroundColor="{DynamicResource toolbarcolor}"
-                AbsoluteLayout.LayoutBounds="0,-245,1,320"
+                AbsoluteLayout.LayoutBounds="0,-248,1,325"
                 AbsoluteLayout.LayoutFlags="WidthProportional"
                 Padding="0,20,0,0"
                 Spacing="0">
@@ -69,11 +68,7 @@
                         <StackLayout Orientation="Vertical" 
                              VerticalOptions="Center"
                              HorizontalOptions="Center">
-
-                            <Image Source="camera32.png"
-                 Aspect="AspectFit"
-                       VerticalOptions="Center">
-                            </Image>
+                            <Label Style="{StaticResource LabelIconeCamera}"></Label>
                             <Label x:Name="menuFotos" Text="Fotos" Style="{StaticResource LabelGabriolaStyleSmallBlack}"></Label>
                         </StackLayout>
                     </Frame>
@@ -89,11 +84,7 @@
                             <TapGestureRecognizer Command="{Binding CmdOpenRSVP}"  />
                         </Frame.GestureRecognizers>
                         <StackLayout Orientation="Vertical" >
-                            <Image Source="check32.png"
-                
-                   Aspect="AspectFit">
-
-                            </Image>
+                            <Label Style="{StaticResource LabelIconeCheck}"></Label>
                             <Label  x:Name="menuRSVP" Text="RSVP" Style="{StaticResource LabelGabriolaStyleSmallBlack}"></Label>
                         </StackLayout>
                     </Frame>
@@ -108,12 +99,8 @@
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding CmdOpenLocal}"  />
                         </Frame.GestureRecognizers>
-                        <StackLayout Orientation="Vertical"
-                         >
-                            <Image Source="localizacao32.png"
-                   Aspect="AspectFit">
-
-                            </Image>
+                        <StackLayout Orientation="Vertical">
+                            <Label Style="{StaticResource LabelIconeMap}"></Label>
                             <Label x:Name="menuLocal" Text="Local" Style="{StaticResource LabelGabriolaStyleSmallBlack}"></Label>
                         </StackLayout>
                     </Frame>
@@ -128,12 +115,8 @@
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding CmdOpenPresentes}"  />
                         </Frame.GestureRecognizers>
-                        <StackLayout Orientation="Vertical"
-                         >
-                            <Image Source="presente32.png"
-                   Aspect="AspectFit">
-
-                            </Image>
+                        <StackLayout Orientation="Vertical">
+                            <Label Style="{StaticResource LabelIconePresente}"></Label>
                             <Label x:Name="menuPresentes" Text="Presentes" Style="{StaticResource LabelGabriolaStyleSmallBlack}"></Label>
                         </StackLayout>
                     </Frame>
@@ -149,10 +132,8 @@
                             <TapGestureRecognizer Command="{Binding CmdOpenPresentes}"  />
                         </Frame.GestureRecognizers>
                         <StackLayout Orientation="Vertical">
-                            <Image Source="cardapio32.png"
-                   Aspect="AspectFit">
-                            </Image>
-                            <Label x:Name="menuCronograma" Text="Cardapio" Style="{StaticResource LabelGabriolaStyleSmallBlack}"></Label>
+                            <Label Style="{StaticResource LabelIconeCronograma}"></Label>
+                                <Label x:Name="menuCronograma" Text="Cronograma" Style="{StaticResource LabelGabriolaStyleSmallBlack}"></Label>
                         </StackLayout>
                     </Frame>
                     <Frame Grid.Column="2"
@@ -166,13 +147,9 @@
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding CmdOpenPresentes}"  />
                         </Frame.GestureRecognizers>
-                        <StackLayout Orientation="Vertical"
-                         >
-                            <Image Source="presente32.png"
-                                    Aspect="AspectFit">
-
-                            </Image>
-                            <Label  x:Name="menuContatos" Text="Presentes" Style="{StaticResource LabelGabriolaStyleSmallBlack}"></Label>
+                        <StackLayout Orientation="Vertical">
+                            <Label Style="{StaticResource LabelIconeDuvida}"></Label>
+                            <Label  x:Name="menuContatos" Text="Dúvidas" Style="{StaticResource LabelGabriolaStyleSmallBlack}"></Label>
                         </StackLayout>
                     </Frame>
                     <StackLayout

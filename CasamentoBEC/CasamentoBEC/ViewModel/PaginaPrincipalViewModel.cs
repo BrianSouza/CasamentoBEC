@@ -14,7 +14,7 @@ namespace CasamentoBEC.ViewModel
         private readonly IMessageService messageService;
         private int exibirCarView;
         int slidePosition = 0;
-
+        public const string Carro = "\uf10b";
         public int ExibirCarView
         {
             get { return exibirCarView; }
