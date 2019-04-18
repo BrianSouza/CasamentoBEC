@@ -2,12 +2,42 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CasamentoBEC.View.PaginaPrincipalView"
-             xmlns:cv="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
+             xmlns:cv="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
              BackgroundImage="backgrounddetail.png"
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" >
     <ContentPage.Content>
         <AbsoluteLayout>
-            <cv:CarouselView ItemsSource="{Binding Car}" 
+            <cv:CarouselViewControl
+                ItemsSource="{Binding Car}"
+                ShowArrows="True"
+                ShowIndicators="True"
+                Orientation="Horizontal"
+                AbsoluteLayout.LayoutBounds="1,.85,1,.85"
+                AbsoluteLayout.LayoutFlags="All">
+                <cv:CarouselViewControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Frame
+                                Style="{DynamicResource framecarousel}">
+                                <StackLayout  Padding="12">
+                                    <ffimageloading:CachedImage  
+                                        Aspect="AspectFit"
+							            DownsampleUseDipUnits="false" 
+							            LoadingPlaceholder="image_loading.png" ErrorPlaceholder="image_error.png"
+							            Source="{Binding ImageURL}"/>
+                                    <Label Style="{DynamicResource labelpretodesc}" Text="{Binding Description}" />
+                                    <Label Style="{DynamicResource labelpreto}" Text="{Binding Name}"/>
+                                </StackLayout>
+                            </Frame>
+                        </Grid>
+                    </DataTemplate>
+                </cv:CarouselViewControl.ItemTemplate>
+            </cv:CarouselViewControl>
+            <!--<cv:CarouselView ItemsSource="{Binding Car}" 
                              x:Name="carPrincipal"
                              Position="{Binding ExibirCarView}"
                              AbsoluteLayout.LayoutBounds="1,.85,1,.85"
@@ -22,7 +52,7 @@
                             <Frame
                                 Style="{DynamicResource framecarousel}">
                                 <StackLayout  Padding="12">
-                                    <!--<Image Grid.RowSpan="2" Aspect="AspectFit" Source="{Binding ImageURL}"/>-->
+                                    --><!--<Image Grid.RowSpan="2" Aspect="AspectFit" Source="{Binding ImageURL}"/>--><!--
                                     <ffimageloading:CachedImage  
                                         Aspect="AspectFit"
 							            DownsampleUseDipUnits="false" 
@@ -35,7 +65,7 @@
                         </Grid>
                     </DataTemplate>
                 </cv:CarouselView.ItemTemplate>
-            </cv:CarouselView>
+            </cv:CarouselView>-->
             <StackLayout
                 x:Name="frameMenu"
                 BackgroundColor="{DynamicResource toolbarcolor}"

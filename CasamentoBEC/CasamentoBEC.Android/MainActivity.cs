@@ -8,6 +8,7 @@ using Android.Widget;
 using Android.OS;
 using DLToolkit.Forms.Controls;
 using FFImageLoading.Forms.Platform;
+using CarouselView.FormsPlugin.Android;
 
 namespace CasamentoBEC.Droid
 {
@@ -23,6 +24,7 @@ namespace CasamentoBEC.Droid
             Rg.Plugins.Popup.Popup.Init(this, bundle);
             FlowListView.Init();
             CachedImageRenderer.Init(true);
+            CarouselViewRenderer.Init();
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
 

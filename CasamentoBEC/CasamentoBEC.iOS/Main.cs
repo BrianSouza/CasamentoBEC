@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using CarouselView.FormsPlugin.iOS;
 using Foundation;
 using UIKit;
 
@@ -14,6 +14,7 @@ namespace CasamentoBEC.iOS
         {
             // if you want to use a different Application Delegate class from "AppDelegate"
             // you can specify it here.
+            CarouselViewRenderer.Init();
             UIApplication.Main(args, null, "AppDelegate");
         }
     }
