@@ -1,5 +1,6 @@
 ﻿using CasamentoBEC.View;
 using CasamentoBEC.ViewModel;
+using FormsControls.Base;
 using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
@@ -31,7 +32,7 @@ namespace CasamentoBEC.Services
         public void NavigateToMain()
         {
             //App.Current.MainPage = new PaginaPrincipalView();
-            App.Current.MainPage = new NavigationPage(new PaginaPrincipalView());
+            App.Current.MainPage = new AnimationNavigationPage(new PaginaPrincipalView());
         }
 
         public async Task PopNavigation()
@@ -50,7 +51,8 @@ namespace CasamentoBEC.Services
         }
         public async void AbrirPresentes()
         {
-            await PopupNavigation.Instance.PushAsync(new Presentes());
+            await App.Current.MainPage.Navigation.PushAsync(new Presentes());
+
         }
         public async void AbrirFotos()
         {

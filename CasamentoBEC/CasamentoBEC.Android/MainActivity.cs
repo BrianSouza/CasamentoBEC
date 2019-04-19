@@ -25,6 +25,7 @@ namespace CasamentoBEC.Droid
             FlowListView.Init();
             CachedImageRenderer.Init(true);
             CarouselViewRenderer.Init();
+            FormsControls.Droid.Main.Init(this);
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
 

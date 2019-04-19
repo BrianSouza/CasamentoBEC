@@ -8,13 +8,6 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout >
-                <Frame Style="{DynamicResource frameloginbar}">
-                    <Image 
-                    Source="{Binding ToolBarImage}" 
-                    HorizontalOptions="CenterAndExpand" 
-                    Aspect="AspectFit" 
-                    VerticalOptions="FillAndExpand"></Image>
-                </Frame>
                 <StackLayout VerticalOptions="CenterAndExpand">
                     <StackLayout Margin="0,0,0,30">
                         <Image Source="brasao.png"></Image>

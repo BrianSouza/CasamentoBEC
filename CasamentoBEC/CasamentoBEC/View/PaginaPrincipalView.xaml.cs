@@ -1,4 +1,5 @@
 ﻿using CasamentoBEC.ViewModel;
+using FormsControls.Base;
 using System;
 
 using Xamarin.Forms;
@@ -7,16 +8,17 @@ using Xamarin.Forms.Xaml;
 namespace CasamentoBEC.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PaginaPrincipalView : ContentPage
+    public partial class PaginaPrincipalView : ContentPage 
     {
+        private readonly double alturaPagina;
         public PaginaPrincipalView()
         {
             InitializeComponent();
-            Xamarin.Forms.NavigationPage.SetHasNavigationBar(this, false);//Esconde a navigationbar
+            //Xamarin.Forms.NavigationPage.SetHasNavigationBar(this, false);//Esconde a navigationbar
             BindingContext = new PaginaPrincipalViewModel();
             SizeChanged += PaginaPrincipalView_SizeChanged;
         }
-
+       
         private void PaginaPrincipalView_SizeChanged(object sender, EventArgs e)
         {
             double alturaTela = Height;
@@ -35,17 +37,7 @@ namespace CasamentoBEC.View
                 //ResizeMenuLabel();
             }
         }
-
-        private void ResizeMenuLabel()
-        {
-            menuContatos.FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label));
-            menuCronograma.FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label));
-            menuFotos.FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label));
-            menuLocal.FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label));
-            menuPresentes.FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label));
-            menuRSVP.FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label));
-        }
-
+        
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
             if (frameMenu.TranslationY == 0)
@@ -69,7 +61,7 @@ namespace CasamentoBEC.View
 
         private void AbrirMenu()
         {
-            frameMenu.TranslateTo(0, 225, 1000, Easing.Linear);
+            frameMenu.TranslateTo(0, 248, 1000, Easing.Linear);
         }
         private void FecharMenu()
         {
@@ -83,7 +75,12 @@ namespace CasamentoBEC.View
             {
                 FecharMenu();
             }
-        }
 
+        }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+        }
     }
 }

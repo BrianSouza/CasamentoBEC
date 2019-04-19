@@ -12,7 +12,7 @@ using Xamarin.Forms.Xaml;
 namespace CasamentoBEC.View
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class FotoSelecionadaView : PopupPage
+	public partial class FotoSelecionadaView : PopupPage 
     {
         private FotoSelecionadaViewModel fotoVM;
 		public FotoSelecionadaView (Model.Fotos foto)

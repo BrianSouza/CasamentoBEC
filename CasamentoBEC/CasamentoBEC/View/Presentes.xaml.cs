@@ -1,4 +1,5 @@
 ﻿using CasamentoBEC.ViewModel;
+using FormsControls.Base;
 using Rg.Plugins.Popup.Pages;
 using System;
 using System.Collections.Generic;
@@ -12,9 +13,19 @@ using Xamarin.Forms.Xaml;
 namespace CasamentoBEC.View
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Presentes : PopupPage
-	{
+	public partial class Presentes : ContentPage , IAnimationPage
+    {
+        public IPageAnimation PageAnimation { get; } = new PushPageAnimation { Duration = AnimationDuration.Long, Subtype = AnimationSubtype.FromBottom };
         private PresentesViewModel presenteVM;
+        
+        public void OnAnimationFinished(bool isPopAnimation)
+        {
+        }
+
+        public void OnAnimationStarted(bool isPopAnimation)
+        {
+        }
+
 		public Presentes ()
 		{
 			InitializeComponent ();
