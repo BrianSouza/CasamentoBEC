@@ -26,13 +26,13 @@ namespace CasamentoBEC.View
 
             if(alturaTela <= 546 && larguraTela <= 321 && Device.RuntimePlatform == Device.Android)
             {
-                var novoTamanhoMenu = new Rectangle(0, -230, 1, 300);
+                var novoTamanhoMenu = new Rectangle(0, -150, 1, 150);
                 AbsoluteLayout.SetLayoutBounds(frameMenu, novoTamanhoMenu);
                 //ResizeMenuLabel();
             }
             else if (alturaTela <= 570 && larguraTela <= 321 && Device.RuntimePlatform == Device.iOS)
             {
-                var novoTamanhoMenu = new Rectangle(0, -230, 1, 310);
+                var novoTamanhoMenu = new Rectangle(0, -150, 1, 150);
                 AbsoluteLayout.SetLayoutBounds(frameMenu, novoTamanhoMenu);
                 //ResizeMenuLabel();
             }
@@ -61,7 +61,7 @@ namespace CasamentoBEC.View
 
         private void AbrirMenu()
         {
-            frameMenu.TranslateTo(0, 248, 1000, Easing.Linear);
+            frameMenu.TranslateTo(0, 148, 1000, Easing.Linear);
         }
         private void FecharMenu()
         {
