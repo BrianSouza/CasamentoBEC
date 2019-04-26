@@ -172,7 +172,7 @@
                    HasShadow="True"
                    WidthRequest="65">
                         <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding CmdOpenPresentes}"  />
+                            <TapGestureRecognizer Command="{Binding CmdOpenInformacoes}"  />
                         </Frame.GestureRecognizers>
                         <StackLayout Orientation="Vertical">
                             <Label Style="{StaticResource LabelIconeDuvida}"></Label>

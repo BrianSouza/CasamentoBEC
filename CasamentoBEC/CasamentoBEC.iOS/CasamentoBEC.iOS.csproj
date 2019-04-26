@@ -303,4 +303,13 @@
   <ItemGroup>
     <BundleResource Include="Resources\duvidas%403x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\placeholderbranco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\placeholderbranco%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\placeholderbranco%403x.png" />
+  </ItemGroup>
 </Project>

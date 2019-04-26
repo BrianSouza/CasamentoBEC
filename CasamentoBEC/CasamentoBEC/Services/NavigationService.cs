@@ -62,9 +62,9 @@ namespace CasamentoBEC.Services
         {
             await App.Current.MainPage.Navigation.PushAsync(new RSVPView());
         }
-        public async void AbrirLocal()
+        public async void AbrirInformacoes()
         {
-            await App.Current.MainPage.Navigation.PushAsync(new LocalView());
+            await App.Current.MainPage.Navigation.PushAsync(new InformacoesView());
         }
 
         public async void AbrirFotosInstagram()

@@ -74,16 +74,16 @@ namespace CasamentoBEC.ViewModel
                 RaisePropertyChanged();
             }
         }
-        private ICommand cmdOpenLocal;
-        public ICommand CmdOpenLocal
+        private ICommand cmdOpenInformacoes;
+        public ICommand CmdOpenInformacoes
         {
             get
             {
-                return cmdOpenLocal;
+                return cmdOpenInformacoes;
             }
             set
             {
-                cmdOpenLocal = value;
+                cmdOpenInformacoes = value;
                 RaisePropertyChanged();
             }
         }
@@ -98,7 +98,7 @@ namespace CasamentoBEC.ViewModel
             CmdOpenPresentes = new Command(() => navigationService.AbrirPresentes());
             CmdOpenFotos = new Command(() => navigationService.AbrirFotos());
             CmdOpenRSVP = new Command(() => navigationService.AbrirRSVP());
-            CmdOpenLocal = new Command(() => navigationService.AbrirLocal());
+            CmdOpenInformacoes = new Command(() => navigationService.AbrirInformacoes());
             MudarImagensCarousel();
         }
 

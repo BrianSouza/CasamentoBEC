@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CasamentoBEC.View.InformacoesView"
+            xmlns:local="clr-namespace:CasamentoBEC.View;assembly=CasamentoBEC">
+    <local:LocalView Title="Local" Icon="placeholderbranco.png"></local:LocalView>
+    <local:InfoView Title="Informações" Icon="duvidas.png"></local:InfoView>
+    
+</TabbedPage>
