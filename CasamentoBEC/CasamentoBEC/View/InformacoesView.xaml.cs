@@ -1,4 +1,5 @@
-﻿using FormsControls.Base;
+﻿using CasamentoBEC.ViewModel;
+using FormsControls.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace CasamentoBEC.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class InformacoesView : TabbedPage, IAnimationPage
     {
+        InfoViewModel infoVM;
         public IPageAnimation PageAnimation { get; } = new PushPageAnimation { Duration = AnimationDuration.Long, Subtype = AnimationSubtype.FromBottom };
 
 
@@ -27,6 +29,8 @@ namespace CasamentoBEC.View
         public InformacoesView ()
         {
             InitializeComponent();
+            infoVM = new InfoViewModel();
+            BindingContext = infoVM;
         }
     }
 }

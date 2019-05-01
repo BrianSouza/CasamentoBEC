@@ -1,12 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CasamentoBEC.View.InfoView">
+             x:Class="CasamentoBEC.View.InfoView"
+             BackgroundImage="backgrounddetail.png">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ListView BackgroundColor="Transparent"
+                  ItemsSource="{Binding ListaInfo}"
+                  SeparatorVisibility="None"
+                  RowHeight="100">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame Style="{StaticResource FrameInfo}">
+                            <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand">
+                                <BoxView 
+                                VerticalOptions="FillAndExpand" 
+                                BackgroundColor="{StaticResource  cordivisao}"
+                                    WidthRequest="2"></BoxView>
+                                <StackLayout VerticalOptions="FillAndExpand" Margin="0,0,0,10">
+                                    <Label Text="{Binding TextoCabecalho}" Style="{StaticResource LblGabriolaMedioListViewBold}"></Label>
+                                    <Label Text="{Binding TextoDescritivo}" Style="{StaticResource LblGabriolaMedioListView}" Margin="0,0,0,10"></Label>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </ContentPage.Content>
 </ContentPage>

@@ -118,7 +118,38 @@
                 <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
                 <Setter Property="FontAttributes" Value="Bold"></Setter>
             </Style>
-            
+            <Style x:Key="LabelGabriolaStyleMediumBlack" TargetType="Label" BaseResourceKey="BaseLabelStyle">
+                <Setter Property="FontFamily">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:String" iOS="gabriola" Android="gabriola.ttf#gabriola"/>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="TextColor" Value="Black"></Setter>
+                <Setter Property="FontSize" Value="Large"></Setter>
+                <Setter Property="HorizontalTextAlignment" Value="Start"></Setter>
+            </Style>
+            <Style x:Key="LblGabriolaMedioListViewBold" TargetType="Label" BaseResourceKey="BaseLabelStyle">
+                <Setter Property="FontFamily">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:String" iOS="gabriola" Android="gabriola.ttf#gabriola"/>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="TextColor" Value="{StaticResource fontefundoclaro}"></Setter>
+                <Setter Property="FontSize" Value="Medium"></Setter>
+                <Setter Property="HorizontalTextAlignment" Value="Start"></Setter>
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+            </Style>
+            <Style x:Key="LblGabriolaMedioListView" TargetType="Label" BaseResourceKey="BaseLabelStyle">
+                <Setter Property="FontFamily">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:String" iOS="gabriola" Android="gabriola.ttf#gabriola"/>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="TextColor" Value="Gray"></Setter>
+                <Setter Property="FontSize" Value="Medium"></Setter>
+                <Setter Property="HorizontalTextAlignment" Value="Start"></Setter>
+                <Setter Property="FontAttributes" Value=""></Setter>
+            </Style>
             <!--Toolbar-->
             <Style x:Key="mdp" TargetType="MasterDetailPage">
                 <Setter Property="NavigationPage.BarBackgroundColor" Value="{DynamicResource toolbarcolor}"></Setter>
@@ -186,6 +217,8 @@
                 <Setter Property="HorizontalOptions" Value="FillAndExpand"></Setter>
                 <Setter Property="Margin" Value="20,20,20,20"></Setter>
                 <Setter Property="WidthRequest" Value="250"></Setter>
+                <Setter Property="HasShadow" Value="True"></Setter>
+                <Setter Property="OutlineColor" Value="{DynamicResource bordercolor}"></Setter>
             </Style>
             <Style x:Key="frameFotos" TargetType="Frame">
                 <Setter Property="CornerRadius" Value="29"></Setter>
@@ -194,6 +227,14 @@
                 <Setter Property="Padding" Value="0"></Setter>
                 <Setter Property="HasShadow" Value="True"></Setter>
                 <!--<Setter Property="Opacity" Value="0.75"></Setter>-->
+            </Style>
+            <Style x:Key="FrameInfo" TargetType="Frame">
+                <Setter Property="CornerRadius" Value="5"></Setter>
+                <Setter Property="Margin" Value="10,10,10,10"></Setter>
+                <Setter Property="Padding" Value="0"></Setter>
+                <Setter Property="HasShadow" Value="True"></Setter>
+                <Setter Property="BackgroundColor" Value="White"></Setter>
+                <Setter Property="VerticalOptions" Value="FillAndExpand"></Setter>
             </Style>
             <!--ListView-->
             <Style x:Key="lstMenu" TargetType="ListView">

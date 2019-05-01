@@ -8,8 +8,7 @@
 
     <ScrollView
     HorizontalOptions="FillAndExpand"
-    VerticalOptions="FillAndExpand"
-        Margin="10,10,10,10">
+    VerticalOptions="FillAndExpand">
         <Frame Style="{DynamicResource framecarousel}">
             <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
                 <Label 
@@ -18,12 +17,12 @@
                 FontSize="Large" 
                 HorizontalOptions="Center" 
                 VerticalOptions="Start"
-                Margin="0,40,0,10"
+                Margin="0,20,0,10"
                 TextColor="{DynamicResource fontefundoclaro}"></Label>
-                <Label  Style="{DynamicResource LabelLobsterStyleSmallBlackNegrito}"
-                        Text="A cêrimonia será realizada no &#10; Espaço Armazém, Sala São Paulo. &#10; Localizado na Vila Leopoldina, &#10; rua Jaguaré, n.164 - São Paulo &#10; ">
+                <Label  Style="{DynamicResource LabelGabriolaStyleMediumBlack}"
+                        Text="A cêrimonia será realizada no Espaço Armazém, Sala São Paulo. &#10; Localizado na Vila Leopoldina, rua Jaguaré, n.164 - São Paulo">
                 </Label>
-                <StackLayout Orientation="Horizontal" Padding="10">
+                <!--<StackLayout Orientation="Horizontal" Padding="10">
                     <ffimageloading:CachedImage
                              Aspect="AspectFit"
 							LoadingPlaceholder="image_loading.png" 
@@ -40,7 +39,7 @@
                         HeightRequest="150"
                         WidthRequest="100"
                         HorizontalOptions="End"/>
-                </StackLayout>
+                </StackLayout>-->
                 <StackLayout
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand">
@@ -53,7 +52,7 @@
                             <TapGestureRecognizer Command="{Binding CmdTapMap}"></TapGestureRecognizer>
                         </ffimageloading:CachedImage.GestureRecognizers>
                     </ffimageloading:CachedImage>
-                    <Label Style="{DynamicResource LabelLobsterStyleSmallBlackNegrito}" Text="(Clique aqui para abrir no Waze)"></Label>
+                    <Label Style="{DynamicResource LabelGabriolaStyleMediumBlack}" Text="(Clique aqui para abrir no Waze)"></Label>
                 </StackLayout>
             </StackLayout>
         </Frame>

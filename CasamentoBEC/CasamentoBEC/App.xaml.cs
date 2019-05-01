@@ -14,7 +14,7 @@ namespace CasamentoBEC
             DependencyService.Register<IMessageService, MessageService>();
             DependencyService.Register<INavigationService, NavigationService>();
 			InitializeComponent();
-            FlowListView.Init();
+            //FlowListView.Init();
             MainPage = new View.LoginView();
 		}
 
