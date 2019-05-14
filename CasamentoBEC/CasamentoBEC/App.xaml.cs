@@ -1,3 +1,6 @@
+
+using CasamentoBEC.Provider;
+using CasamentoBEC.Provider.Interface;
 using CasamentoBEC.Services;
 using DLToolkit.Forms.Controls;
 using System;
@@ -13,6 +16,7 @@ namespace CasamentoBEC
 		{
             DependencyService.Register<IMessageService, MessageService>();
             DependencyService.Register<INavigationService, NavigationService>();
+            DependencyService.Register<IAPIProvider, APIProvider>();
 			InitializeComponent();
             //FlowListView.Init();
             MainPage = new View.LoginView();

@@ -1,7 +1,7 @@
-﻿using CasamentoBEC.Services;
+﻿using CasamentoBEC.Provider.Interface;
+using CasamentoBEC.Services;
 using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -11,11 +11,14 @@ namespace CasamentoBEC.ViewModel
     {
         #region Variaveis
         private readonly IMessageService messageService;
+        private readonly IAPIProvider _api;
+
         private ImageSource image;
         private string toolBarImage;
         private string entryImage;
         private string placeHolderText;
         private string buttonEntrarText;
+        private string codigoConvite;
         #endregion
 
         #region Command
@@ -25,7 +28,7 @@ namespace CasamentoBEC.ViewModel
         #region Propriedades
         public string ButtonEntrarText
         {
-            get { return buttonEntrarText; }
+            get => buttonEntrarText;
             set
             {
                 buttonEntrarText = value;
@@ -34,7 +37,7 @@ namespace CasamentoBEC.ViewModel
         }
         public string PlaceHolderText
         {
-            get { return placeHolderText; }
+            get => placeHolderText;
             set
             {
                 placeHolderText = value;
@@ -43,7 +46,7 @@ namespace CasamentoBEC.ViewModel
         }
         public string EntryImage
         {
-            get { return entryImage; }
+            get => entryImage;
             set
             {
                 entryImage = value;
@@ -52,7 +55,7 @@ namespace CasamentoBEC.ViewModel
         }
         public string ToolBarImage
         {
-            get { return toolBarImage; }
+            get => toolBarImage;
             set
             {
                 toolBarImage = value;
@@ -61,10 +64,19 @@ namespace CasamentoBEC.ViewModel
         }
         public ImageSource Image
         {
-            get { return image; }
+            get => image;
             set
             {
                 image = value;
+                RaisePropertyChanged();
+            }
+        }
+        public string CodigoConvite
+        {
+            get => codigoConvite;
+            set
+            {
+                codigoConvite = value;
                 RaisePropertyChanged();
             }
         }
@@ -74,6 +86,7 @@ namespace CasamentoBEC.ViewModel
         public LoginViewModel()
         {
             messageService = DependencyService.Get<IMessageService>();
+            _api = DependencyService.Get<IAPIProvider>();
             LoginCommand = new Command(() => Login());
             SetImages();
             SetText();
@@ -81,19 +94,30 @@ namespace CasamentoBEC.ViewModel
 
         private void SetImages()
         {
-            this.Image = UriImageSource.FromUri(new Uri("https://image.ibb.co/gJBMCT/ftlogin.jpg"));
-            this.EntryImage = "icon_edit.png";
-            this.ToolBarImage = "coracao.png";
+            Image = UriImageSource.FromUri(new Uri("https://image.ibb.co/gJBMCT/ftlogin.jpg"));
+            EntryImage = "icon_edit.png";
+            ToolBarImage = "coracao.png";
         }
         private void SetText()
         {
-            this.PlaceHolderText = "Código Convite";
-            this.ButtonEntrarText = "Entrar";
+            PlaceHolderText = "Código Convite";
+            ButtonEntrarText = "Entrar";
         }
 
-        private void Login()
+        private async Task Login()
         {
-            navigationService.NavigateToMain();
+            if (string.IsNullOrEmpty(CodigoConvite))
+            {
+                await messageService.ShowAsync("Atenção", "Um código de convite deve ser informado!", "OK");
+                return;
+            }
+
+            Model.Convidado convidado = await _api.GetConvidadoAsync(CodigoConvite);
+
+            if (convidado != null)
+            {
+                navigationService.NavigateToMain();
+            }
         }
         #endregion
 

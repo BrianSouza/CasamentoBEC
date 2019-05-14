@@ -14,7 +14,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Frame Style="{DynamicResource frameFotos}"
+            <!--<Frame Style="{DynamicResource frameFotos}"
                    Grid.Row="0" Grid.Column="0">
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding CmdFotoInstagram}"  />
@@ -24,7 +24,7 @@
                    >
 
                 </Image>
-            </Frame>
+            </Frame>-->
             <Frame Style="{DynamicResource frameFotos}"
                    Grid.Row="1" Grid.Column="0">
                 <Frame.GestureRecognizers>
