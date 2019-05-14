@@ -34,6 +34,15 @@
     </NavigationPage.TitleView>
     <ContentPage.Content>
         <AbsoluteLayout>
+            <ActivityIndicator IsRunning="{Binding Processando}"
+                         IsVisible="{Binding Processando}"
+                          HeightRequest="40"
+                          WidthRequest="100"
+                          VerticalOptions="CenterAndExpand"
+                          HorizontalOptions="CenterAndExpand"
+                          Color="{StaticResource bordercolor}"
+                          AbsoluteLayout.LayoutBounds=".5,.5,1,1"
+                          AbsoluteLayout.LayoutFlags="All"/>
             <cv:CarouselViewControl
                 ItemsSource="{Binding Car}"
                 ShowArrows="True"

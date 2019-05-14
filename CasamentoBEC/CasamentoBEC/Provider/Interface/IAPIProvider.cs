@@ -1,6 +1,7 @@
 ﻿using CasamentoBEC.Model;
 using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,6 +11,6 @@ namespace CasamentoBEC.Provider.Interface
     {
         Task<Convidado> GetConvidadoAsync(string identificador);
 
-        Task SentFilmesAsync(Convidado convidado);
+        Task<Convidado> SentConvidadoAsync(Convidado convidado);
     }
 }

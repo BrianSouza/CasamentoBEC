@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CasamentoBEC.Model
 {
-    public class Convidado
+    public sealed class Convidado : BaseModel
     {
             public int Id { get; set; }
             public string Nome { get; set; }

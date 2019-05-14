@@ -90,16 +90,25 @@ namespace CasamentoBEC.ViewModel
 
         public PaginaPrincipalViewModel()
         {
-            messageService = DependencyService.Get<IMessageService>();
-            string textoPaginaInicial = "...Como é bom poder contar com vocês na \n realização do nosso sonho! \n A contagem regressiva começa,\n o frio na barriga e toda a ansiedade do dia \n mais esperado de nossas vidas.\n Nos enche de alegria em tê-los ao nosso lado.\n Vamos juntos nesse grande sonho,\n o dia do nosso casamento...";
+            try
+            {
+                Processando = true;
+                messageService = DependencyService.Get<IMessageService>();
+                string textoPaginaInicial = "...Como é bom poder contar com vocês na \n realização do nosso sonho! \n A contagem regressiva começa,\n o frio na barriga e toda a ansiedade do dia \n mais esperado de nossas vidas.\n Nos enche de alegria em tê-los ao nosso lado.\n Vamos juntos nesse grande sonho,\n o dia do nosso casamento...";
 
-            PreencheCarousel(textoPaginaInicial);
+                PreencheCarousel(textoPaginaInicial);
+
+                CmdOpenPresentes = new Command(() => navigationService.AbrirPresentes());
+                CmdOpenFotos = new Command(() => navigationService.AbrirFotos());
+                CmdOpenRSVP = new Command(() => navigationService.AbrirRSVP());
+                CmdOpenInformacoes = new Command(() => navigationService.AbrirInformacoes());
+                MudarImagensCarousel();
+            }
+            finally
+            {
+                Processando = false;
+            }
             
-            CmdOpenPresentes = new Command(() => navigationService.AbrirPresentes());
-            CmdOpenFotos = new Command(() => navigationService.AbrirFotos());
-            CmdOpenRSVP = new Command(() => navigationService.AbrirRSVP());
-            CmdOpenInformacoes = new Command(() => navigationService.AbrirInformacoes());
-            MudarImagensCarousel();
         }
 
         private void PreencheCarousel(string textoPaginaInicial)

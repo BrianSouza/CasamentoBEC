@@ -106,18 +106,31 @@ namespace CasamentoBEC.ViewModel
 
         private async Task Login()
         {
-            if (string.IsNullOrEmpty(CodigoConvite))
+            try
             {
-                await messageService.ShowAsync("Atenção", "Um código de convite deve ser informado!", "OK");
-                return;
+                Processando = true;
+                if (string.IsNullOrEmpty(CodigoConvite))
+                {
+                    await messageService.ShowAsync("Atenção", "Um código de convite deve ser informado!", "OK");
+                    return;
+                }
+
+                Model.Convidado convidado = await _api.GetConvidadoAsync(CodigoConvite);
+
+                if (convidado != null && convidado.Sucesso)
+                {
+                    navigationService.NavigateToMain();
+                }
+                else
+                {
+                    await messageService.ShowAsync("Atenção", "Verifique se o código informado esta correto!", "OK");
+                }
             }
-
-            Model.Convidado convidado = await _api.GetConvidadoAsync(CodigoConvite);
-
-            if (convidado != null)
+            finally
             {
-                navigationService.NavigateToMain();
+                Processando = false;
             }
+            
         }
         #endregion
 

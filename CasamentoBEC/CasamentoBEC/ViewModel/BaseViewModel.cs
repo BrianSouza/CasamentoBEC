@@ -11,7 +11,8 @@ namespace CasamentoBEC.ViewModel
     public class BaseViewModel : INotifyPropertyChanged 
     {
         internal INavigationService navigationService;
-       
+        private bool processando;
+
         public event PropertyChangedEventHandler PropertyChanged;
         public BaseViewModel()
         {
@@ -34,6 +35,15 @@ namespace CasamentoBEC.ViewModel
             };
 
             return uri;
+        }
+        public bool Processando
+        {
+            get => processando;
+            set
+            {
+                processando = value;
+                RaisePropertyChanged();
+            }
         }
 
     }

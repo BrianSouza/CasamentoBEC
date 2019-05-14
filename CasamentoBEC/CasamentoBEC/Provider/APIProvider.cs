@@ -22,27 +22,21 @@ namespace CasamentoBEC.Provider
             {
                 string url = $"https://apicasamento.azurewebsites.net/api/Convidados/{identificador}";
                 var response = await client.GetStringAsync(url);
-                var filmes = JsonConvert.DeserializeObject<Convidado>(response);
-                return filmes;
+                var convidado = JsonConvert.DeserializeObject<Convidado>(response);
+                convidado.Sucesso = true;
+                return convidado;
             }
             catch (HttpRequestException requestException)
             {
-                if (requestException.InnerException is WebException &&
-                  ((WebException)requestException.InnerException).Status == WebExceptionStatus.NameResolutionFailure)
-                {
-                    throw requestException;
-                }
-
-                throw requestException;
+                return new Convidado { Sucesso = false, CodErro = "1", MsgErro = requestException.Message };
             }
             catch (Exception ex)
             {
-                Debug.WriteLine(ex.Message);
-                throw ex;
+                return new Convidado { Sucesso = false, CodErro = "2", MsgErro = ex.Message };
             }
         }
 
-        public async Task SentFilmesAsync(Convidado convidado)
+        public async Task<Convidado> SentConvidadoAsync(Convidado convidado)
         {
             try
             {
@@ -50,11 +44,15 @@ namespace CasamentoBEC.Provider
                 string jsonString = JsonConvert.SerializeObject(convidado);
                 var response = await client.PostAsync(url, new StringContent(jsonString, Encoding.UTF8, "application/json"));
                 await response.Content.ReadAsStringAsync();
+                return new Convidado { Sucesso = true };
+            }
+            catch (HttpRequestException requestException)
+            {
+                return new Convidado { Sucesso = false, CodErro = "1", MsgErro = requestException.Message };
             }
             catch (Exception ex)
             {
-                Debug.WriteLine(ex.Message);
-                throw;
+                return new Convidado { Sucesso = false, CodErro = "2", MsgErro = ex.Message };
             }
         }
     }
