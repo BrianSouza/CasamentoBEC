@@ -12,7 +12,9 @@ namespace CasamentoBEC
 {
 	public partial class App : Application
 	{
-		public App ()
+        public static Model.Convidado ConvidadoLogado { get; set; }
+
+        public App ()
 		{
             DependencyService.Register<IMessageService, MessageService>();
             DependencyService.Register<INavigationService, NavigationService>();

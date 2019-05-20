@@ -11,6 +11,6 @@ namespace CasamentoBEC.Provider.Interface
     {
         Task<Convidado> GetConvidadoAsync(string identificador);
 
-        Task<Convidado> SentConvidadoAsync(Convidado convidado);
+        Task<Convidado> ConfirmarPresencaAsync(Convidado convidado);
     }
 }

@@ -20,7 +20,7 @@ namespace CasamentoBEC.Provider
         {
             try
             {
-                string url = $"https://apicasamento.azurewebsites.net/api/Convidados/{identificador}";
+                string url = $"http://apicasamento.sa-east-1.elasticbeanstalk.com/api/Convidados/{identificador}";
                 var response = await client.GetStringAsync(url);
                 var convidado = JsonConvert.DeserializeObject<Convidado>(response);
                 convidado.Sucesso = true;
@@ -36,14 +36,14 @@ namespace CasamentoBEC.Provider
             }
         }
 
-        public async Task<Convidado> SentConvidadoAsync(Convidado convidado)
+        public async Task<Convidado> ConfirmarPresencaAsync(Convidado convidado)
         {
             try
             {
-                string url = $"https://apicasamento.azurewebsites.net/api/Convidados/identificador?identificador={convidado.Identificador}";
+                string url = $"http://apicasamento.sa-east-1.elasticbeanstalk.com/api/Convidados/{convidado.Identificador}";
                 string jsonString = JsonConvert.SerializeObject(convidado);
-                var response = await client.PostAsync(url, new StringContent(jsonString, Encoding.UTF8, "application/json"));
-                await response.Content.ReadAsStringAsync();
+                var response =  await client.GetStringAsync(url);
+                var convidadoRetorno = JsonConvert.DeserializeObject<Convidado>(response);
                 return new Convidado { Sucesso = true };
             }
             catch (HttpRequestException requestException)

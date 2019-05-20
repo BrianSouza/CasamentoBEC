@@ -44,15 +44,43 @@ namespace CasamentoBEC.ViewModel
         }
         public RSVPViewModel()
         {
-            Confirmado = false;
-            NaoConfirmado = true;
+            ValidarUsuarioConfirmado();
             CmdConfirmar = new Command(ConfirmarPresenca);
+        }
+
+        private void ValidarUsuarioConfirmado()
+        {
+            if (App.ConvidadoLogado.PresencaConfirmada)
+            {
+                Confirmado = true;
+                NaoConfirmado = false;
+            }
+            else
+            {
+                Confirmado = false;
+                NaoConfirmado = true;
+            }
         }
 
         private void ConfirmarPresenca()
         {
-            Confirmado = true;
-            NaoConfirmado = false;
+            //Confirmado = true;
+            //NaoConfirmado = false;
+            if(!Confirmado)
+            {
+                Confirmado = true;
+                NaoConfirmado = false;
+                App.ConvidadoLogado.PresencaConfirmada = Confirmado;
+                _api.ConfirmarPresencaAsync(App.ConvidadoLogado);
+            }
+        }
+
+        private void ValidarConfirmacao()
+        {
+            if (Confirmado)
+                NaoConfirmado = false;
+            else
+                NaoConfirmado = true;
         }
     }
 }

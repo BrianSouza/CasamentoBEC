@@ -11,7 +11,7 @@ namespace CasamentoBEC.ViewModel
     {
         #region Variaveis
         private readonly IMessageService messageService;
-        private readonly IAPIProvider _api;
+        
 
         private ImageSource image;
         private string toolBarImage;
@@ -86,7 +86,7 @@ namespace CasamentoBEC.ViewModel
         public LoginViewModel()
         {
             messageService = DependencyService.Get<IMessageService>();
-            _api = DependencyService.Get<IAPIProvider>();
+            
             LoginCommand = new Command(() => Login());
             SetImages();
             SetText();
@@ -115,7 +115,7 @@ namespace CasamentoBEC.ViewModel
                     return;
                 }
 
-                Model.Convidado convidado = await _api.GetConvidadoAsync(CodigoConvite);
+                var convidado = App.ConvidadoLogado = await _api.GetConvidadoAsync(CodigoConvite);
 
                 if (convidado != null && convidado.Sucesso)
                 {
