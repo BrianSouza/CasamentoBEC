@@ -24,6 +24,13 @@
                                 </FormattedString>
                             </Label.FormattedText>
                         </Label>
+                        <ActivityIndicator IsRunning="{Binding Processando}"
+                         IsVisible="{Binding Processando}"
+                          HeightRequest="40"
+                          WidthRequest="100"
+                          VerticalOptions="CenterAndExpand"
+                          HorizontalOptions="CenterAndExpand"
+                          Color="{StaticResource bordercolor}"/>
                         <Label Text="Obrigado pela sua confirmação!"  HorizontalTextAlignment="Center" FontFamily="gabriola.ttf#gabriola" FontSize="28" TextColor="Black" IsVisible="{Binding Confirmado}"></Label>
                         <ffimageloading:CachedImage
                             Margin="0,30,0,30"

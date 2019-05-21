@@ -9,7 +9,7 @@ namespace CasamentoBEC.ViewModel
     public class RSVPViewModel : BaseViewModel
     {
         private bool _naoConfirmado;
-        private bool _confirmado; 
+        private bool _confirmado;
         private ICommand cmdConfirmar;
 
         public bool Confirmado
@@ -64,14 +64,21 @@ namespace CasamentoBEC.ViewModel
 
         private void ConfirmarPresenca()
         {
-            //Confirmado = true;
-            //NaoConfirmado = false;
             if(!Confirmado)
             {
-                Confirmado = true;
-                NaoConfirmado = false;
-                App.ConvidadoLogado.PresencaConfirmada = Confirmado;
-                _api.ConfirmarPresencaAsync(App.ConvidadoLogado);
+                try
+                {
+                    Processando = true;
+                    Confirmado = true;
+                    NaoConfirmado = false;
+                    App.ConvidadoLogado.PresencaConfirmada = Confirmado;
+                    _api.ConfirmarPresencaAsync(App.ConvidadoLogado);
+                }
+                finally
+                {
+                    Processando = false;
+                }
+                
             }
         }
 

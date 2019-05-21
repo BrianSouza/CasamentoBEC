@@ -7,6 +7,7 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Net;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -36,23 +37,25 @@ namespace CasamentoBEC.Provider
             }
         }
 
-        public async Task<Convidado> ConfirmarPresencaAsync(Convidado convidado)
+        public async Task<HttpResponseMessage> ConfirmarPresencaAsync(Convidado convidado)
         {
             try
             {
-                string url = $"http://apicasamento.sa-east-1.elasticbeanstalk.com/api/Convidados/{convidado.Identificador}";
-                string jsonString = JsonConvert.SerializeObject(convidado);
-                var response =  await client.GetStringAsync(url);
-                var convidadoRetorno = JsonConvert.DeserializeObject<Convidado>(response);
-                return new Convidado { Sucesso = true };
+                using (var httpClient = new HttpClient())
+                {
+                    string requestUrl = $"http://apicasamento.sa-east-1.elasticbeanstalk.com/api/Convidados/{convidado.Identificador}?rsvp={convidado.PresencaConfirmada}";
+
+                    var response = await httpClient.PutAsync(new Uri(requestUrl), null);
+                    return response.EnsureSuccessStatusCode();
+                }
             }
             catch (HttpRequestException requestException)
             {
-                return new Convidado { Sucesso = false, CodErro = "1", MsgErro = requestException.Message };
+                return new HttpResponseMessage(HttpStatusCode.BadRequest);
             }
             catch (Exception ex)
             {
-                return new Convidado { Sucesso = false, CodErro = "2", MsgErro = ex.Message };
+                return new HttpResponseMessage(HttpStatusCode.BadRequest);
             }
         }
     }
