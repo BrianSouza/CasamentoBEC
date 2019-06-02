@@ -58,5 +58,25 @@ namespace CasamentoBEC.Provider
                 return new HttpResponseMessage(HttpStatusCode.BadRequest);
             }
         }
+
+        public async Task<Fotos> GetFotosAsync(int tipo)
+        {
+            try
+            {
+                string url = $"http://apicasamento.sa-east-1.elasticbeanstalk.com/api/Fotos?tipoFoto={tipo}";
+                var response = await client.GetStringAsync(url);
+                Fotos fotos  = new Fotos { FotosIE = JsonConvert.DeserializeObject<IEnumerable<Foto>>(response) };
+                fotos.Sucesso = true;
+                return fotos;
+            }
+            catch (HttpRequestException requestException)
+            {
+                return new Fotos { Sucesso = false, CodErro = "1", MsgErro = requestException.Message };
+            }
+            catch (Exception ex)
+            {
+                return new Fotos { Sucesso = false, CodErro = "2", MsgErro = ex.Message };
+            }
+        }
     }
 }

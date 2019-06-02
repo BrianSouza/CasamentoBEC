@@ -1,7 +1,10 @@
-﻿using System;
+﻿
+using CasamentoBEC.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace CasamentoBEC.Services
 {
@@ -32,6 +35,7 @@ namespace CasamentoBEC.Services
         void AbrirFotosCasamento();
 
 
-        void AbrirFotoSelecionada(Model.Fotos foto);
+        void AbrirFotoSelecionada(FotosSelecionadas img);
+        Task GoBack();
     }
 }

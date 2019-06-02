@@ -12,5 +12,7 @@ namespace CasamentoBEC.Provider.Interface
         Task<Convidado> GetConvidadoAsync(string identificador);
 
         Task<HttpResponseMessage> ConfirmarPresencaAsync(Convidado convidado);
+
+        Task<Fotos> GetFotosAsync(int tipo);
     }
 }

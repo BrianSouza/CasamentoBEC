@@ -35,7 +35,7 @@ namespace CasamentoBEC.View
 
         private void FlowListView_FlowItemTapped(object sender, ItemTappedEventArgs e)
         {
-            gridVM.Foto = (e.Item as Model.Fotos);
+            gridVM.FotoSelecionada = (e.Item as FotosSelecionadas);
         }
     }
 }

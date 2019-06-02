@@ -38,7 +38,7 @@
                              Aspect="AspectFit"
 							LoadingPlaceholder="image_loading.png" 
                             ErrorPlaceholder="image_error.png"
-							Source="{Binding ImgSource}"/>
+							Source="{Binding FotosObtidas}"/>
 
 
                             </Grid>

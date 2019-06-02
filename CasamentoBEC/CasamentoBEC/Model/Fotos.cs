@@ -5,9 +5,8 @@ using Xamarin.Forms;
 
 namespace CasamentoBEC.Model
 {
-    public class Fotos
+    public class Fotos : BaseModel
     {
-         public UriImageSource ImgSource { get; set; }
-
+       public IEnumerable<Foto> FotosIE { get; set; }
     }
 }

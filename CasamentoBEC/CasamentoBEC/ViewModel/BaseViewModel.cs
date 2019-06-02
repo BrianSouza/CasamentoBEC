@@ -11,14 +11,16 @@ namespace CasamentoBEC.ViewModel
 {
     public class BaseViewModel : INotifyPropertyChanged 
     {
-        internal INavigationService navigationService;
+        internal readonly INavigationService navigationService;
         internal readonly IAPIProvider _api;
+        internal readonly IMessageService _message;
         private bool processando;
         public event PropertyChangedEventHandler PropertyChanged;
         public BaseViewModel()
         {
             navigationService = DependencyService.Get<INavigationService>();
             _api = DependencyService.Get<IAPIProvider>();
+            _message = DependencyService.Get<IMessageService>();
         }
 
         public void RaisePropertyChanged([CallerMemberName] string propertyName = null)

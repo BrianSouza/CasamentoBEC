@@ -15,12 +15,12 @@ namespace CasamentoBEC.View
 	public partial class FotoSelecionadaView : PopupPage 
     {
         private FotoSelecionadaViewModel fotoVM;
-		public FotoSelecionadaView (Model.Fotos foto)
+		public FotoSelecionadaView (FotosSelecionadas img)
 		{
 			InitializeComponent ();
             fotoVM = new FotoSelecionadaViewModel();
             this.BindingContext = fotoVM;
-            fotoVM.Foto = foto.ImgSource;
+            fotoVM.Foto = img.FotosObtidas;
 		}
 	}
 }
