@@ -7,7 +7,7 @@
         <ListView BackgroundColor="Transparent"
                   ItemsSource="{Binding ListaInfo}"
                   SeparatorVisibility="None"
-                  RowHeight="100">
+                  RowHeight="200">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

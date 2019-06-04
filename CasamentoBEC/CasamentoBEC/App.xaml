@@ -128,6 +128,16 @@
                 <Setter Property="FontSize" Value="Large"></Setter>
                 <Setter Property="HorizontalTextAlignment" Value="Start"></Setter>
             </Style>
+            <Style x:Key="LabelLocal" TargetType="Label" BaseResourceKey="BaseLabelStyle">
+                <Setter Property="FontFamily">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:String" iOS="gabriola" Android="gabriola.ttf#gabriola"/>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="TextColor" Value="Black"></Setter>
+                <Setter Property="FontSize" Value="Large"></Setter>
+                <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+            </Style>
             <Style x:Key="LblGabriolaMedioListViewBold" TargetType="Label" BaseResourceKey="BaseLabelStyle">
                 <Setter Property="FontFamily">
                     <Setter.Value>
