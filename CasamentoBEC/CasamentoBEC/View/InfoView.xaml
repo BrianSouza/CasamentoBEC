@@ -7,7 +7,7 @@
         <ListView BackgroundColor="Transparent"
                   ItemsSource="{Binding ListaInfo}"
                   SeparatorVisibility="None"
-                  RowHeight="200">
+                  HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -17,9 +17,14 @@
                                 VerticalOptions="FillAndExpand" 
                                 BackgroundColor="{StaticResource  cordivisao}"
                                     WidthRequest="2"></BoxView>
-                                <StackLayout VerticalOptions="FillAndExpand" Margin="0,0,0,10">
-                                    <Label Text="{Binding TextoCabecalho}" Style="{StaticResource LblGabriolaMedioListViewBold}"></Label>
-                                    <Label Text="{Binding TextoDescritivo}" Style="{StaticResource LblGabriolaMedioListView}" Margin="0,0,0,10"></Label>
+                                <StackLayout VerticalOptions="FillAndExpand" Spacing="0">
+                                    <Label Text="{Binding TextoCurto}" Style="{StaticResource LblGabriolaMedioListViewBold}" Margin="0,0,0,10"></Label>
+                                    <Label Text="{Binding TextoDescricao}" Style="{StaticResource LblGabriolaMedioListView}" LineBreakMode="WordWrap" Margin="0,0,0,10"></Label>
+                                    <Label Text="{Binding TextoDescricao2}" Style="{StaticResource LblGabriolaMedioListView}" LineBreakMode="WordWrap" IsVisible="{Binding IsVisible}"></Label>
+                                    <Label Text="{Binding TextoDescricao3}" Style="{StaticResource LblGabriolaMedioListView}" LineBreakMode="WordWrap" IsVisible="{Binding IsVisible2}"></Label>
+                                    <Label Text="{Binding TextoDescricao4}" Style="{StaticResource LblGabriolaMedioListView}" LineBreakMode="WordWrap" IsVisible="{Binding IsVisible3}"></Label>
+                                    <Label Text="{Binding TextoDescricao5}" Style="{StaticResource LblGabriolaMedioListView}" LineBreakMode="WordWrap" IsVisible="{Binding IsVisible4}" Margin="0,0,0,10"></Label>
+                                    <Label Text="{Binding TextoContato, StringFormat='Contato: {0}'}" Style="{StaticResource LblGabriolaMedioListView}" Margin="0,0,0,10"></Label>
                                 </StackLayout>
                             </StackLayout>
                         </Frame>
