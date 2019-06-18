@@ -19,7 +19,7 @@ namespace CasamentoBEC.Services
         void NavigateToMain();
 
         void AbrirMenu();
-
+        Task AbrirErroConexao();
         void AbrirPresentes();
 
         void AbrirFotos();

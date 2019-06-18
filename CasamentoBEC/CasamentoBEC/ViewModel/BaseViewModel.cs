@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace CasamentoBEC.ViewModel
@@ -16,13 +18,46 @@ namespace CasamentoBEC.ViewModel
         internal readonly IMessageService _message;
         private bool processando;
         public event PropertyChangedEventHandler PropertyChanged;
+        private bool _isNotConnected;
+        public bool IsNotConnected
+        {
+            get
+            {
+                return _isNotConnected;
+            }
+            set
+            {
+                _isNotConnected = value;
+                RaisePropertyChanged();
+                ExibirPopupErroConexao();
+            }
+        }
+
         public BaseViewModel()
         {
             navigationService = DependencyService.Get<INavigationService>();
             _api = DependencyService.Get<IAPIProvider>();
             _message = DependencyService.Get<IMessageService>();
+            Connectivity.ConnectivityChanged += Connectivity_ConnectivityChanged;
+            ValidarConexao();
         }
-
+        ~BaseViewModel()
+        {
+            Connectivity.ConnectivityChanged -= Connectivity_ConnectivityChanged;
+        }
+        private void Connectivity_ConnectivityChanged(object sender, ConnectivityChangedEventArgs e)
+        {
+            IsNotConnected = e.NetworkAccess != NetworkAccess.Internet;
+        }
+        public void ExibirPopupErroConexao()
+        {
+            if (IsNotConnected)
+                navigationService.AbrirErroConexao();
+        }
+        public void ValidarConexao()
+        {
+            IsNotConnected = Connectivity.NetworkAccess != NetworkAccess.Internet;
+        }
         public void RaisePropertyChanged([CallerMemberName] string propertyName = null)
         {
             if (this.PropertyChanged != null)

@@ -44,11 +44,13 @@ namespace CasamentoBEC.Services
         {
             await App.Current.MainPage.Navigation.PopToRootAsync();
         }
-
         public async void AbrirMenu()
         {
             await PopupNavigation.Instance.PushAsync(new MenuView());
-
+        }
+        public async Task AbrirErroConexao()
+        {
+            await PopupNavigation.Instance.PushAsync(new PopupErroConexao());
         }
         public async void AbrirFotoSelecionada(FotosSelecionadas img)
         {

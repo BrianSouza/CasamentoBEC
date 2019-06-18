@@ -265,6 +265,8 @@
             <x:String x:Key="map">&#xf34e;</x:String>
             <x:String x:Key="check">&#xf5e0;</x:String>
             <x:String x:Key="camera">&#xf100;</x:String>
+            <x:String x:Key="wifioff">&#xf5aa;</x:String>
+
 
             <!--Fontes Icones-->
             <Style x:Key="LabelIconeDuvida" TargetType="Label" BaseResourceKey="BaseLabelStyle">
@@ -311,6 +313,14 @@
                 <Setter Property="FontFamily" Value="{StaticResource MaterialFontFamily}"></Setter>
                 <Setter Property="Text" Value="{StaticResource camera}"></Setter>
                 <Setter Property="TextColor" Value="{StaticResource coriconemenu}"></Setter>
+                <Setter Property="FontSize" Value="32"></Setter>
+                <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+            </Style>
+            <Style x:Key="LabelIconeWifiOff" TargetType="Label" BaseResourceKey="BaseLabelStyle">
+                <Setter Property="FontFamily" Value="{StaticResource MaterialFontFamily}"></Setter>
+                <Setter Property="Text" Value="{StaticResource wifioff}"></Setter>
+                <Setter Property="TextColor" Value="White"></Setter>
                 <Setter Property="FontSize" Value="32"></Setter>
                 <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
                 <Setter Property="FontAttributes" Value="Bold"></Setter>

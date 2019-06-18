@@ -4,43 +4,42 @@
              x:Class="CasamentoBEC.View.LoginView"
              xmlns:behavior="clr-namespace:CasamentoBEC.CustomControls"
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:local="clr-namespace:CasamentoBEC.View"
              BackgroundImage="backgroundlogin.png">
-    <ContentPage.Content>
-        <ScrollView>
-            <StackLayout >
-                <StackLayout VerticalOptions="CenterAndExpand">
-                    <StackLayout Margin="0,0,0,30">
-                        <Image Source="brasao.png"></Image>
-                    </StackLayout>
-                    <ActivityIndicator IsRunning="{Binding Processando}"
+    <ScrollView>
+        <StackLayout >
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <StackLayout Margin="0,0,0,30">
+                    <Image Source="brasao.png"></Image>
+                </StackLayout>
+                <ActivityIndicator IsRunning="{Binding Processando}"
                          IsVisible="{Binding Processando}"
                           HeightRequest="40"
                           WidthRequest="100"
                           VerticalOptions="CenterAndExpand"
                           HorizontalOptions="CenterAndExpand"
                           Color="{StaticResource bordercolor}"/>
-                    <Frame  Style="{DynamicResource framelogin}" HorizontalOptions="CenterAndExpand">
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="0">
-                            <Entry Placeholder="{Binding PlaceHolderText}"
+                <Frame  Style="{DynamicResource framelogin}" HorizontalOptions="CenterAndExpand">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="0">
+                        <Entry Placeholder="{Binding PlaceHolderText}"
                                     Style="{DynamicResource entrylogin}"
                                     HorizontalOptions="Start"
                                    MinimumWidthRequest="100"
                                    Text="{Binding CodigoConvite}"></Entry>
-                            <Image Source="{Binding EntryImage}"></Image>
+                        <Image Source="{Binding EntryImage}"></Image>
 
-                        </StackLayout>
-                    </Frame>
+                    </StackLayout>
+                </Frame>
 
-                    <Button 
+                <Button 
                     Style="{DynamicResource btnlaranja}"
                     Text="{Binding ButtonEntrarText}"
                         Command="{Binding LoginCommand}">
-                        <Button.Behaviors>
-                            <behavior:ViewTappedButtonBehavior AnimationType="Scale"></behavior:ViewTappedButtonBehavior>
-                        </Button.Behaviors>
-                    </Button>
-                </StackLayout>
+                    <Button.Behaviors>
+                        <behavior:ViewTappedButtonBehavior AnimationType="Scale"></behavior:ViewTappedButtonBehavior>
+                    </Button.Behaviors>
+                </Button>
             </StackLayout>
-        </ScrollView>
-    </ContentPage.Content>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

@@ -108,6 +108,10 @@ namespace CasamentoBEC.ViewModel
         {
             try
             {
+                ValidarConexao();
+                if (IsNotConnected)
+                    return;
+
                 Processando = true;
                 if (string.IsNullOrEmpty(CodigoConvite))
                 {

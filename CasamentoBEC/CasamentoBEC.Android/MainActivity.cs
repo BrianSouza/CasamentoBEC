@@ -22,6 +22,7 @@ namespace CasamentoBEC.Droid
 
             base.OnCreate(bundle);
             Rg.Plugins.Popup.Popup.Init(this, bundle);
+            Xamarin.Essentials.Platform.Init(this,bundle);
             //FlowListView.Init();
             CachedImageRenderer.Init(true);
             CarouselViewRenderer.Init();
