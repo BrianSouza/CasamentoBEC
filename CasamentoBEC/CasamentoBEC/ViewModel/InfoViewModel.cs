@@ -36,6 +36,10 @@ namespace CasamentoBEC.ViewModel
         {
             try
             {
+                ValidarConexao();
+                if (IsNotConnected)
+                    return;
+
                 CarregandoInformacoes = true;
                 Avisos ieAvisos = await _api.GetAvisos();
                 if (ieAvisos.Sucesso == true)

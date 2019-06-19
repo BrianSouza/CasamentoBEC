@@ -27,6 +27,10 @@ namespace CasamentoBEC.ViewModel
         }
         private void TappedMap()
         {
+            ValidarConexao();
+            if (IsNotConnected)
+                return;
+
             Device.OpenUri(new Uri("https://www.waze.com/ul?ll=-23.52641370%2C-46.73721970&navigate=yes&zoom=16"));
         }
     }

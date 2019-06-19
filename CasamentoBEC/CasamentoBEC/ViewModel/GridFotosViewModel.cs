@@ -91,6 +91,10 @@ namespace CasamentoBEC.ViewModel
         }
         private async void PreencherListaImagens(TiposFotos tipo)
         {
+            ValidarConexao();
+            if (IsNotConnected)
+                return;
+                
             Foto = await _api.GetFotosAsync((int)tipo);
             if (Foto.Sucesso)
             {

@@ -64,7 +64,11 @@ namespace CasamentoBEC.ViewModel
 
         private void ConfirmarPresenca()
         {
-            if(!Confirmado)
+            ValidarConexao();
+            if (IsNotConnected)
+                return;
+
+            if (!Confirmado)
             {
                 try
                 {
