@@ -9,7 +9,7 @@
 	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
-		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
@@ -20,7 +20,16 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>MinimumOSVersion</key>
+  <key>UIAppFonts</key>
+
+  <array>
+
+    <string>gabriola.ttf</string>
+    <string>Lobster_13.ttf</string>
+    <string>materialdesignicons-webfont</string>
+
+  </array>
+  <key>MinimumOSVersion</key>
 	<string>8.0</string>
 	<key>CFBundleDisplayName</key>
 	<string>CasamentoBEC</string>

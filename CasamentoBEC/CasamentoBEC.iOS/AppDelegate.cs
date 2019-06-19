@@ -25,11 +25,12 @@ namespace CasamentoBEC.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             CachedImageRenderer.Init();
-            FlowListView.Init();
-
+            //FlowListView.Init();
+            FormsControls.Touch.Main.Init();
+            Rg.Plugins.Popup.Popup.Init();
             LoadApplication(new App());
 
-
+            
             return base.FinishedLaunching(app, options);
         }
     }

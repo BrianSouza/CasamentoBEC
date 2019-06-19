@@ -2,31 +2,30 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CasamentoBEC.View.LoginView"
-             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              xmlns:behavior="clr-namespace:CasamentoBEC.CustomControls"
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:local="clr-namespace:CasamentoBEC.View"
              BackgroundImage="backgroundlogin.png">
-    <ContentPage.Content>
-        <ScrollView>
-            <StackLayout >
-                <Frame Style="{DynamicResource frameloginbar}">
-                    <Image 
-                    Source="{Binding ToolBarImage}" 
-                    HorizontalOptions="CenterAndExpand" 
-                    Aspect="AspectFit" 
-                    VerticalOptions="FillAndExpand"></Image>
-                </Frame>
-                <StackLayout VerticalOptions="End"
-                     Padding="0,0,0,100">
-
-                    <ffimageloading:CachedImage Source="brasao.png"
-                        Margin="0,30,0,0"></ffimageloading:CachedImage>
+    <ScrollView>
+        <StackLayout >
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <StackLayout Margin="0,0,0,30">
+                    <Image Source="brasao.png"></Image>
                 </StackLayout>
-
-                <Frame  Style="{DynamicResource framelogin}">
-                    <StackLayout Orientation="Horizontal">
+                <ActivityIndicator IsRunning="{Binding Processando}"
+                         IsVisible="{Binding Processando}"
+                          HeightRequest="40"
+                          WidthRequest="100"
+                          VerticalOptions="CenterAndExpand"
+                          HorizontalOptions="CenterAndExpand"
+                          Color="{StaticResource bordercolor}"/>
+                <Frame  Style="{DynamicResource framelogin}" HorizontalOptions="CenterAndExpand">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="0">
                         <Entry Placeholder="{Binding PlaceHolderText}"
-                       Style="{DynamicResource entrylogin}"></Entry>
+                                    Style="{DynamicResource entrylogin}"
+                                    HorizontalOptions="Start"
+                                   MinimumWidthRequest="100"
+                                   Text="{Binding CodigoConvite}"></Entry>
                         <Image Source="{Binding EntryImage}"></Image>
 
                     </StackLayout>
@@ -40,8 +39,7 @@
                         <behavior:ViewTappedButtonBehavior AnimationType="Scale"></behavior:ViewTappedButtonBehavior>
                     </Button.Behaviors>
                 </Button>
-
             </StackLayout>
-        </ScrollView>
-    </ContentPage.Content>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

@@ -9,21 +9,7 @@ namespace CasamentoBEC.ViewModel
     public class PresentesViewModel : BaseViewModel
     {
         private string address;
-
-        private ICommand cmdClose;
-        public ICommand CmdClose
-        {
-            get
-            {
-                return cmdClose;
-            }
-            set
-            {
-                cmdClose = value;
-                RaisePropertyChanged();
-            }
-        }
-
+        
         public string Address
         {
             get
@@ -39,7 +25,7 @@ namespace CasamentoBEC.ViewModel
        
         public PresentesViewModel()
         {
-            CmdClose = new Command(() => navigationService.PopNavigation());
+            ValidarConexao();
             Address = "https://sites.icasei.com.br/briancamila/pt_br/store/9/1/1";
         }
     }

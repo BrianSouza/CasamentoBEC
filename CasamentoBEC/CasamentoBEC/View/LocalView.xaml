@@ -8,42 +8,33 @@
 
     <ScrollView
     HorizontalOptions="FillAndExpand"
-    VerticalOptions="FillAndExpand"
-        Margin="10,10,10,10">
+    VerticalOptions="FillAndExpand">
         <Frame Style="{DynamicResource framecarousel}">
             <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
                 <Label 
                 Text="O Local" 
                 FontFamily="Lobster_13.otf#Lobster_13" 
-                FontSize="40" 
+                FontSize="Large" 
                 HorizontalOptions="Center" 
                 VerticalOptions="Start"
-                Margin="0,40,0,10"
+                Margin="0,20,0,10"
                 TextColor="{DynamicResource fontefundoclaro}"></Label>
-                <Label  FontFamily="Lobster_13.otf#Lobster_13" 
-                        FontSize="18" 
-                        HorizontalOptions="CenterAndExpand"
-                        VerticalOptions="StartAndExpand"
-                        HorizontalTextAlignment="Center"
-                        Text="A cêrimonia será realizada no &#10; Espaço Armazém, Sala São Paulo. &#10; Localizado na Vila Leopoldina, &#10; rua Jaguaré, n.164 - São Paulo &#10; ">
+                <Label  Style="{DynamicResource LabelLocal}"
+                        Text="A cêrimonia será realizada no Espaço Armazém, Sala São Paulo. &#10; Localizado na Vila Leopoldina, rua Jaguaré, n.164 - São Paulo">
                 </Label>
-                <StackLayout Orientation="Horizontal">
+                <StackLayout
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand">
                     <ffimageloading:CachedImage
-                            Margin="10,0,10,0"
-                             Aspect="AspectFill"
+                             Aspect="AspectFit"
 							LoadingPlaceholder="image_loading.png" 
                             ErrorPlaceholder="image_error.png"
-							Source="eam1.jpg"
-                        HeightRequest="91"
-                        WidthRequest="65"/>
-                    <ffimageloading:CachedImage
-                            Margin="10,0,10,0"
-                             Aspect="AspectFill"
-							LoadingPlaceholder="image_loading.png" 
-                            ErrorPlaceholder="image_error.png"
-							Source="eam2.jpg"
-                        HeightRequest="91"
-                        WidthRequest="65"/>
+							Source="placeholderrosa.png">
+                        <ffimageloading:CachedImage.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding CmdTapMap}"></TapGestureRecognizer>
+                        </ffimageloading:CachedImage.GestureRecognizers>
+                    </ffimageloading:CachedImage>
+                    <Label Style="{DynamicResource LabelGabriolaStyleMediumBlack}" Text="(Clique aqui para abrir no Waze)"></Label>
                 </StackLayout>
             </StackLayout>
         </Frame>

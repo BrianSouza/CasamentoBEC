@@ -1,5 +1,6 @@
 ﻿using CasamentoBEC.View;
 using CasamentoBEC.ViewModel;
+using FormsControls.Base;
 using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
@@ -31,7 +32,7 @@ namespace CasamentoBEC.Services
         public void NavigateToMain()
         {
             //App.Current.MainPage = new PaginaPrincipalView();
-            App.Current.MainPage = new NavigationPage(new PaginaPrincipalView());
+            App.Current.MainPage = new AnimationNavigationPage(new PaginaPrincipalView());
         }
 
         public async Task PopNavigation()
@@ -39,34 +40,38 @@ namespace CasamentoBEC.Services
             await PopupNavigation.Instance.PopAsync();
         }
 
+        public async Task GoBack()
+        {
+            await App.Current.MainPage.Navigation.PopToRootAsync();
+        }
         public async void AbrirMenu()
         {
             await PopupNavigation.Instance.PushAsync(new MenuView());
-
         }
-        public async void AbrirFotoSelecionada(Model.Fotos foto)
+        public async Task AbrirErroConexao()
         {
-            await PopupNavigation.Instance.PushAsync(new FotoSelecionadaView(foto));
+            await PopupNavigation.Instance.PushAsync(new PopupErroConexao());
+        }
+        public async void AbrirFotoSelecionada(FotosSelecionadas img)
+        {
+            await PopupNavigation.Instance.PushAsync(new FotoSelecionadaView(img));
         }
         public async void AbrirPresentes()
         {
-            await PopupNavigation.Instance.PushAsync(new Presentes());
+            await App.Current.MainPage.Navigation.PushAsync(new Presentes());
+
         }
         public async void AbrirFotos()
         {
-            //await PopupNavigation.Instance.PushAsync(new FotosView());
-            await PopupNavigation.Instance.PopAsync();//Fecha o menu antes de abrir a navigation
             await App.Current.MainPage.Navigation.PushAsync(new FotoView());
         }
         public async void AbrirRSVP()
         {
-            await PopupNavigation.Instance.PopAsync();//Fecha o menu antes de abrir a navigation
             await App.Current.MainPage.Navigation.PushAsync(new RSVPView());
         }
-        public async void AbrirLocal()
+        public async void AbrirInformacoes()
         {
-            await PopupNavigation.Instance.PopAsync();//Fecha o menu antes de abrir a navigation
-            await App.Current.MainPage.Navigation.PushAsync(new LocalView());
+            await App.Current.MainPage.Navigation.PushAsync(new InformacoesView());
         }
 
         public async void AbrirFotosInstagram()

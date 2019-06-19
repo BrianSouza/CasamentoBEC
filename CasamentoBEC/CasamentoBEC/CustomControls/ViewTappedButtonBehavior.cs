@@ -100,7 +100,7 @@ namespace CasamentoBEC.CustomControls
                     }
                     else if (AnimationType == AnimationType.Rotate)
                     {
-                        await view.RotateTo(360, 200, easing: Easing.Linear);
+                        await view.RotateTo(360, 1000, easing: Easing.Linear);
                         view.Rotation = 0;
                     }
                     else if (AnimationType == AnimationType.FlipHorizontal)

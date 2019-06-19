@@ -9,34 +9,6 @@ namespace CasamentoBEC.ViewModel
 {
     public class MenuViewModel : BaseViewModel
     {
-        private ICommand cmdOpenMenu;
-        public ICommand CmdOpenMenu
-        {
-            get
-            {
-                return cmdOpenMenu;
-            }
-            set
-            {
-                cmdOpenMenu = value;
-                RaisePropertyChanged();
-            }
-        }
-
-        private ICommand cmdCloseMenu;
-        public ICommand CmdCloseMenu
-        {
-            get
-            {
-                return cmdCloseMenu;
-            }
-            set
-            {
-                cmdCloseMenu = value;
-                RaisePropertyChanged();
-            }
-        }
-
         private ICommand cmdOpenPresentes;
         public ICommand CmdOpenPresentes
         {
@@ -59,8 +31,6 @@ namespace CasamentoBEC.ViewModel
             }
             set
             {
-                CmdCloseMenu.Execute(null);
-
                 cmdOpenFotos = value;
                 RaisePropertyChanged();
             }
@@ -93,12 +63,7 @@ namespace CasamentoBEC.ViewModel
         }
         public MenuViewModel()
         {
-            CmdOpenMenu = new Command(() => navigationService.AbrirMenu());
-            CmdCloseMenu = new Command(() => navigationService.PopNavigation());
-            CmdOpenPresentes = new Command(() => navigationService.AbrirPresentes());
-            CmdOpenFotos = new Command(() => navigationService.AbrirFotos());
-            CmdOpenRSVP= new Command(() => navigationService.AbrirRSVP());
-            CmdOpenLocal = new Command(() => navigationService.AbrirLocal());
+            
 
         }
 

@@ -1,4 +1,5 @@
 ﻿using CasamentoBEC.ViewModel;
+using FormsControls.Base;
 using Rg.Plugins.Popup.Pages;
 using System;
 using System.Collections.Generic;
@@ -12,10 +13,11 @@ using Xamarin.Forms.Xaml;
 namespace CasamentoBEC.View
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class LocalView : ContentPage
+	public partial class LocalView : ContentPage 
     {
         LocalViewModel LocalVM;
-		public LocalView ()
+       
+        public LocalView ()
 		{
 			InitializeComponent ();
             LocalVM = new LocalViewModel();

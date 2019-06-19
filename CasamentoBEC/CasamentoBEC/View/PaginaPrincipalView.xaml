@@ -2,29 +2,55 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CasamentoBEC.View.PaginaPrincipalView"
-             xmlns:cv="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
+             xmlns:cv="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
              BackgroundImage="backgrounddetail.png"
-             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms">
-
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:behavior="clr-namespace:CasamentoBEC.CustomControls">
+    <NavigationPage.TitleView>
+        <StackLayout
+                        x:Name="stackMenu"
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="3"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        Spacing="0">
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer  Tapped="TapGestureRecognizer_Tapped" />
+                <SwipeGestureRecognizer Direction="Down" Swiped="SwipeGestureRecognizer_Swiped"/>
+                <SwipeGestureRecognizer  Direction="Up" Swiped="SwipeGestureRecognizer_Swiped_1" />
+            </StackLayout.GestureRecognizers>
+            <Image Source="ic_menu" HorizontalOptions="Center">
+                <Image.Behaviors>
+                    <behavior:ViewTappedButtonBehavior AnimationType="Rotate" Command="{Binding CmdConfirmar}"></behavior:ViewTappedButtonBehavior>
+                </Image.Behaviors>
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer  Tapped="TapGestureRecognizer_Tapped" />
+                    <SwipeGestureRecognizer  Direction="Down" Swiped="SwipeGestureRecognizer_Swiped"/>
+                    <SwipeGestureRecognizer Direction="Up" Swiped="SwipeGestureRecognizer_Swiped_1" />
+                </Image.GestureRecognizers>
+            </Image>
+        </StackLayout>
+    </NavigationPage.TitleView>
     <ContentPage.Content>
-        <StackLayout>
-            <StackLayout Orientation="Vertical" 
-                         VerticalOptions="Start" 
-                         HorizontalOptions="FillAndExpand">
-                <StackLayout.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding CmdAbriMenu}"  />
-                    <SwipeGestureRecognizer Direction="Down" Command="{Binding CmdAbriMenu}"/>
-                </StackLayout.GestureRecognizers>
-                <Image Source="menufechado.png"
-                   Aspect="AspectFit">
-                </Image>
-
-            </StackLayout>
-
-            <cv:CarouselView ItemsSource="{Binding Car}" 
-                             x:Name="carPrincipal"
-                             Position="{Binding ExibirCarView}">
-                <cv:CarouselView.ItemTemplate>
+        <AbsoluteLayout>
+            <ActivityIndicator IsRunning="{Binding Processando}"
+                         IsVisible="{Binding Processando}"
+                          HeightRequest="40"
+                          WidthRequest="100"
+                          VerticalOptions="CenterAndExpand"
+                          HorizontalOptions="CenterAndExpand"
+                          Color="{StaticResource bordercolor}"
+                          AbsoluteLayout.LayoutBounds=".5,.5,1,1"
+                          AbsoluteLayout.LayoutFlags="All"/>
+            <cv:CarouselViewControl
+                ItemsSource="{Binding Car}"
+                ShowArrows="True"
+                ShowIndicators="True"
+                Orientation="Horizontal"
+                AbsoluteLayout.LayoutBounds="1,1,1,1"
+                AbsoluteLayout.LayoutFlags="All">
+                <cv:CarouselViewControl.ItemTemplate>
                     <DataTemplate>
                         <Grid>
                             <Grid.RowDefinitions>
@@ -34,7 +60,6 @@
                             <Frame
                                 Style="{DynamicResource framecarousel}">
                                 <StackLayout  Padding="12">
-                                    <!--<Image Grid.RowSpan="2" Aspect="AspectFit" Source="{Binding ImageURL}"/>-->
                                     <ffimageloading:CachedImage  
                                         Aspect="AspectFit"
 							            DownsampleUseDipUnits="false" 
@@ -44,13 +69,130 @@
                                     <Label Style="{DynamicResource labelpreto}" Text="{Binding Name}"/>
                                 </StackLayout>
                             </Frame>
-
-
                         </Grid>
                     </DataTemplate>
-                </cv:CarouselView.ItemTemplate>
-            </cv:CarouselView>
-        </StackLayout>
+                </cv:CarouselViewControl.ItemTemplate>
+            </cv:CarouselViewControl>
+            <StackLayout
+                x:Name="frameMenu"
+                BackgroundColor="{DynamicResource toolbarcolor}"
+                AbsoluteLayout.LayoutBounds="0,-150,1,150"
+                AbsoluteLayout.LayoutFlags="WidthProportional"
+                Padding="0,20,0,0"
+                Spacing="0">
+                <Grid Margin="10,10,10,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Frame Grid.Column="0"
+                           Grid.Row="0"
+                           CornerRadius="10"
+                           BackgroundColor="White"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           HasShadow="True"
+                           WidthRequest="65">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding CmdOpenFotos}"  />
+                        </Frame.GestureRecognizers>
+                        <StackLayout Orientation="Vertical" 
+                             VerticalOptions="Center"
+                             HorizontalOptions="Center">
+                            <Label Style="{StaticResource LabelIconeCamera}"></Label>
+                            <Label x:Name="menuFotos" Text="Fotos" Style="{StaticResource LabelGabriolaStyleSmallBlack}"></Label>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Grid.Column="1"
+                         Grid.Row="0"
+                   CornerRadius="10"
+                   BackgroundColor="White"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   HasShadow="True"
+                   WidthRequest="65">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding CmdOpenRSVP}"  />
+                        </Frame.GestureRecognizers>
+                        <StackLayout Orientation="Vertical" >
+                            <Label Style="{StaticResource LabelIconeCheck}"></Label>
+                            <Label  x:Name="menuRSVP" Text="RSVP" Style="{StaticResource LabelGabriolaStyleSmallBlack}"></Label>
+                        </StackLayout>
+                    </Frame>
+                    <!--<Frame Grid.Column="2"
+                         Grid.Row="0"
+                   CornerRadius="10"
+                   BackgroundColor="White"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   HasShadow="True"
+                   WidthRequest="65">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding CmdOpenLocal}"  />
+                        </Frame.GestureRecognizers>
+                        <StackLayout Orientation="Vertical">
+                            <Label Style="{StaticResource LabelIconeMap}"></Label>
+                            <Label x:Name="menuLocal" Text="Local" Style="{StaticResource LabelGabriolaStyleSmallBlack}"></Label>
+                        </StackLayout>
+                    </Frame>-->
+                    <Frame Grid.Column="2"
+                         Grid.Row="0"
+                   CornerRadius="10"
+                   BackgroundColor="White"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   HasShadow="True"
+                   WidthRequest="65">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding CmdOpenPresentes}"  />
+                        </Frame.GestureRecognizers>
+                        <StackLayout Orientation="Vertical">
+                            <Label Style="{StaticResource LabelIconePresente}"></Label>
+                            <Label x:Name="menuPresentes" Text="Presentes" Style="{StaticResource LabelGabriolaStyleSmallBlack}"></Label>
+                        </StackLayout>
+                    </Frame>
+                    <!--<Frame Grid.Column="1"
+                         Grid.Row="1"
+                   CornerRadius="10"
+                   BackgroundColor="White"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   HasShadow="True"
+                   WidthRequest="65">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding CmdOpenPresentes}"  />
+                        </Frame.GestureRecognizers>
+                        <StackLayout Orientation="Vertical">
+                            <Label Style="{StaticResource LabelIconeCronograma}"></Label>
+                            <Label x:Name="menuCronograma" Text="Cronograma" Style="{StaticResource LabelGabriolaStyleSmallBlack}"></Label>
+                        </StackLayout>
+                    </Frame>-->
+                    <Frame Grid.Column="3"
+                         Grid.Row="0"
+                   CornerRadius="10"
+                   BackgroundColor="White"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   HasShadow="True"
+                   WidthRequest="65">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding CmdOpenInformacoes}"  />
+                        </Frame.GestureRecognizers>
+                        <StackLayout Orientation="Vertical">
+                            <Label Style="{StaticResource LabelIconeDuvida}"></Label>
+                            <Label  x:Name="menuContatos" Text="Dúvidas" Style="{StaticResource LabelGabriolaStyleSmallBlack}"></Label>
+                        </StackLayout>
+                    </Frame>
+                    
+                </Grid>
+            </StackLayout>
+
+        </AbsoluteLayout>
     </ContentPage.Content>
 
 </ContentPage>
