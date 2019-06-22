@@ -85,7 +85,34 @@
                 <Setter Property="HorizontalOptions" Value="Center"></Setter>
                 <Setter Property="VerticalTextAlignment" Value="Center"></Setter>
                 <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
-
+            </Style>
+            <Style x:Key="labelbranco" TargetType="Label">
+                <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="FontSize" Value="44"></Setter>
+                <Setter Property="FontFamily">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:String" iOS="gabriola" Android="gabriola.ttf#gabriola"/>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"></Setter>
+                <Setter Property="HorizontalOptions" Value="Center"></Setter>
+                <Setter Property="VerticalTextAlignment" Value="Center"></Setter>
+                <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+            </Style>
+            <Style x:Key="labelbrancoMenor" TargetType="Label">
+                <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="FontSize" Value="28"></Setter>
+                <Setter Property="FontFamily">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:String" iOS="gabriola" Android="gabriola.ttf#gabriola"/>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"></Setter>
+                <Setter Property="HorizontalOptions" Value="Center"></Setter>
+                <Setter Property="VerticalTextAlignment" Value="Center"></Setter>
+                <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
             </Style>
             <Style x:Key="LabelGabriolaStyleSmallWhite" TargetType="Label" BaseResourceKey="BaseLabelStyle">
                 <Setter Property="FontFamily">

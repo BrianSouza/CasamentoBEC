@@ -52,24 +52,59 @@
                 AbsoluteLayout.LayoutFlags="All">
                 <cv:CarouselViewControl.ItemTemplate>
                     <DataTemplate>
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="Auto"/>
-                            </Grid.RowDefinitions>
-                            <Frame
-                                Style="{DynamicResource framecarousel}">
-                                <StackLayout  Padding="12">
-                                    <ffimageloading:CachedImage  
-                                        Aspect="AspectFit"
+                        <AbsoluteLayout>
+                            <ffimageloading:CachedImage  
+                                AbsoluteLayout.LayoutBounds="1,1,1,1"
+                                AbsoluteLayout.LayoutFlags="All"
+                                        Aspect="AspectFill"
 							            DownsampleUseDipUnits="false" 
-							            LoadingPlaceholder="image_loading.png" ErrorPlaceholder="image_error.png"
+							            LoadingPlaceholder="image_loading.png" 
+                                        ErrorPlaceholder="image_error.png"
 							            Source="{Binding ImageURL}"/>
-                                    <Label Style="{DynamicResource labelpretodesc}" Text="{Binding Description}" />
-                                    <Label Style="{DynamicResource labelpreto}" Text="{Binding Name}"/>
-                                </StackLayout>
-                            </Frame>
-                        </Grid>
+                            <Label Style="{DynamicResource labelbranco}" 
+                                   Text="{Binding Description}" 
+                                   AbsoluteLayout.LayoutBounds=".3,.9,1,.1"
+                                   AbsoluteLayout.LayoutFlags="All"/>
+                            <Label Style="{DynamicResource labelbranco}" 
+                                   Text="{Binding Name}"
+                                   AbsoluteLayout.LayoutBounds=".3,.65,1,.1"
+                                   AbsoluteLayout.LayoutFlags="All"/>
+
+
+                            <Label Style="{DynamicResource labelbrancoMenor}" 
+                                   Text="{Binding Description1}"
+                                   AbsoluteLayout.LayoutBounds=".3,.15,1,.1"
+                                   AbsoluteLayout.LayoutFlags="All"/>
+                            <Label Style="{DynamicResource labelbrancoMenor}" 
+                                   Text="{Binding Description2}"
+                                   AbsoluteLayout.LayoutBounds=".3,.25,1,.1"
+                                   AbsoluteLayout.LayoutFlags="All"/>
+                            <Label Style="{DynamicResource labelbrancoMenor}" 
+                                   Text="{Binding Description3}"
+                                   AbsoluteLayout.LayoutBounds=".3,.35,1,.1"
+                                   AbsoluteLayout.LayoutFlags="All"/>
+                            <Label Style="{DynamicResource labelbrancoMenor}" 
+                                   Text="{Binding Description4}"
+                                   AbsoluteLayout.LayoutBounds=".3,.45,1,.1"
+                                   AbsoluteLayout.LayoutFlags="All"/>
+                            <Label Style="{DynamicResource labelbrancoMenor}" 
+                                   Text="{Binding Description5}"
+                                   AbsoluteLayout.LayoutBounds=".3,.55,1,.1"
+                                   AbsoluteLayout.LayoutFlags="All"/>
+                            <Label Style="{DynamicResource labelbrancoMenor}" 
+                                   Text="{Binding Description6}"
+                                   AbsoluteLayout.LayoutBounds=".3,.65,1,.1"
+                                   AbsoluteLayout.LayoutFlags="All"/>
+                            <Label Style="{DynamicResource labelbrancoMenor}" 
+                                   Text="{Binding Description7}"
+                                   AbsoluteLayout.LayoutBounds=".3,.75,1,.1"
+                                   AbsoluteLayout.LayoutFlags="All"/>
+                            <Label Style="{DynamicResource labelbrancoMenor}" 
+                                   Text="{Binding Description8}"
+                                   AbsoluteLayout.LayoutBounds=".3,.85,1,.1"
+                                   AbsoluteLayout.LayoutFlags="All"/>
+
+                        </AbsoluteLayout>
                     </DataTemplate>
                 </cv:CarouselViewControl.ItemTemplate>
             </cv:CarouselViewControl>
@@ -188,7 +223,7 @@
                             <Label  x:Name="menuContatos" Text="Dúvidas" Style="{StaticResource LabelGabriolaStyleSmallBlack}"></Label>
                         </StackLayout>
                     </Frame>
-                    
+
                 </Grid>
             </StackLayout>
 

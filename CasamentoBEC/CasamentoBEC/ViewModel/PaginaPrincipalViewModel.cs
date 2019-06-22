@@ -11,6 +11,14 @@ namespace CasamentoBEC.ViewModel
 {
     public class PaginaPrincipalViewModel : BaseViewModel
     {
+        readonly string textoPaginaInicial1 = @"...Como é bom poder contar com vocês na";
+        readonly string textoPaginaInicial2 = @"realização do nosso sonho!";
+        readonly string textoPaginaInicial3 = @"A contagem regressiva começa,";
+        readonly string textoPaginaInicial4 = @"o frio na barriga e toda a ansiedade do dia";
+        readonly string textoPaginaInicial5 = @"mais esperado de nossas vidas.";
+        readonly string textoPaginaInicial6 = @"Nos enche de alegria em tê-los ao nosso lado.";
+        readonly string textoPaginaInicial7 = @"Vamos juntos nesse grande sonho,";
+        readonly string textoPaginaInicial8 = @"o dia do nosso casamento...";
         private readonly IMessageService messageService;
         private int exibirCarView;
         int slidePosition = 0;
@@ -94,9 +102,7 @@ namespace CasamentoBEC.ViewModel
             {
                 Processando = true;
                 messageService = DependencyService.Get<IMessageService>();
-                string textoPaginaInicial = "...Como é bom poder contar com vocês na \n realização do nosso sonho! \n A contagem regressiva começa,\n o frio na barriga e toda a ansiedade do dia \n mais esperado de nossas vidas.\n Nos enche de alegria em tê-los ao nosso lado.\n Vamos juntos nesse grande sonho,\n o dia do nosso casamento...";
-
-                PreencheCarousel(textoPaginaInicial);
+                PreencheCarousel();
 
                 CmdOpenPresentes = new Command(() => navigationService.AbrirPresentes());
                 CmdOpenFotos = new Command(() => navigationService.AbrirFotos());
@@ -111,12 +117,21 @@ namespace CasamentoBEC.ViewModel
             
         }
 
-        private void PreencheCarousel(string textoPaginaInicial)
+        private void PreencheCarousel()
         {
             Car = new ObservableCollection<Carousel>()
             {
-                new Carousel{ ImageURL=GetImageSource("https://image.ibb.co/eat0aU/stdsemadornos.png"),Name="#CasorioMoziCamis",Description=GetTextoDia()},
-                new Carousel{ImageURL =null ,Name="",Description=textoPaginaInicial}
+                new Carousel{ ImageURL=GetImageSource("https://casamentobucket.s3-sa-east-1.amazonaws.com/savethedate.png"),Name="",Description=GetTextoDia()},
+                new Carousel{ ImageURL=GetImageSource("https://casamentobucket.s3-sa-east-1.amazonaws.com/noivos.png"),Name="#CasorioMoziCamis",Description=""},
+                new Carousel{ImageURL =GetImageSource("https://casamentobucket.s3-sa-east-1.amazonaws.com/fundoarvore.png") ,
+                    Description1 =textoPaginaInicial1,
+                    Description2 =textoPaginaInicial2,
+                    Description3 =textoPaginaInicial3,
+                    Description4 =textoPaginaInicial4,
+                    Description5 =textoPaginaInicial5,
+                    Description6 =textoPaginaInicial6,
+                    Description7 =textoPaginaInicial7,
+                    Description8 =textoPaginaInicial8}
             };
         }
 

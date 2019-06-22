@@ -318,4 +318,13 @@
   <ItemGroup>
     <BundleResource Include="Resources\placeholderbranco%403x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\savethedate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\savethedate%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\savethedate%403x.png" />
+  </ItemGroup>
 </Project>
