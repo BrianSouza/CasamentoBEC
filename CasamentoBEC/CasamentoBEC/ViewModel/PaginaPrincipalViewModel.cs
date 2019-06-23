@@ -122,7 +122,7 @@ namespace CasamentoBEC.ViewModel
             Car = new ObservableCollection<Carousel>()
             {
                 new Carousel{ ImageURL=GetImageSource("https://casamentobucket.s3-sa-east-1.amazonaws.com/savethedate.png"),Name="",Description=GetTextoDia()},
-                new Carousel{ ImageURL=GetImageSource("https://casamentobucket.s3-sa-east-1.amazonaws.com/noivos.png"),Name="#CasorioMoziCamis",Description=""},
+                new Carousel{ ImageURL=GetImageSource("https://casamentobucket.s3-sa-east-1.amazonaws.com/noivos.png"),Name="#CamisEMozi",Description=""},
                 new Carousel{ImageURL =GetImageSource("https://casamentobucket.s3-sa-east-1.amazonaws.com/fundoarvore.png") ,
                     Description1 =textoPaginaInicial1,
                     Description2 =textoPaginaInicial2,

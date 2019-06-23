@@ -171,10 +171,33 @@
                         <OnPlatform x:TypeArguments="x:String" iOS="gabriola" Android="gabriola.ttf#gabriola"/>
                     </Setter.Value>
                 </Setter>
-                <Setter Property="TextColor" Value="{StaticResource fontefundoclaro}"></Setter>
+                <Setter Property="TextColor" Value="Black"></Setter>
                 <Setter Property="FontSize" Value="Medium"></Setter>
                 <Setter Property="HorizontalTextAlignment" Value="Start"></Setter>
                 <Setter Property="FontAttributes" Value="Bold"></Setter>
+            </Style>
+            <Style x:Key="LblMontserratMedioListViewBold" TargetType="Label" BaseResourceKey="BaseLabelStyle">
+                <Setter Property="FontFamily">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:String" iOS="Montserrat" Android="Montserrat"/>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="TextColor" Value="{StaticResource fontefundoclaro}"></Setter>
+                <Setter Property="FontSize" Value="Small"></Setter>
+                <Setter Property="HorizontalTextAlignment" Value="Start"></Setter>
+            </Style>
+            
+            <Style x:Key="LblGabriolaGrandeListViewBoldBranco" TargetType="Label" BaseResourceKey="BaseLabelStyle">
+                <Setter Property="FontFamily">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:String" iOS="gabriola" Android="gabriola.ttf#gabriola"/>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="TextColor" Value="{StaticResource fontefundolaranja}"></Setter>
+                <Setter Property="FontSize" Value="Large"></Setter>
+                <Setter Property="HorizontalTextAlignment" Value="Start"></Setter>
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"></Setter>
             </Style>
             <Style x:Key="LblGabriolaMedioListView" TargetType="Label" BaseResourceKey="BaseLabelStyle">
                 <Setter Property="FontFamily">
@@ -284,6 +307,10 @@
             <OnPlatform x:Key="MaterialFontFamily" x:TypeArguments="x:String">
                 <On Platform="iOS" Value="Material Design Icons"/>
                 <On Platform="Android" Value="materialdesignicons-webfont.ttf#Material Design Icons"/>
+            </OnPlatform>
+            <OnPlatform x:Key="Montserrat" x:TypeArguments="x:String">
+                <On Platform="iOS" Value="Material Design Icons"/>
+                <On Platform="Android" Value="Montserrat-Bold.ttf#Montserrat-Bold"/>
             </OnPlatform>
             <!--String Icones-->
             <x:String x:Key="duvida">&#xf186;</x:String>

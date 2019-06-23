@@ -110,7 +110,7 @@
             </cv:CarouselViewControl>
             <StackLayout
                 x:Name="frameMenu"
-                BackgroundColor="{DynamicResource toolbarcolor}"
+                BackgroundColor="Transparent"
                 AbsoluteLayout.LayoutBounds="0,-150,1,150"
                 AbsoluteLayout.LayoutFlags="WidthProportional"
                 Padding="0,20,0,0"
