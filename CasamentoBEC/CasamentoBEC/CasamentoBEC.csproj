@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <ApplicationIcon>brasao_fg5_1.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>

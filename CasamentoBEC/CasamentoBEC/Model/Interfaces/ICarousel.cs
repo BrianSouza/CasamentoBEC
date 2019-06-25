@@ -7,7 +7,7 @@ namespace CasamentoBEC.Model.NewFolder
 {
     interface ICarousel
     {
-        UriImageSource ImageURL { get; set; }
+        string ImageURL { get; set; }
         string Name { get; set; }
     }
 }
