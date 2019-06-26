@@ -38,4 +38,9 @@
 	<key>CFBundleName</key>
 	<string>CasamentoBEC</string>
 </dict>
+  <key>NSAppTransportSecurity</key>
+  <dict>
+    <key>NSAllowsArbitraryLoads</key>
+    <true/>
+  </dict>
 </plist>

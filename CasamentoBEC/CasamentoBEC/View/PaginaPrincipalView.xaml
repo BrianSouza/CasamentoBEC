@@ -34,15 +34,7 @@
     </NavigationPage.TitleView>
     <ContentPage.Content>
         <AbsoluteLayout>
-            <ActivityIndicator IsRunning="{Binding Processando}"
-                         IsVisible="{Binding Processando}"
-                          HeightRequest="40"
-                          WidthRequest="100"
-                          VerticalOptions="CenterAndExpand"
-                          HorizontalOptions="CenterAndExpand"
-                          Color="{StaticResource bordercolor}"
-                          AbsoluteLayout.LayoutBounds=".5,.5,1,1"
-                          AbsoluteLayout.LayoutFlags="All"/>
+
             <cv:CarouselViewControl
                 ItemsSource="{Binding Car}"
                 ShowArrows="True"
@@ -53,13 +45,20 @@
                 <cv:CarouselViewControl.ItemTemplate>
                     <DataTemplate>
                         <AbsoluteLayout>
-                            <ffimageloading:CachedImage  
+                            <ActivityIndicator IsRunning="{Binding Processando}"
+                                              BindingContext="{x:Reference imageCarrousel}"
+                                              HeightRequest="40"
+                                              WidthRequest="100"
+                                              VerticalOptions="CenterAndExpand"
+                                              HorizontalOptions="CenterAndExpand"
+                                              Color="{StaticResource bordercolor}"
+                                              AbsoluteLayout.LayoutBounds=".5,.5,1,1"
+                                              AbsoluteLayout.LayoutFlags="All"/>        
+                            <Image  
+                                x:Name="imageCarrousel"
                                 AbsoluteLayout.LayoutBounds="1,1,1,1"
                                 AbsoluteLayout.LayoutFlags="All"
                                         Aspect="AspectFill"
-							            DownsampleUseDipUnits="false" 
-							            LoadingPlaceholder="image_loading.png" 
-                                        ErrorPlaceholder="image_error.png"
 							            Source="{Binding ImageURL}"/>
                             <Label Style="{DynamicResource labelbranco}" 
                                    Text="{Binding Description}" 
@@ -69,8 +68,6 @@
                                    Text="{Binding Name}"
                                    AbsoluteLayout.LayoutBounds=".3,.65,1,.1"
                                    AbsoluteLayout.LayoutFlags="All"/>
-
-
                             <Label Style="{DynamicResource labelbrancoMenor}" 
                                    Text="{Binding Description1}"
                                    AbsoluteLayout.LayoutBounds=".3,.15,1,.1"
