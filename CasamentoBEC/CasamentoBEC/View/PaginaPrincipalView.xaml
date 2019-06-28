@@ -20,7 +20,7 @@
                 <SwipeGestureRecognizer Direction="Down" Swiped="SwipeGestureRecognizer_Swiped"/>
                 <SwipeGestureRecognizer  Direction="Up" Swiped="SwipeGestureRecognizer_Swiped_1" />
             </StackLayout.GestureRecognizers>
-            <Image Source="ic_menu" HorizontalOptions="Center">
+            <Image Source="ic_menu" HorizontalOptions="Center" x:Name="ImgMenu">
                 <Image.Behaviors>
                     <behavior:ViewTappedButtonBehavior AnimationType="Rotate" Command="{Binding CmdConfirmar}"></behavior:ViewTappedButtonBehavior>
                 </Image.Behaviors>

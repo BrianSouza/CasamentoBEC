@@ -32,7 +32,7 @@ namespace CasamentoBEC.Services
         public void NavigateToMain()
         {
             //App.Current.MainPage = new PaginaPrincipalView();
-            App.Current.MainPage = new AnimationNavigationPage(new PaginaPrincipalView());
+            App.Current.MainPage = new AnimationNavigationPage(new PaginaPrincipalView()) { BarBackgroundColor = Color.FromHex("dc8686") };
         }
 
         public async Task PopNavigation()

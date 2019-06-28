@@ -28,12 +28,16 @@ namespace CasamentoBEC.View
             {
                 var novoTamanhoMenu = new Rectangle(0, -150, 1, 150);
                 AbsoluteLayout.SetLayoutBounds(frameMenu, novoTamanhoMenu);
+                ImgMenu.HeightRequest = 35;
+                ImgMenu.WidthRequest = 35;
                 //ResizeMenuLabel();
             }
             else if (alturaTela <= 570 && larguraTela <= 321 && Device.RuntimePlatform == Device.iOS)
             {
                 var novoTamanhoMenu = new Rectangle(0, -150, 1, 150);
                 AbsoluteLayout.SetLayoutBounds(frameMenu, novoTamanhoMenu);
+                ImgMenu.HeightRequest = 35;
+                ImgMenu.WidthRequest = 35;
                 //ResizeMenuLabel();
             }
         }
