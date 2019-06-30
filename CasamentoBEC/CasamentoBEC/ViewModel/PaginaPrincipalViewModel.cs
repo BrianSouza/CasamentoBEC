@@ -11,38 +11,9 @@ namespace CasamentoBEC.ViewModel
 {
     public class PaginaPrincipalViewModel : BaseViewModel
     {
-        readonly string textoPaginaInicial1 = @"...Como é bom poder contar com vocês na";
-        readonly string textoPaginaInicial2 = @"realização do nosso sonho!";
-        readonly string textoPaginaInicial3 = @"A contagem regressiva começa,";
-        readonly string textoPaginaInicial4 = @"o frio na barriga e toda a ansiedade do dia";
-        readonly string textoPaginaInicial5 = @"mais esperado de nossas vidas.";
-        readonly string textoPaginaInicial6 = @"Nos enche de alegria em tê-los ao nosso lado.";
-        readonly string textoPaginaInicial7 = @"Vamos juntos nesse grande sonho,";
-        readonly string textoPaginaInicial8 = @"o dia do nosso casamento...";
         private readonly IMessageService messageService;
-        private int exibirCarView;
-        int slidePosition = 0;
+       
         private string _textoDoDia;
-        public int ExibirCarView
-        {
-            get { return exibirCarView; }
-            set
-            {
-                exibirCarView = value;
-                RaisePropertyChanged();
-            }
-        }
-        ObservableCollection<Carousel> car;
-        public ObservableCollection<Carousel> Car
-        {
-            get { return car; }
-            set
-            {
-                car = value;
-                RaisePropertyChanged();
-            }
-        }
-
        
         private ICommand cmdOpenPresentes;
         public ICommand CmdOpenPresentes
@@ -110,6 +81,7 @@ namespace CasamentoBEC.ViewModel
                 CmdOpenFotos = new Command(() => navigationService.AbrirFotos());
                 CmdOpenRSVP = new Command(() => navigationService.AbrirRSVP());
                 CmdOpenInformacoes = new Command(() => navigationService.AbrirInformacoes());
+                TextoDoDia = GetTextoDia();
             }
             finally
             {
@@ -126,7 +98,7 @@ namespace CasamentoBEC.ViewModel
             string txtDiasParaCasamento = string.Empty;
             if (diasParaCasamento == 0)
             {
-                txtDiasParaCasamento = "Hoje é o grande dia.";
+                txtDiasParaCasamento = "Hoje é o grande dia!!!";
             }
             else if (diasParaCasamento > 0)
             {
@@ -134,7 +106,7 @@ namespace CasamentoBEC.ViewModel
             }
             else
             {
-                txtDiasParaCasamento = "";
+                txtDiasParaCasamento = "Obrigado por sua presença!";
             }
 
             return txtDiasParaCasamento;

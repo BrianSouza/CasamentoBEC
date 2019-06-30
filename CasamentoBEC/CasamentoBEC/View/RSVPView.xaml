@@ -5,7 +5,7 @@
              xmlns:behavior="clr-namespace:CasamentoBEC.CustomControls"
              x:Class="CasamentoBEC.View.RSVPView"
              BackgroundImage="backgroundlogin.png"
-             Title="RSVP">
+             Title="Confirme sua presença">
     <ContentPage.Content>
         <Frame  Style="{DynamicResource framecarousel}">
             <ScrollView

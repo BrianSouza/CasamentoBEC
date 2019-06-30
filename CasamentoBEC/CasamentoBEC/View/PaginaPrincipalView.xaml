@@ -65,9 +65,13 @@
                    
                 </AbsoluteLayout>
             </StackLayout>
+            <Label Text="{Binding TextoDoDia}" 
+                   AbsoluteLayout.LayoutBounds=".25,.05,1,.2"
+                   AbsoluteLayout.LayoutFlags="All"
+                   Style="{StaticResource labelbranco}"/>
             <StackLayout
                 x:Name="frameMenu"
-                BackgroundColor="Transparent"
+                BackgroundColor="{StaticResource bordercolor}"
                 AbsoluteLayout.LayoutBounds="0,-150,1,150"
                 AbsoluteLayout.LayoutFlags="WidthProportional"
                 Padding="0,20,0,0"

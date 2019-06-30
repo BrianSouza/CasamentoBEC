@@ -54,8 +54,7 @@
     <MtouchDebug>true</MtouchDebug>
     <CodesignEntitlements>
     </CodesignEntitlements>
-    <CodesignProvision>
-    </CodesignProvision>
+    <CodesignProvision>BDSouza</CodesignProvision>
     <CodesignExtraArgs />
     <CodesignResourceRules />
     <MtouchProfiling>true</MtouchProfiling>
