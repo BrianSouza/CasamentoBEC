@@ -47,6 +47,7 @@ namespace CasamentoBEC.View
                 AbsoluteLayout.SetLayoutBounds(frameMenu, novoTamanhoMenu);
                 ImgMenu.HeightRequest = 35;
                 ImgMenu.WidthRequest = 35;
+                AbsoluteLayout.SetLayoutBounds(stkMensagem, new Rectangle(1, .75, 1, .45));            
                 //ResizeMenuLabel();
             }
             else if(Device.RuntimePlatform == Device.iOS)
