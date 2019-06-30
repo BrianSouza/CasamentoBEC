@@ -74,7 +74,21 @@
             </Style>
             <Style x:Key="labelpretodesc" TargetType="Label">
                 <Setter Property="TextColor" Value="{DynamicResource pretolabel}"></Setter>
-                <Setter Property="FontSize" Value="Large"></Setter>
+                <Setter Property="FontSize" Value="Medium"></Setter>
+                <Setter Property="FontFamily">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:String" iOS="gabriola" Android="gabriola.ttf#gabriola"/>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"></Setter>
+                <Setter Property="HorizontalOptions" Value="Center"></Setter>
+                <Setter Property="VerticalTextAlignment" Value="Center"></Setter>
+                <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+            </Style>
+            <Style x:Key="labelhashtag" TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource toolbarcolor}"></Setter>
+                <Setter Property="FontSize" Value="30"></Setter>
                 <Setter Property="FontFamily">
                     <Setter.Value>
                         <OnPlatform x:TypeArguments="x:String" iOS="gabriola" Android="gabriola.ttf#gabriola"/>

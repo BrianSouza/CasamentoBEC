@@ -22,6 +22,7 @@ namespace CasamentoBEC.ViewModel
         private readonly IMessageService messageService;
         private int exibirCarView;
         int slidePosition = 0;
+        private string _textoDoDia;
         public int ExibirCarView
         {
             get { return exibirCarView; }
@@ -96,19 +97,19 @@ namespace CasamentoBEC.ViewModel
             }
         }
 
+        public string TextoDoDia { get => _textoDoDia; set => _textoDoDia = value; }
+
         public PaginaPrincipalViewModel()
         {
             try
             {
                 Processando = true;
                 messageService = DependencyService.Get<IMessageService>();
-                PreencheCarousel();
 
                 CmdOpenPresentes = new Command(() => navigationService.AbrirPresentes());
                 CmdOpenFotos = new Command(() => navigationService.AbrirFotos());
                 CmdOpenRSVP = new Command(() => navigationService.AbrirRSVP());
                 CmdOpenInformacoes = new Command(() => navigationService.AbrirInformacoes());
-                MudarImagensCarousel();
             }
             finally
             {
@@ -116,28 +117,6 @@ namespace CasamentoBEC.ViewModel
             }
             
         }
-
-        private void PreencheCarousel()
-        {
-            Car = new ObservableCollection<Carousel>()
-            {
-                //new Carousel{ ImageURL=GetImageSource("https://casamentobucket.s3-sa-east-1.amazonaws.com/savethedate.png"),Name="",Description=GetTextoDia()},
-                //new Carousel{ ImageURL=GetImageSource("https://casamentobucket.s3-sa-east-1.amazonaws.com/noivos.png"),Name="#CamisEMozi",Description=""},
-                //new Carousel{ImageURL =GetImageSource("https://casamentobucket.s3-sa-east-1.amazonaws.com/fundoarvore.png") ,
-                new Carousel{ ImageURL="savethedate.png",Name="",Description=GetTextoDia()},
-                new Carousel{ ImageURL="noivos.png",Name="#CamisEMozi",Description=""},
-                new Carousel{ImageURL = "fundoarvore.png",
-                Description1 = textoPaginaInicial1,
-                    Description2 =textoPaginaInicial2,
-                    Description3 =textoPaginaInicial3,
-                    Description4 =textoPaginaInicial4,
-                    Description5 =textoPaginaInicial5,
-                    Description6 =textoPaginaInicial6,
-                    Description7 =textoPaginaInicial7,
-                    Description8 =textoPaginaInicial8}
-            };
-        }
-
         private string GetTextoDia()
         {
             DateTime dtAtual = DateTime.Now.Date;
@@ -162,16 +141,5 @@ namespace CasamentoBEC.ViewModel
 
         }
 
-        private void MudarImagensCarousel()
-        {
-            
-            Device.StartTimer(TimeSpan.FromSeconds(10), () =>
-            {
-                slidePosition++;
-                if (slidePosition == car.Count) slidePosition = 0;
-                ExibirCarView = slidePosition;
-                return true;
-            });
-        }
     }
 }

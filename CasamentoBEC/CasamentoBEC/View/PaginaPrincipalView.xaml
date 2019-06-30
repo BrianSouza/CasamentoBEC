@@ -3,9 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CasamentoBEC.View.PaginaPrincipalView"
              xmlns:cv="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
-             BackgroundImage="backgrounddetail.png"
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
-             xmlns:behavior="clr-namespace:CasamentoBEC.CustomControls">
+             xmlns:behavior="clr-namespace:CasamentoBEC.CustomControls"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             BackgroundImageSource="backgrounddetail.png">
     <NavigationPage.TitleView>
         <StackLayout
                         x:Name="stackMenu"
@@ -33,78 +34,37 @@
         </StackLayout>
     </NavigationPage.TitleView>
     <ContentPage.Content>
-        <AbsoluteLayout>
-
-            <cv:CarouselViewControl
-                ItemsSource="{Binding Car}"
-                ShowArrows="True"
-                ShowIndicators="True"
-                Orientation="Horizontal"
-                AbsoluteLayout.LayoutBounds="1,1,1,1"
-                AbsoluteLayout.LayoutFlags="All">
-                <cv:CarouselViewControl.ItemTemplate>
-                    <DataTemplate>
-                        <AbsoluteLayout>
-                            <ActivityIndicator IsRunning="{Binding Processando}"
-                                              BindingContext="{x:Reference imageCarrousel}"
-                                              HeightRequest="40"
-                                              WidthRequest="100"
-                                              VerticalOptions="CenterAndExpand"
-                                              HorizontalOptions="CenterAndExpand"
-                                              Color="{StaticResource bordercolor}"
-                                              AbsoluteLayout.LayoutBounds=".5,.5,1,1"
-                                              AbsoluteLayout.LayoutFlags="All"/>        
-                            <Image  
-                                x:Name="imageCarrousel"
+        <AbsoluteLayout >
+            <StackLayout
+                Spacing="0"
+                 AbsoluteLayout.LayoutBounds="1,.65,1,.45"
+                 AbsoluteLayout.LayoutFlags="All">
+                <Label Style="{StaticResource labelpretodesc}" Text="...Como é bom poder contar com vocês na"></Label>
+                <Label Style="{StaticResource labelpretodesc}" Text="realização do nosso sonho!"></Label>
+                <Label Style="{StaticResource labelpretodesc}" Text="A contagem regressiva começa,"></Label>
+                <Label Style="{StaticResource labelpretodesc}" Text="o frio na barriga e toda a ansiedade do dia"></Label>
+                <Label Style="{StaticResource labelpretodesc}" Text="mais esperado de nossas vidas."></Label>
+                <Label Style="{StaticResource labelpretodesc}" Text="Nos enche de alegria em tê-los ao nosso lado."></Label>
+                <Label Style="{StaticResource labelpretodesc}" Text="Vamos juntos nesse grande sonho,"></Label>
+                <Label Style="{StaticResource labelpretodesc}" Text="o dia do nosso casamento..."></Label>
+                <Label Style="{StaticResource labelhashtag}" Text="#MoziECamis" />
+            </StackLayout>
+            <StackLayout 
+                         HeightRequest="200"
+                         AbsoluteLayout.LayoutBounds="1,1,1,1"
+                         AbsoluteLayout.LayoutFlags="All">
+                <AbsoluteLayout 
+                                HeightRequest="200"
+                                AbsoluteLayout.LayoutBounds="1,1,1,1"
+                                AbsoluteLayout.LayoutFlags="All">
+                    <skia:SKCanvasView 
+                                x:Name="skCanvasView"
                                 AbsoluteLayout.LayoutBounds="1,1,1,1"
                                 AbsoluteLayout.LayoutFlags="All"
-                                        Aspect="AspectFill"
-							            Source="{Binding ImageURL}"/>
-                            <Label Style="{DynamicResource labelbranco}" 
-                                   Text="{Binding Description}" 
-                                   AbsoluteLayout.LayoutBounds=".3,.9,1,.1"
-                                   AbsoluteLayout.LayoutFlags="All"/>
-                            <Label Style="{DynamicResource labelbranco}" 
-                                   Text="{Binding Name}"
-                                   AbsoluteLayout.LayoutBounds=".3,.65,1,.1"
-                                   AbsoluteLayout.LayoutFlags="All"/>
-                            <Label Style="{DynamicResource labelbrancoMenor}" 
-                                   Text="{Binding Description1}"
-                                   AbsoluteLayout.LayoutBounds=".3,.15,1,.1"
-                                   AbsoluteLayout.LayoutFlags="All"/>
-                            <Label Style="{DynamicResource labelbrancoMenor}" 
-                                   Text="{Binding Description2}"
-                                   AbsoluteLayout.LayoutBounds=".3,.25,1,.1"
-                                   AbsoluteLayout.LayoutFlags="All"/>
-                            <Label Style="{DynamicResource labelbrancoMenor}" 
-                                   Text="{Binding Description3}"
-                                   AbsoluteLayout.LayoutBounds=".3,.35,1,.1"
-                                   AbsoluteLayout.LayoutFlags="All"/>
-                            <Label Style="{DynamicResource labelbrancoMenor}" 
-                                   Text="{Binding Description4}"
-                                   AbsoluteLayout.LayoutBounds=".3,.45,1,.1"
-                                   AbsoluteLayout.LayoutFlags="All"/>
-                            <Label Style="{DynamicResource labelbrancoMenor}" 
-                                   Text="{Binding Description5}"
-                                   AbsoluteLayout.LayoutBounds=".3,.55,1,.1"
-                                   AbsoluteLayout.LayoutFlags="All"/>
-                            <Label Style="{DynamicResource labelbrancoMenor}" 
-                                   Text="{Binding Description6}"
-                                   AbsoluteLayout.LayoutBounds=".3,.65,1,.1"
-                                   AbsoluteLayout.LayoutFlags="All"/>
-                            <Label Style="{DynamicResource labelbrancoMenor}" 
-                                   Text="{Binding Description7}"
-                                   AbsoluteLayout.LayoutBounds=".3,.75,1,.1"
-                                   AbsoluteLayout.LayoutFlags="All"/>
-                            <Label Style="{DynamicResource labelbrancoMenor}" 
-                                   Text="{Binding Description8}"
-                                   AbsoluteLayout.LayoutBounds=".3,.85,1,.1"
-                                   AbsoluteLayout.LayoutFlags="All"/>
-
-                        </AbsoluteLayout>
-                    </DataTemplate>
-                </cv:CarouselViewControl.ItemTemplate>
-            </cv:CarouselViewControl>
+                                PaintSurface="canvasView_PaintSurface"/>
+                   
+                </AbsoluteLayout>
+            </StackLayout>
             <StackLayout
                 x:Name="frameMenu"
                 BackgroundColor="Transparent"
@@ -223,8 +183,7 @@
 
                 </Grid>
             </StackLayout>
-
         </AbsoluteLayout>
+        
     </ContentPage.Content>
-
 </ContentPage>

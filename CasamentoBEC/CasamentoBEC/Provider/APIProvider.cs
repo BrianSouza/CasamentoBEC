@@ -1,10 +1,12 @@
 ﻿using CasamentoBEC.Model;
 using CasamentoBEC.Provider.Interface;
 using Newtonsoft.Json;
+using SkiaSharp;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.IO;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -65,7 +67,7 @@ namespace CasamentoBEC.Provider
             {
                 string url = $"http://apicasamento.sa-east-1.elasticbeanstalk.com/api/Fotos?tipoFoto={tipo}";
                 var response = await client.GetStringAsync(url);
-                Fotos fotos  = new Fotos { FotosIE = JsonConvert.DeserializeObject<IEnumerable<Foto>>(response) };
+                Fotos fotos = new Fotos { FotosIE = JsonConvert.DeserializeObject<IEnumerable<Foto>>(response) };
                 fotos.Sucesso = true;
                 return fotos;
             }
@@ -98,5 +100,6 @@ namespace CasamentoBEC.Provider
                 return new Avisos { Sucesso = false, CodErro = "2", MsgErro = ex.Message };
             }
         }
+
     }
 }
