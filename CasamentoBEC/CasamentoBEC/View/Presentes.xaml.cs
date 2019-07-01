@@ -32,5 +32,15 @@ namespace CasamentoBEC.View
             presenteVM = new PresentesViewModel();
             this.BindingContext = presenteVM;
 		}
+
+        private void WebView_Navigating(object sender, WebNavigatingEventArgs e)
+        {
+            presenteVM.Processando = true;
+        }
+
+        private void WebView_Navigated(object sender, WebNavigatedEventArgs e)
+        {
+            presenteVM.Processando = false;
+        }
     }
 }

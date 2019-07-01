@@ -30,7 +30,6 @@
 
                     </StackLayout>
                 </Frame>
-
                 <Button 
                     Style="{DynamicResource btnlaranja}"
                     Text="{Binding ButtonEntrarText}"

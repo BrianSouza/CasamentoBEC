@@ -4,8 +4,23 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="CasamentoBEC.View.Presentes"
     Title="Presentes Virtuais">
+    <AbsoluteLayout>
     <WebView 
+        AbsoluteLayout.LayoutBounds="1,1,1,1"
+        AbsoluteLayout.LayoutFlags="All"
                     VerticalOptions="FillAndExpand" 
                     HorizontalOptions="FillAndExpand"
-                    Source="{Binding Address}" />
+                    Source="{Binding Address}" 
+        Navigating="WebView_Navigating"
+        Navigated="WebView_Navigated"/>
+    <ActivityIndicator IsRunning="{Binding Processando}"
+                         IsVisible="{Binding Processando}"
+                          HeightRequest="40"
+                          WidthRequest="100"
+                          VerticalOptions="CenterAndExpand"
+                          HorizontalOptions="CenterAndExpand"
+                          Color="{StaticResource bordercolor}"
+                       AbsoluteLayout.LayoutBounds=".5,.5,1,1"
+                       AbsoluteLayout.LayoutFlags="All"/>
+    </AbsoluteLayout>
 </ContentPage>
