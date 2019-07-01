@@ -93,7 +93,7 @@
                            VerticalOptions="Center"
                            HorizontalOptions="Center"
                            HasShadow="True"
-                           WidthRequest="65">
+                           x:Name="frmFotos">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding CmdOpenFotos}"  />
                         </Frame.GestureRecognizers>
@@ -111,7 +111,7 @@
                    VerticalOptions="Center"
                    HorizontalOptions="Center"
                    HasShadow="True"
-                   WidthRequest="65">
+                           x:Name="frmRSVP">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding CmdOpenRSVP}"  />
                         </Frame.GestureRecognizers>
@@ -120,22 +120,7 @@
                             <Label  x:Name="menuRSVP" Text="RSVP" Style="{StaticResource LabelGabriolaStyleSmallBlack}"></Label>
                         </StackLayout>
                     </Frame>
-                    <!--<Frame Grid.Column="2"
-                         Grid.Row="0"
-                   CornerRadius="10"
-                   BackgroundColor="White"
-                   VerticalOptions="Center"
-                   HorizontalOptions="Center"
-                   HasShadow="True"
-                   WidthRequest="65">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding CmdOpenLocal}"  />
-                        </Frame.GestureRecognizers>
-                        <StackLayout Orientation="Vertical">
-                            <Label Style="{StaticResource LabelIconeMap}"></Label>
-                            <Label x:Name="menuLocal" Text="Local" Style="{StaticResource LabelGabriolaStyleSmallBlack}"></Label>
-                        </StackLayout>
-                    </Frame>-->
+                    
                     <Frame Grid.Column="2"
                          Grid.Row="0"
                    CornerRadius="10"
@@ -143,7 +128,7 @@
                    VerticalOptions="Center"
                    HorizontalOptions="Center"
                    HasShadow="True"
-                   WidthRequest="65">
+                           x:Name="frmPresentes">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding CmdOpenPresentes}"  />
                         </Frame.GestureRecognizers>
@@ -152,22 +137,7 @@
                             <Label x:Name="menuPresentes" Text="Presentes" Style="{StaticResource LabelGabriolaStyleSmallBlack}"></Label>
                         </StackLayout>
                     </Frame>
-                    <!--<Frame Grid.Column="1"
-                         Grid.Row="1"
-                   CornerRadius="10"
-                   BackgroundColor="White"
-                   VerticalOptions="Center"
-                   HorizontalOptions="Center"
-                   HasShadow="True"
-                   WidthRequest="65">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding CmdOpenPresentes}"  />
-                        </Frame.GestureRecognizers>
-                        <StackLayout Orientation="Vertical">
-                            <Label Style="{StaticResource LabelIconeCronograma}"></Label>
-                            <Label x:Name="menuCronograma" Text="Cronograma" Style="{StaticResource LabelGabriolaStyleSmallBlack}"></Label>
-                        </StackLayout>
-                    </Frame>-->
+                   
                     <Frame Grid.Column="3"
                          Grid.Row="0"
                    CornerRadius="10"
@@ -175,7 +145,7 @@
                    VerticalOptions="Center"
                    HorizontalOptions="Center"
                    HasShadow="True"
-                   WidthRequest="65">
+                           x:Name="frmDuvida">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding CmdOpenInformacoes}"  />
                         </Frame.GestureRecognizers>

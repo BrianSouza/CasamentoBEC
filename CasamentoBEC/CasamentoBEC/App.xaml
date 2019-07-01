@@ -157,7 +157,7 @@
                     </Setter.Value>
                 </Setter>
                 <Setter Property="TextColor" Value="Black"></Setter>
-                <Setter Property="FontSize" Value="Small"></Setter>
+                <Setter Property="FontSize" Value="13"></Setter>
                 <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
             </Style>
             <Style x:Key="LabelLobsterStyleSmallBlackNegrito" TargetType="Label" BaseResourceKey="BaseLabelStyle">
@@ -353,7 +353,7 @@
                 <Setter Property="FontFamily" Value="{StaticResource MaterialFontFamily}"></Setter>
                 <Setter Property="Text" Value="{StaticResource duvida}"></Setter>
                 <Setter Property="TextColor" Value="{StaticResource coriconemenu}"></Setter>
-                <Setter Property="FontSize" Value="32"></Setter>
+                <Setter Property="FontSize" Value="30"></Setter>
                 <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
                 <Setter Property="FontAttributes" Value="Bold"></Setter>
             </Style>
@@ -361,7 +361,7 @@
                 <Setter Property="FontFamily" Value="{StaticResource MaterialFontFamily}"></Setter>
                 <Setter Property="Text" Value="{StaticResource cronograma}"></Setter>
                 <Setter Property="TextColor" Value="{StaticResource coriconemenu}"></Setter>
-                <Setter Property="FontSize" Value="32"></Setter>
+                <Setter Property="FontSize" Value="30"></Setter>
                 <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
                 <Setter Property="FontAttributes" Value="Bold"></Setter>
             </Style>
@@ -369,7 +369,7 @@
                 <Setter Property="FontFamily" Value="{StaticResource MaterialFontFamily}"></Setter>
                 <Setter Property="Text" Value="{StaticResource presente}"></Setter>
                 <Setter Property="TextColor" Value="{StaticResource coriconemenu}"></Setter>
-                <Setter Property="FontSize" Value="32"></Setter>
+                <Setter Property="FontSize" Value="30"></Setter>
                 <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
                 <Setter Property="FontAttributes" Value="Bold"></Setter>
             </Style>
@@ -377,7 +377,7 @@
                 <Setter Property="FontFamily" Value="{StaticResource MaterialFontFamily}"></Setter>
                 <Setter Property="Text" Value="{StaticResource map}"></Setter>
                 <Setter Property="TextColor" Value="{StaticResource coriconemenu}"></Setter>
-                <Setter Property="FontSize" Value="32"></Setter>
+                <Setter Property="FontSize" Value="30"></Setter>
                 <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
                 <Setter Property="FontAttributes" Value="Bold"></Setter>
             </Style>
@@ -385,7 +385,7 @@
                 <Setter Property="FontFamily" Value="{StaticResource MaterialFontFamily}"></Setter>
                 <Setter Property="Text" Value="{StaticResource check}"></Setter>
                 <Setter Property="TextColor" Value="{StaticResource coriconemenu}"></Setter>
-                <Setter Property="FontSize" Value="32"></Setter>
+                <Setter Property="FontSize" Value="30"></Setter>
                 <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
                 <Setter Property="FontAttributes" Value="Bold"></Setter>
             </Style>
@@ -393,7 +393,7 @@
                 <Setter Property="FontFamily" Value="{StaticResource MaterialFontFamily}"></Setter>
                 <Setter Property="Text" Value="{StaticResource camera}"></Setter>
                 <Setter Property="TextColor" Value="{StaticResource coriconemenu}"></Setter>
-                <Setter Property="FontSize" Value="32"></Setter>
+                <Setter Property="FontSize" Value="30"></Setter>
                 <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
                 <Setter Property="FontAttributes" Value="Bold"></Setter>
             </Style>
@@ -401,7 +401,7 @@
                 <Setter Property="FontFamily" Value="{StaticResource MaterialFontFamily}"></Setter>
                 <Setter Property="Text" Value="{StaticResource wifioff}"></Setter>
                 <Setter Property="TextColor" Value="White"></Setter>
-                <Setter Property="FontSize" Value="32"></Setter>
+                <Setter Property="FontSize" Value="30"></Setter>
                 <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
                 <Setter Property="FontAttributes" Value="Bold"></Setter>
             </Style>

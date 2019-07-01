@@ -49,6 +49,17 @@ namespace CasamentoBEC.View
                 ImgMenu.WidthRequest = 35;
                 //ResizeMenuLabel();
             }
+            else if(Device.RuntimePlatform == Device.iOS)
+            {
+                ImgMenu.HeightRequest = 35;
+                ImgMenu.WidthRequest = 35;
+            }
+
+            double larguraFrame = Math.Round((larguraTela / 4) - 6);
+            frmDuvida.WidthRequest = larguraFrame;
+            frmFotos.WidthRequest = larguraFrame;
+            frmPresentes.WidthRequest = larguraFrame;
+            frmRSVP.WidthRequest = larguraFrame;
         }
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
