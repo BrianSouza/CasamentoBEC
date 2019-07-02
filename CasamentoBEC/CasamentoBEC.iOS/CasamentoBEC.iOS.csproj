@@ -27,8 +27,8 @@
     <MtouchArch>x86_64</MtouchArch>
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
-    <CodesignKey>iPhone Developer</CodesignKey>
-    <CodesignProvision />
+    <CodesignKey>iPhone Developer: Brian Diego De Souza (3CU897XAU5)</CodesignKey>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -39,6 +39,8 @@
     <MtouchLink>None</MtouchLink>
     <MtouchArch>x86_64</MtouchArch>
     <ConsolePause>false</ConsolePause>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+    <CodesignKey>iPhone Developer: Brian Diego De Souza (3CU897XAU5)</CodesignKey>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -54,7 +56,7 @@
     <MtouchDebug>true</MtouchDebug>
     <CodesignEntitlements>
     </CodesignEntitlements>
-    <CodesignProvision>BDSouza</CodesignProvision>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
     <CodesignExtraArgs />
     <CodesignResourceRules />
     <MtouchProfiling>true</MtouchProfiling>
@@ -69,8 +71,9 @@
     <WarningLevel>4</WarningLevel>
     <MtouchArch>ARM64</MtouchArch>
     <ConsolePause>false</ConsolePause>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Developer: Brian Diego De Souza (3CU897XAU5)</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
     <DebugType>none</DebugType>
@@ -81,8 +84,8 @@
     <ConsolePause>False</ConsolePause>
     <MtouchArch>ARM64</MtouchArch>
     <BuildIpa>True</BuildIpa>
-    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
-    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+    <CodesignKey>iPhone Developer: Brian Diego De Souza (3CU897XAU5)</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
@@ -93,8 +96,8 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>False</ConsolePause>
     <MtouchArch>ARM64</MtouchArch>
-    <CodesignProvision>Automatic:AppStore</CodesignProvision>
-    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+    <CodesignKey>iPhone Developer: Brian Diego De Souza (3CU897XAU5)</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
@@ -201,7 +204,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\CasamentoBEC\CasamentoBEC.csproj">
-      <Project>{3252B870-B91D-4A20-B8ED-692E7714ADBD}</Project>
+      <Project>{6FB06121-8FFD-4DCC-B586-A5C6DFE39BBC}</Project>
       <Name>CasamentoBEC</Name>
     </ProjectReference>
   </ItemGroup>

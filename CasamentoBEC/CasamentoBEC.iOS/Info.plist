@@ -9,8 +9,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationPortraitUpsideDown</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
@@ -37,11 +35,12 @@
 	<string>LaunchScreen</string>
 	<key>CFBundleName</key>
 	<string>CasamentoBEC</string>
-  <key>NSAppTransportSecurity</key>
-  <dict>
-    <key>NSAllowsArbitraryLoads</key>
-    <true/>
-  </dict>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>UIMainStoryboardFile</key>
+	<string>LaunchScreen</string>
 </dict>
-  
 </plist>
