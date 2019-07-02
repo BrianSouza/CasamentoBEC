@@ -13,7 +13,12 @@
                 <DataTemplate>
                     <ViewCell>
                         <Frame Style="{StaticResource FrameInfo}">
+                            
                             <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Spacing="0">
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding ClickCommand}"
+                                                                       CommandParameter="{Binding TextoContato}" />
+                                </StackLayout.GestureRecognizers>
                                 <BoxView 
                                 VerticalOptions="FillAndExpand" 
                                 BackgroundColor="{StaticResource  cordivisao}"

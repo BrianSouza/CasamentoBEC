@@ -47,7 +47,7 @@
                 <Label Style="{StaticResource labelpretodesc}" Text="Nos enche de alegria em tê-los ao nosso lado."></Label>
                 <Label Style="{StaticResource labelpretodesc}" Text="Vamos juntos nesse grande sonho,"></Label>
                 <Label Style="{StaticResource labelpretodesc}" Text="o dia do nosso casamento..."></Label>
-                <Label Style="{StaticResource labelhashtag}" Text="#MoziECamis" />
+                <Label Style="{StaticResource labelhashtag}" Text="#CAMISEMOZI" />
             </StackLayout>
             <StackLayout 
                          HeightRequest="200"
@@ -151,7 +151,7 @@
                         </Frame.GestureRecognizers>
                         <StackLayout Orientation="Vertical">
                             <Label Style="{StaticResource LabelIconeDuvida}"></Label>
-                            <Label  x:Name="menuContatos" Text="Dúvidas" Style="{StaticResource LabelGabriolaStyleSmallBlack}"></Label>
+                            <Label  x:Name="menuContatos" Text="Info" Style="{StaticResource LabelGabriolaStyleSmallBlack}"></Label>
                         </StackLayout>
                     </Frame>
 

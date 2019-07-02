@@ -1,6 +1,8 @@
 ﻿using CasamentoBEC.Model;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace CasamentoBEC.ViewModel
 {
@@ -17,7 +19,7 @@ namespace CasamentoBEC.ViewModel
                 RaisePropertyChanged();
             }
         }
-
+        public ICommand ClickCommand { get; set; }
         public bool CarregandoInformacoes
         {
             get => _carregandoInformacoes;
@@ -31,6 +33,7 @@ namespace CasamentoBEC.ViewModel
         public InfoViewModel()
         {
             Task.Run(async () => await GetAvisos());
+            ClickCommand = new Command((TextoContato) => AbrirContato(TextoContato));
         }
         private async Task GetAvisos()
         {
@@ -104,6 +107,10 @@ namespace CasamentoBEC.ViewModel
 
                 }
             }
+        }
+        private void AbrirContato(object textoContato)
+        {
+            Device.OpenUri(new System.Uri(textoContato.ToString()));
         }
     }
 }

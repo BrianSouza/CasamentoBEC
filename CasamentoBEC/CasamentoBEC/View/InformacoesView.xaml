@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CasamentoBEC.View.InformacoesView"
             xmlns:local="clr-namespace:CasamentoBEC.View;assembly=CasamentoBEC"
-            Title="Informações e Avisos">
+            Title="Local e informações">
     <local:LocalView Title="Local" Icon="placeholderbranco.png"></local:LocalView>
     <local:InfoView Title="Informações" Icon="duvidas.png"></local:InfoView>
     
