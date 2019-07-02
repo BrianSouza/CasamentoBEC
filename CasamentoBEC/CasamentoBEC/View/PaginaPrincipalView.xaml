@@ -35,7 +35,7 @@
     </NavigationPage.TitleView>
     <ContentPage.Content>
         <AbsoluteLayout >
-            <StackLayout
+            <StackLayout x:Name="stkMensagem"
                 Spacing="0"
                  AbsoluteLayout.LayoutBounds="1,.65,1,.45"
                  AbsoluteLayout.LayoutFlags="All">
@@ -65,7 +65,9 @@
                    
                 </AbsoluteLayout>
             </StackLayout>
-            <Label Text="{Binding TextoDoDia}" 
+            <Label 
+                x:Name="lblTextoDa"
+                Text="{Binding TextoDoDia}" 
                    AbsoluteLayout.LayoutBounds=".25,.05,1,.2"
                    AbsoluteLayout.LayoutFlags="All"
                    Style="{StaticResource labelbranco}"/>
