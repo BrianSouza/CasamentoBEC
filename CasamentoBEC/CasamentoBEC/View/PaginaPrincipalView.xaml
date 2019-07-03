@@ -68,9 +68,12 @@
             <Label 
                 x:Name="lblTextoDa"
                 Text="{Binding TextoDoDia}" 
-                   AbsoluteLayout.LayoutBounds=".25,.05,1,.2"
+                   AbsoluteLayout.LayoutBounds=".25,.20,1,.2"
                    AbsoluteLayout.LayoutFlags="All"
                    Style="{StaticResource labelbranco}"/>
+            <Image Source="brasaobranco.png"
+                   AbsoluteLayout.LayoutBounds=".5,.03,1,.2"
+                   AbsoluteLayout.LayoutFlags="All"></Image>
             <StackLayout
                 x:Name="frameMenu"
                 BackgroundColor="{StaticResource bordercolor}"

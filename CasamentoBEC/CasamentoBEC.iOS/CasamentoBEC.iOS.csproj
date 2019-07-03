@@ -339,5 +339,11 @@
     <BundleResource Include="Resources\backgroundlogin.png" />
     <BundleResource Include="Resources\backgroundlogin%402x.png" />
     <BundleResource Include="Resources\backgroundlogin%403x.png" />
+    <BundleResource Include="Resources\brasaooriginal%403x.png" />
+    <BundleResource Include="Resources\brasaooriginal%402x.png" />
+    <BundleResource Include="Resources\brasaooriginal.png" />
+    <BundleResource Include="Resources\brasaobranco%402x.png" />
+    <BundleResource Include="Resources\brasaobranco.png" />
+    <BundleResource Include="Resources\brasaobranco%403x.png" />
   </ItemGroup>
 </Project>
