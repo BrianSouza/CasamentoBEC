@@ -335,7 +335,7 @@
                 <On Platform="Android" Value="materialdesignicons-webfont.ttf#Material Design Icons"/>
             </OnPlatform>
             <OnPlatform x:Key="Montserrat" x:TypeArguments="x:String">
-                <On Platform="iOS" Value="Material Design Icons"/>
+                <On Platform="iOS" Value="Montserrat-Bold"/>
                 <On Platform="Android" Value="Montserrat-Bold.ttf#Montserrat-Bold"/>
             </OnPlatform>
             <!--String Icones-->

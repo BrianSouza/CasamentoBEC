@@ -10,9 +10,6 @@
     <NavigationPage.TitleView>
         <StackLayout
                         x:Name="stackMenu"
-                        Grid.Row="2"
-                        Grid.Column="0"
-                        Grid.ColumnSpan="3"
                         VerticalOptions="Center"
                         HorizontalOptions="Center"
                         Spacing="0">
@@ -72,8 +69,9 @@
                    AbsoluteLayout.LayoutFlags="All"
                    Style="{StaticResource labelbranco}"/>
             <Image Source="brasaobranco.png"
-                   AbsoluteLayout.LayoutBounds=".5,.03,1,.2"
-                   AbsoluteLayout.LayoutFlags="All"></Image>
+                   AbsoluteLayout.LayoutBounds="1,.03,1,.2"
+                   AbsoluteLayout.LayoutFlags="All"
+                   x:Name="brasaoBranco"></Image>
             <StackLayout
                 x:Name="frameMenu"
                 BackgroundColor="{StaticResource bordercolor}"

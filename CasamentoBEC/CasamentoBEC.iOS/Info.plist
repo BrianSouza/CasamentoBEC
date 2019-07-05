@@ -21,7 +21,7 @@
 	<array>
 		<string>gabriola.ttf</string>
 		<string>Lobster_13.ttf</string>
-		<string>materialdesignicons-webfont</string>
+		<string>materialdesignicons-webfont.ttf</string>
 	</array>
 	<key>MinimumOSVersion</key>
 	<string>8.0</string>

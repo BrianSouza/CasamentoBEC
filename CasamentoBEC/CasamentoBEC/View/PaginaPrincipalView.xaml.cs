@@ -39,6 +39,9 @@ namespace CasamentoBEC.View
                 AbsoluteLayout.SetLayoutBounds(frameMenu, novoTamanhoMenu);
                 ImgMenu.HeightRequest = 35;
                 ImgMenu.WidthRequest = 35;
+                var novoTamanhoBrasao = new Rectangle(1, .03, 1, .35);
+                AbsoluteLayout.SetLayoutBounds(brasaoBranco, novoTamanhoBrasao);
+
                 //ResizeMenuLabel();
             }
             else if (alturaTela <= 570 && larguraTela <= 321 && Device.RuntimePlatform == Device.iOS)
@@ -47,13 +50,17 @@ namespace CasamentoBEC.View
                 AbsoluteLayout.SetLayoutBounds(frameMenu, novoTamanhoMenu);
                 ImgMenu.HeightRequest = 35;
                 ImgMenu.WidthRequest = 35;
-                AbsoluteLayout.SetLayoutBounds(stkMensagem, new Rectangle(1, .75, 1, .45));            
+                AbsoluteLayout.SetLayoutBounds(stkMensagem, new Rectangle(1, .75, 1, .45));
+                var novoTamanhoBrasao = new Rectangle(1, .03, 1, .35);
+                AbsoluteLayout.SetLayoutBounds(brasaoBranco, novoTamanhoBrasao);
                 //ResizeMenuLabel();
             }
             else if(Device.RuntimePlatform == Device.iOS)
             {
                 ImgMenu.HeightRequest = 35;
                 ImgMenu.WidthRequest = 35;
+                var novoTamanhoBrasao = new Rectangle(1, .01, 1, .5);
+                AbsoluteLayout.SetLayoutBounds(brasaoBranco, novoTamanhoBrasao);
             }
 
             double larguraFrame = Math.Round((larguraTela / 4) - 6);
