@@ -61,6 +61,8 @@ namespace CasamentoBEC.View
                 ImgMenu.WidthRequest = 35;
                 var novoTamanhoBrasao = new Rectangle(1, .01, 1, .5);
                 AbsoluteLayout.SetLayoutBounds(brasaoBranco, novoTamanhoBrasao);
+                var novoTamanhoTxt = new Rectangle(.25, .25, 1, .2);
+                AbsoluteLayout.SetLayoutBounds(lblTextoDa, novoTamanhoTxt); 
             }
 
             double larguraFrame = Math.Round((larguraTela / 4) - 6);

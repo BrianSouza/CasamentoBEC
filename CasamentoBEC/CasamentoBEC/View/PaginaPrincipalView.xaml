@@ -62,16 +62,19 @@
                    
                 </AbsoluteLayout>
             </StackLayout>
-            <Label 
-                x:Name="lblTextoDa"
-                Text="{Binding TextoDoDia}" 
-                   AbsoluteLayout.LayoutBounds=".25,.20,1,.2"
-                   AbsoluteLayout.LayoutFlags="All"
-                   Style="{StaticResource labelbranco}"/>
-            <Image Source="brasaobranco.png"
-                   AbsoluteLayout.LayoutBounds="1,.03,1,.2"
+           
+                <Image Source="brasaobranco.png"
+                   AbsoluteLayout.LayoutBounds="1,.02,1,.2"
                    AbsoluteLayout.LayoutFlags="All"
                    x:Name="brasaoBranco"></Image>
+            <Label 
+                AbsoluteLayout.LayoutBounds="1,.20,1,.2"
+                AbsoluteLayout.LayoutFlags="All"
+                x:Name="lblTextoDa"
+                Text="{Binding TextoDoDia}" 
+                Style="{StaticResource labelbranco}"/>
+
+
             <StackLayout
                 x:Name="frameMenu"
                 BackgroundColor="{StaticResource bordercolor}"
