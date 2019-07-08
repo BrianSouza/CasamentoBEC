@@ -160,17 +160,7 @@
                 <Setter Property="FontSize" Value="13"></Setter>
                 <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
             </Style>
-            <Style x:Key="LabelLobsterStyleSmallBlackNegrito" TargetType="Label" BaseResourceKey="BaseLabelStyle">
-                <Setter Property="FontFamily">
-                    <Setter.Value>
-                        <OnPlatform x:TypeArguments="x:String" iOS="Lobster_13" Android="Lobster_13.otf#Lobster_13"/>
-                    </Setter.Value>
-                </Setter>
-                <Setter Property="TextColor" Value="Black"></Setter>
-                <Setter Property="FontSize" Value="Small"></Setter>
-                <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
-                <Setter Property="FontAttributes" Value="Bold"></Setter>
-            </Style>
+            
             <Style x:Key="LabelGabriolaStyleMediumBlack" TargetType="Label" BaseResourceKey="BaseLabelStyle">
                 <Setter Property="FontFamily">
                     <Setter.Value>

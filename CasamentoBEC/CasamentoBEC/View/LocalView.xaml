@@ -13,7 +13,7 @@
             <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
                 <Label 
                 Text="O Local" 
-                FontFamily="Lobster_13.otf#Lobster_13" 
+                FontFamily="gabriola.ttf#gabriola" 
                 FontSize="Large" 
                 HorizontalOptions="Center" 
                 VerticalOptions="Start"
