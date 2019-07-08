@@ -77,7 +77,7 @@ namespace CasamentoBEC.ViewModel
                 Processando = true;
                 messageService = DependencyService.Get<IMessageService>();
 
-                CmdOpenPresentes = new Command(() => navigationService.AbrirPresentes());
+                CmdOpenPresentes = new Command(() => AbrirSitePresentes());
                 CmdOpenFotos = new Command(() => navigationService.AbrirFotos());
                 CmdOpenRSVP = new Command(() => navigationService.AbrirRSVP());
                 CmdOpenInformacoes = new Command(() => navigationService.AbrirInformacoes());
@@ -88,6 +88,14 @@ namespace CasamentoBEC.ViewModel
                 Processando = false;
             }
             
+        }
+        private void AbrirSitePresentes()
+        {
+            ValidarConexao();
+            if (IsNotConnected)
+                return;
+
+            Device.OpenUri(new Uri("https://sites.icasei.com.br/briancamila/pt_br/store/9/1/1"));
         }
         private string GetTextoDia()
         {
