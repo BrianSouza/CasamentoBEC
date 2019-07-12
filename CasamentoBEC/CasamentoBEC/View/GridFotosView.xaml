@@ -9,17 +9,17 @@
     <ContentPage.Content>
         <Frame
              Style="{DynamicResource framecarousel}">
-            <control:FlowListView FlowColumnCount="3" 
+            <control:FlowListView FlowColumnCount="2" 
                               SeparatorVisibility="None"
                               HasUnevenRows="True"
-                              FlowColumnExpand="None"
+                              FlowColumnExpand="Proportional"
                               FlowItemsSource="{Binding ImagesSources}"
                               FlowItemTappedCommand="{Binding CmdFotoSelecionada}"
                               FlowItemTapped="FlowListView_FlowItemTapped"
                               HorizontalOptions="FillAndExpand"
                               VerticalOptions="StartAndExpand"
-                              RowHeight="20"
                               Margin="10"
+                              BackgroundColor="Transparent"
                               >
                     <control:FlowListView.FlowColumnTemplate>
                         <DataTemplate>
@@ -27,10 +27,10 @@
                           VerticalOptions="FillAndExpand"
                           HorizontalOptions="FillAndExpand">
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="60" />
+                                    <RowDefinition Height="Auto" />
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
 
                                 <ffimageloading:CachedImage

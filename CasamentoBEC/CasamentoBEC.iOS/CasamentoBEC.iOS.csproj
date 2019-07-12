@@ -114,6 +114,7 @@
     <ApplicationIcon>brasao_fg5_1.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="CustomEntryRenderer.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <ImageAsset Include="Assets2.xcassets\AppIcons.appiconset\Contents.json">

@@ -223,22 +223,22 @@
     <AndroidResource Include="Resources\drawable-hdpi\ensaio.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\casamento.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable-xhdpi\ensaio.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxhdpi\casamento.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\casamento.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxhdpi\ensaio.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxxhdpi\casamento.png" />
+    <Content Include="Resources\drawable-xxhdpi\casamento.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxxhdpi\ensaio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\casamento.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\image_loading.png" />
