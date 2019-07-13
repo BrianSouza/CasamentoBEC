@@ -21,7 +21,7 @@
 	<array>
 		<string>gabriola.ttf</string>
 		<string>materialdesignicons-webfont.ttf</string>
-    <string>fa-solid-900.ttf</string>
+		<string>fa-solid-900.ttf</string>
 	</array>
 	<key>MinimumOSVersion</key>
 	<string>8.0</string>
@@ -42,5 +42,11 @@
 	</dict>
 	<key>UIMainStoryboardFile</key>
 	<string>LaunchScreen</string>
+	<key>CFBundleShortVersionString</key>
+	<string>100</string>
+	<key>XSAppIconAssets</key>
+	<string>Assets.xcassets/AppIcons.appiconset</string>
+	<key>XSLaunchImageAssets</key>
+	<string>Assets.xcassets/LaunchImage.launchimage</string>
 </dict>
 </plist>
