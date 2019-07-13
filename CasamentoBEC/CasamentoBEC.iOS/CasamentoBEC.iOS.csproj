@@ -104,13 +104,14 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>False</ConsolePause>
     <MtouchArch>ARM64</MtouchArch>
-    <CodesignProvision>VS: WildCard Development</CodesignProvision>
-    <CodesignKey>iPhone Developer: Brian Diego De Souza (3CU897XAU5)</CodesignKey>
+    <CodesignProvision>produção</CodesignProvision>
+    <CodesignKey>iPhone Distribution: Brian Diego De Souza (FP5P6ZN238)</CodesignKey>
     <CodesignEntitlements>
     </CodesignEntitlements>
     <CodesignExtraArgs />
     <CodesignResourceRules />
     <OptimizePNGs>true</OptimizePNGs>
+    <BuildIpa>true</BuildIpa>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
     <AppExtensionDebugBundleId />
