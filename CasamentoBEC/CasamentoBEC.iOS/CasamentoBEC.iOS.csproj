@@ -205,9 +205,15 @@
     <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\LaunchImage6.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
     <None Include="Entitlements.plist" />
     <None Include="Info.plist">
       <SubType>Designer</SubType>
@@ -444,56 +450,156 @@
     <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\splashscreen1.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon%402x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon%402x1.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon%402x2.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon%402x3.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon%402x4.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon%402x5.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon%403x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon%403x1.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon%403x2.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon%403x3.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon1.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon10.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon11.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon12.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon13.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon14.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon15.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon16.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon17.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon18.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon19.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon2.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon20.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon21.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon22.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon23.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon24.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon25.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon3.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon4.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon5.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon6.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon7.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon8.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon9.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\LaunchImage.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\LaunchImage1.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\LaunchImage2.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\LaunchImage3.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\LaunchImage4.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\LaunchImage5.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\LaunchImage6.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage1.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage2.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage3.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage4.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage5.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage6.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon%402x1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon%402x2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon%402x3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon%402x4.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon%402x5.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon%403x1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon%403x2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon%403x3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon10.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon11.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon12.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon13.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon14.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon15.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon16.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon17.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon18.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon19.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon20.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon21.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon22.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon23.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon24.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon25.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon4.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon5.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon6.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon7.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon8.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Icon9.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\LaunchImage.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\LaunchImage1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\LaunchImage2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\LaunchImage3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\LaunchImage4.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\LaunchImage5.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\LaunchImage6.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage4.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage5.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\LaunchImage6.png">
+      <Visible>false</Visible>
+    </ImageAsset>
     <Content Include="brasao_fg5_1.ico" />
     <BundleResource Include="Resources\backgrounddetail.png" />
     <BundleResource Include="Resources\backgrounddetail%402x.png" />
